@@ -1,0 +1,37 @@
+site_name: 'OpenStudio Coalition User Docs'
+site_favicon: favicon.ico
+site_logo: 'OS_32x32.png'
+
+pages:
+- [index.md]
+
+- [about/openstudio_coalition.md, About, About the OpenStudio Coalition]
+- [about/mailing_list.md, About, Join the Mailing List]
+- [about/software_license.md, About, Software License]
+- [about/features.md, About, Current Features]
+
+- [getting_started/getting_started.md, Getting Started, Installation and Introductory Tutorial]
+- [getting_started/creating_your_model.md, Getting Started, Creating Your Model]
+- [getting_started/best_practices.md, Getting Started, Best Practices]
+- [getting_started/running_your_simulation.md, Getting Started, Running Simulations & Viewing Results]
+- [getting_started/using_bcl.md, Getting Started, Building Component Library]
+- [getting_started/large_scale_analysis.md, Getting Started, Large Scale Analysis]
+- [getting_started/troubleshooting.md, Getting Started, Troubleshooting]
+
+- [tutorials/utility_rate_tariffs.md, Tutorials, Utility Rate Tariffs]
+- [tutorials/life_cycle_costing_examples.md, Tutorials, Life Cycle Cost Analysis]
+- [tutorials/tutorial_gbxmlimport.md, Tutorials, Import gbXML]
+- [tutorials/radiance_tutorial.md, Tutorials, Radiance and OpenStudio]
+- [tutorials/tutorial_shadingcontrols.md, Tutorials, Shading Controls]
+- [tutorials/tutorial_windowproperty_frameanddivider.md, Tutorials, Window Property Frame and Divider]
+
+- [reference/openstudio_application_interface.md, Reference, OpenStudio Application Interface Guide]
+- [reference/sketchup_plugin_interface.md, Reference, SketchUp Plug-in Interface Guide]
+- [reference/geometry_editor.md, Reference, FloorspaceJS]
+- [reference/openstudio_results_measure.md, Reference, OpenStudio Results Measure]
+
+theme: simplex
+theme_dir: 'bootstrap_nrel'
+
+
+
