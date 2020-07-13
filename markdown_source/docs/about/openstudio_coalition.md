@@ -16,10 +16,14 @@ The National Renewable Energy Laboratory (NREL) transferred control of the OpenS
 
 ## For More Information:
 
-Sign up to our email list at: www.openstudiocoalition.org
+Sign up to our email list:
 
-Contact us at: osc@openstudiocoalition.org
+<a href="mailing_list.md" class="btn btn-primary" role="button">Email List</a>
+
+Contact us at osc@openstudiocoalition.org
  
+<a href="mailto:osc@openstudiocoalition.org" class="btn btn-primary" role="button">Contact Us</a>
+
 
  
 
