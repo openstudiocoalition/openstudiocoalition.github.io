@@ -1,6 +1,6 @@
 site_name: 'OpenStudio Coalition User Docs'
 site_favicon: favicon.ico
-site_logo: 'OS_32x32.png'
+site_logo: 'OSC_32x32.png'
 
 pages:
 - [index.md]

@@ -1,4 +1,4 @@
-<h1>OpenStudio Coalition</h1>
+<h1>The OpenStudio Coalition</h1>
 <p>The OpenStudio Coalition is a newly formed organization founded to support the OpenStudio Application and to expand the use of energy modeling generally using the free and open source OpenStudio Application. The goals of the OpenStudio Coalition (OSC) include:</p>
 <ul>
 <li>Keeping the OpenStudio Applications Free and Readily Available</li>
