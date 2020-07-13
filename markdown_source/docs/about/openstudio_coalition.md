@@ -8,7 +8,8 @@ The goals of the OpenStudio Coalition (OSC) include:
 
 ## Organization
 
-The OpenStudio Coalition is a DBA of The Energy Coalition, a California registered 501(c)3 corporation,  and is managed by volunteers from the founding organizations, The Energy Coalition (TEC), Vermont Energy Investment Corporation (VEIC) and Performance Systems Development (PSD).  These organizations have worked together over the past several years, supporting development of and using the OpenStudio/EnergyPlus framework and have now formed this new organization to help support the OpenStudio Application and the expansion of the value and adoption of energy modeling.  These organizations have been joined by expert developers who can help support the continued evolution of the OpenStudio Application.
+The OpenStudio Coalition is managed by volunteers from the founding organizations, The Energy Coalition (TEC), Vermont Energy Investment Corporation (VEIC) and Performance Systems Development (PSD).  These organizations have worked together over the past several years, supporting development of and using the OpenStudio/EnergyPlus framework and have now formed this new organization to help support the OpenStudio Application and the expansion of the value and adoption of energy modeling.  These organizations have been joined by expert developers who can help support the continued evolution of the OpenStudio Application.
+
 It is the intent of the founding members to seek external funding to support the goals of the organization.  The primary focus of initial funding will be to fund incremental development of the OpenStudio application. 
 
 ## Organization Resources
