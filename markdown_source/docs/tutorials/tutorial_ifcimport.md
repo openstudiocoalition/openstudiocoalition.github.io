@@ -1,6 +1,8 @@
 <h1>Import IFC</h1>
 This tutorial explains how to import an IFC file into OpenStudio using BIMserver.  This functionality is available in OpenStudio 1.7.1 and higher.  This functionality was developed by Chong Zhou as part of the [BIMDataHub](https://github.com/BIMDataHub) project at the [Consortium for Building Energy Innovation](http://www.cbei.psu.edu/).
 
+**Notice** The IFC plugin was built by the [BIMDataHub](https://github.com/BIMDataHub) group.  The functionality has not been maintained since 2016. 
+
 ## Install BIMserver
 
 ### Stand-alone version

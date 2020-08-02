@@ -21,6 +21,7 @@ pages:
 - [tutorials/utility_rate_tariffs.md, Tutorials, Utility Rate Tariffs]
 - [tutorials/life_cycle_costing_examples.md, Tutorials, Life Cycle Cost Analysis]
 - [tutorials/tutorial_gbxmlimport.md, Tutorials, Import gbXML]
+- [tutorials/tutorial_ifcimport.md, Tutorials, Import IFC]
 - [tutorials/radiance_tutorial.md, Tutorials, Radiance and OpenStudio]
 - [tutorials/tutorial_shadingcontrols.md, Tutorials, Shading Controls]
 - [tutorials/tutorial_windowproperty_frameanddivider.md, Tutorials, Window Property Frame and Divider]
