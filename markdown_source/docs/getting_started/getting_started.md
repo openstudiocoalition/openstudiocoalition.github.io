@@ -18,26 +18,27 @@ __Download and install OpenStudio Application__
     - Radiance
     - Application Resources
 
-__Optional - Download and install SketchUp and the Openstudio SketchUp Plugin__
+__Optional - Download and install SketchUp and the Openstudio SketchUp Plug-in__
 
-There are a few options for generating geometry for the OpenStudio Application, including the built-in FloorspaceJS interface. One option is to use the OpenStudio Sketchup Plugin. To use the plugin:
+There are a few options for generating geometry for the OpenStudio Application, including the built-in FloorspaceJS interface. One option is to use the OpenStudio Sketchup Plug-in. To use the plug-in:
 
-1. Download and install SketchUp. Presently, the OpenStudio SketchUp Plugin requires [SketchUp 2019 Pro](https://www.sketchup.com/) (not available for Linux). 
-2. Download the OpenStudio SketchUp Plugin [here](https://github.com/NREL/openstudio-sketchup-plugin/releases). Follow the [procedure to install the Plugin](https://help.sketchup.com/en/installing-ruby-plugins-extensions).
+1. Download and install SketchUp. Presently, the OpenStudio SketchUp Plug-in requires [SketchUp 2019 - 2020 Pro](https://www.sketchup.com/) (not available for Linux).
+2. Download the OpenStudio SketchUp Plug-in RBZ package [here](https://github.com/NREL/openstudio-sketchup-plugin/releases).
+3. Follow the [Installing extensions manually in SketchUp Preferences](https://help.sketchup.com/en/extension-warehouse/adding-extensions-sketchup) to install the Plug-in.
 
-__Optional - Setup a Building Component Library (BCL) Account__  
+__Optional - Setup a Building Component Library (BCL) Account__
 
-BCL content can now be accessed from within the OpenStudio SketchUp Plugin and from the standalone OpenStudio Application. To take advantage of this integration, you will need to follow the steps outlined here to request a BCL key.
+BCL content can now be accessed from within the OpenStudio SketchUp Plug-in and from the standalone OpenStudio Application. To take advantage of this integration, you will need to follow the steps outlined here to request a BCL key.
 
 1. Login to [Building Component Library (BCL)](https://bcl.nrel.gov/). Create an account if you don't have one. Follow the instructions from the email sent to you upon registration and then login.
 2. Click on the `My Dashboard` near the top right of the website.
-3. Copy the text after `API v1.1 key`: then paste the key into the OpenStudio Application, or the SketchUp Plugin. __You only need to configure the key in one place and it will be used globally throughout the OpenStudio Application tools.__ Additionally, this key will be maintained when you install updates to the OpenStudio Application.
+3. Copy the text after `API v1.1 key`: then paste the key into the OpenStudio Application, or the SketchUp Plug-in. __You only need to configure the key in one place and it will be used globally throughout the OpenStudio Application tools.__ Additionally, this key will be maintained when you install updates to the OpenStudio Application.
 
-Enter the key through the OpenStudio SketchUp Plugin under the menu `Extensions->OpenStudio User Scripts->Building Component Library->Setup BCL Key` and click `OK`. __Or__ register the key through the OpenStudio Application under the menu `Components & Measures->Find Components`. If a key is not already registered, it will prompt you for one.
+Enter the key through the OpenStudio SketchUp Plug-in under the menu `Extensions->OpenStudio User Scripts->Building Component Library->Setup BCL Key` and click `OK`. __Or__ register the key through the OpenStudio Application under the menu `Components & Measures->Find Components`. If a key is not already registered, it will prompt you for one.
 
 ![Key request dialog](img/bcl_key_request.png)
 
-__Optional - Install Parametric Analysis Tool (PAT)__  
+__Optional - Install Parametric Analysis Tool (PAT)__
 
 1. Download the latest release of PAT [here](https://github.com/NREL/OpenStudio-PAT/releases) (not available for Linux).
 
@@ -57,7 +58,7 @@ The tutorial below was created before the grid view was added to the Space Types
 
 ### Selecting a Library for Constructions, Loads, and Schedules
 
-Libraries that are included with the OpenStudio Application contain data for constructions, loads, and schedules for 6 vintages across all U.S. climate zones. They also contain data for 9 vintages specific to DEER. The Libraries do not contain any geometry. Load libraries by using the menu under __File/Load Library__. Then select your vintage from the default file set. The Library data is organized such that you can access specific constructions and loads, or you can apply construction sets and space types that contain whole packages of subsequent dependent characteristics. For example a Library Space Type contains several specific loads and associated schedules for that space type, all of which become part of your model if you add the Space Type to your model. You can also load previously generated models as Libraries through the __File/Load Library__ menu by navigating to any OpenStudio Model file from the browser window that pops up. It can take a few minutes to load. 
+Libraries that are included with the OpenStudio Application contain data for constructions, loads, and schedules for 6 vintages across all U.S. climate zones. They also contain data for 9 vintages specific to DEER. The Libraries do not contain any geometry. Load libraries by using the menu under __File/Load Library__. Then select your vintage from the default file set. The Library data is organized such that you can access specific constructions and loads, or you can apply construction sets and space types that contain whole packages of subsequent dependent characteristics. For example a Library Space Type contains several specific loads and associated schedules for that space type, all of which become part of your model if you add the Space Type to your model. You can also load previously generated models as Libraries through the __File/Load Library__ menu by navigating to any OpenStudio Model file from the browser window that pops up. It can take a few minutes to load.
 
 ![New OpenStudio Model From Template Dialog](img/menu_libraries.png)
 
@@ -81,8 +82,8 @@ Climate Zones: 1 - 8
 
 For additional information on the integrated FloorspaceJS interface, go to the [FloorspaceJS Interface Guide](../reference/geometry_editor.md)
 
-### SketchUp Plugin - Building Envelope
-For additional information on the SketchUp Plugin interface, go to the [OpenStudio SketchUp Plugin Interface Guide](../reference/sketchup_plugin_interface.md).
+### SketchUp Plug-in - Building Envelope
+For additional information on the SketchUp Plug-in interface, go to the [OpenStudio SketchUp Plug-in Interface Guide](../reference/sketchup_plugin_interface.md).
 
 
 <!--
