@@ -141,7 +141,7 @@ The first time you open this window you will be prompted for an API key, unless 
 
 ## Environment Variables
 
-A variety of environment variables can be used to modify the OpenStudio Applicaton's operation.  Environment variables can be set on the command line for a specific session or stored permantently in the advanced system settings on Windows or the ~/.bashrc file on Unix and Mac.
+A variety of environment variables can be used to modify the OpenStudio Application's operation.  Environment variables can be set on the command line for a specific session or stored permanently in the advanced system settings on Windows or in your profile file (eg `~/.bashrc`) on Unix.
 
 ### OpenStudio Application Environment Variables
 
