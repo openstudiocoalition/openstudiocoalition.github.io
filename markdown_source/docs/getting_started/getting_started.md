@@ -28,15 +28,7 @@ There are a few options for generating geometry for the OpenStudio Application, 
 
 __Optional - Setup a Building Component Library (BCL) Account__
 
-BCL content can now be accessed from within the OpenStudio SketchUp Plug-in and from the standalone OpenStudio Application. To take advantage of this integration, you will need to follow the steps outlined here to request a BCL key.
-
-1. Login to [Building Component Library (BCL)](https://bcl.nrel.gov/). Create an account if you don't have one. Follow the instructions from the email sent to you upon registration and then login.
-2. Click on the `My Dashboard` near the top right of the website.
-3. Copy the text after `API v1.1 key`: then paste the key into the OpenStudio Application, or the SketchUp Plug-in. __You only need to configure the key in one place and it will be used globally throughout the OpenStudio Application tools.__ Additionally, this key will be maintained when you install updates to the OpenStudio Application.
-
-Enter the key through the OpenStudio SketchUp Plug-in under the menu `Extensions->OpenStudio User Scripts->Building Component Library->Setup BCL Key` and click `OK`. __Or__ register the key through the OpenStudio Application under the menu `Components & Measures->Find Components`. If a key is not already registered, it will prompt you for one.
-
-![Key request dialog](img/bcl_key_request.png)
+[Building Component Library (BCL)](https://bcl.nrel.gov/) content can now be accessed from within the OpenStudio SketchUp Plug-in and from the standalone OpenStudio Application without a BCL key.
 
 __Optional - Install Parametric Analysis Tool (PAT)__
 
