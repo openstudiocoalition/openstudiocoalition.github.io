@@ -1,7 +1,7 @@
 <h1>Current Features</h1>
 The OpenStudio Application uses the [OpenStudio SDK](https://openstudio-sdk-documentation.s3.amazonaws.com/index.html). The features that are available in the current major release are described below.
 
-## As of OpenStudio Application Version 1.0.0
+## As of OpenStudio Application Version 1.3.0
 
 ### Building Geometry/3D CAD
 
