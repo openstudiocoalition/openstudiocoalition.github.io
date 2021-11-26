@@ -148,8 +148,7 @@ A variety of environment variables can be used to modify the OpenStudio Applicat
 - `OPENSTUDIO_APPLICATION_DEBUG`, if set then debug level logging is enabled
 - `OPENSTUDIO_APPLICATION_LOGFILE_PATH`, if set to a path then logging information is sent to the file path
 - `OPENSTUDIO_APPLICATION_SLEEP_AT_START`, if set to an integer the application sleeps that many seconds before starting to allow a debugger to attach
-- `OPENSTUDIO_APPLICATION_START_TAB_INDEX`, if set to an integer the application opens the specified tab first { SITE = 0, SCHEDULES = 1, CONSTRUCTIONS = 2, LOADS = 3, SPACE_TYPES = 4, GEOMETRY = 5, FACILITY = 6, SPACES = 7, THERMAL_ZONES = 8, HVAC_SYSTEMS = 9, OUTPUT_VARIABLES = 10, SIMULATION_SETTINGS = 11, RUBY_SCRIPTS = 12, RUN_SIMULATION = 13, RESULTS_SUMMARY = 14 }
-
+- `OPENSTUDIO_APPLICATION_START_TAB_INDEX`, if set to an integer the application opens the specified tab first (enum VerticalTabID in OSDocument.hpp) { SITE = 0, SCHEDULES = 1, CONSTRUCTIONS = 2, LOADS = 3, SPACE_TYPES = 4, GEOMETRY = 5, FACILITY = 6, SPACES = 7, THERMAL_ZONES = 8, HVAC_SYSTEMS = 9, OUTPUT_VARIABLES = 10, SIMULATION_SETTINGS = 11, RUBY_SCRIPTS = 12, RUN_SIMULATION = 13, RESULTS_SUMMARY = 14 }
 
 ### Qt Environment Variables
 
