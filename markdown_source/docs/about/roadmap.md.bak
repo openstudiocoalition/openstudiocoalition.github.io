@@ -8,29 +8,3 @@ The OpenStudio SDK, OpenStudio Command Line Interface (CLI), OpenStudio Server, 
 Effective early May 2020, NREL will no longer distribute the OpenStudio Application and the SketchUp Plugin. The final NREL software distribution of the OpenStudio Application, along with any non-NREL future releases, will be available at [https://github.com/NREL/OpenStudioApplication/releases](https://github.com/NREL/OpenStudioApplication/releases). Companies, individual contributors, and organizations that are interested in providing development contributions, support and maintenance activities for the OpenStudio Application, including new features, defect fixes and enhancements, are encouraged to contact OSC@openstudiocoalition.org.
 
 ## List of Features Needing Funding
-
-###Distributed Energy Resources
-   - Expand capabilities for the app to model solar, storage, electric vehicles, and heat pumps (water and space conditioning)
-
-###BCL Expansion
-   - Develop and provide guidance on building component library (BCL) measures to allow for decarbonization analysis
-   - Develop measures for REopt and/or SAM to allows energy efficiency measures to be modeled along with DERs
-   - Integrate U.S. DOE National Lab demand flexibility algorithms via BCL measures 
-   
-###Interface
-   - Modernize UI design
-   - Language translation localization for EFIGS and beyond
-   
-###Wizards
-   - Gather feedback from user community on what wizards or simplified use cases are most helpful
-   
-###Compliance Capabilities
-   - Complete the testing and documentation required for California Title 24 software compliance
-   
-
-   
-###Trainings
-   - Recorded/OnDemand trainings
-   - Live trainings
-   - Customized trainings
-   
