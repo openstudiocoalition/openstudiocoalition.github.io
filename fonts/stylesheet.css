@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Muli';
+    src: url('Muli-Bold.eot');
+    src: url('Muli-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Muli-Bold.woff2') format('woff2'),
+        url('Muli-Bold.woff') format('woff'),
+        url('Muli-Bold.ttf') format('truetype'),
+        url('Muli-Bold.svg#Muli-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('Muli-Light.eot');
+    src: url('Muli-Light.eot?#iefix') format('embedded-opentype'),
+        url('Muli-Light.woff2') format('woff2'),
+        url('Muli-Light.woff') format('woff'),
+        url('Muli-Light.ttf') format('truetype'),
+        url('Muli-Light.svg#Muli-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Eurostile';
+    src: url('Eurostile-Black.eot');
+    src: url('Eurostile-Black.eot?#iefix') format('embedded-opentype'),
+        url('Eurostile-Black.woff2') format('woff2'),
+        url('Eurostile-Black.woff') format('woff'),
+        url('Eurostile-Black.ttf') format('truetype'),
+        url('Eurostile-Black.svg#Eurostile-Black') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('Muli-ExtraBold.eot');
+    src: url('Muli-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Muli-ExtraBold.woff2') format('woff2'),
+        url('Muli-ExtraBold.woff') format('woff'),
+        url('Muli-ExtraBold.ttf') format('truetype'),
+        url('Muli-ExtraBold.svg#Muli-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('Muli-Regular.eot');
+    src: url('Muli-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Muli-Regular.woff2') format('woff2'),
+        url('Muli-Regular.woff') format('woff'),
+        url('Muli-Regular.ttf') format('truetype'),
+        url('Muli-Regular.svg#Muli-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

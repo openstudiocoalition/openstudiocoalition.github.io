@@ -10,7 +10,7 @@ blockquote {
     padding: 0;
 }
 body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif, Eurostile; Muli; 
     font-size: 13px;
     line-height: 18px;
     color: #737373;
@@ -30,7 +30,7 @@ th {
 }
 
 a {
-    color: #0069d6;
+    color: #11619A;
 }
 a:hover {
     color: #0050a3;
@@ -48,11 +48,12 @@ h3,
 h4,
 h5,
 h6 {
-    color: #404040;
+    color: #11619A;
     line-height: 36px;
 }
 h1 {
-    margin-bottom: 18px;
+    color: #11619A
+	margin-bottom: 18px;
     font-size: 30px;
     border-bottom: 3px solid #ccc;
 

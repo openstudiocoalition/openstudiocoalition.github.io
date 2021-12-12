@@ -9,6 +9,7 @@ pages:
 - [about/mailing_list.md, About, Join the Mailing List]
 - [about/software_license.md, About, Software License]
 - [about/features.md, About, Current Features]
+- [about/roadmap.md, About, Roadmap Features]
 
 - [getting_started/getting_started.md, Getting Started, Installation and Introductory Tutorial]
 - [getting_started/creating_your_model.md, Getting Started, Creating Your Model]

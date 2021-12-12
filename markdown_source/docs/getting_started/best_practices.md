@@ -1,5 +1,6 @@
 <h1>Modeling Best Practices</h1>
 This page is a collection of best practices that have been developed over time and by experience. Following these best practices will help you avoid the issues that users experience most often.
+Another resource in development is the [BEMcyclopedia](http://www.bemcyclopedia.com/). Please check the site for continued updates.
 
 ## General
 - __Save your model often and with different versions.__ Save multiple versions of your OpenStudio Model as you progress; this makes it easier to recover from an error and provides takeoff points for model variations.

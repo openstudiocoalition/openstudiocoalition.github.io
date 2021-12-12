@@ -67,6 +67,10 @@
                 <a href="../../about/features">Current Features</a>
               </li>
             
+              <li>
+                <a href="../../about/roadmap">Roadmap Features</a>
+              </li>
+            
             </ul>
           </li>
           
@@ -244,11 +248,11 @@
 <p>This page walks you through installing the OpenStudio Application, the basics of its suite of applications, and the fundamental workflow.</p>
 <h2 id="installation-instructions">Installation Instructions</h2>
 <p>OpenStudio Application is supported on 64-bit versions of Windows 7 &ndash; Windows 10, OS X 10.12 &ndash; 10.14, and Ubuntu 18.04.
-OpenStudio Application supports the latest EnergyPlus release which is bundled with the OpenStudio Application installer. The dependencies for the OpenStudio Application 1.0.0 include EnergyPlus 9.3.0, Radiance 5.0.a.12, SketchUp 2019 Pro, and Ruby 2.5.5.</p>
+OpenStudio Application supports the latest EnergyPlus release which is bundled with the OpenStudio Application installer. The dependencies for the OpenStudio Application 1.3.0 include EnergyPlus 9.3.0, Radiance 5.0.a.12, SketchUp 2019 Pro, and Ruby 2.5.5.</p>
 <h3 id="installation-steps">Installation Steps</h3>
 <p><strong>Download and install OpenStudio Application</strong></p>
 <ol>
-<li>Download the latest release of OpenStudio Application <a href="https://github.com/NREL/OpenStudioApplication/releases">here</a>.</li>
+<li>Download the latest release of OpenStudio Application <a href="https://github.com/openstudiocoalition/OpenStudioApplication/releases">here</a>.</li>
 <li>Choose the installer that matches your operating system. The OpenStudio Application package contains the following components:<ul>
 <li>OpenStudio Application</li>
 <li>EnergyPlus</li>
@@ -260,22 +264,15 @@ OpenStudio Application supports the latest EnergyPlus release which is bundled w
 </ul>
 </li>
 </ol>
-<p><strong>Optional - Download and install SketchUp and the Openstudio SketchUp Plug-in</strong></p>
+<p><strong>Optional - Download and install SketchUp and the Openstudio SketchUp Plug-in <a href="https://github.com/openstudiocoalition/openstudio-sketchup-plugin/releases">here</a></strong></p>
 <p>There are a few options for generating geometry for the OpenStudio Application, including the built-in FloorspaceJS interface. One option is to use the OpenStudio Sketchup Plug-in. To use the plug-in:</p>
 <ol>
-<li>Download and install SketchUp. Presently, the OpenStudio SketchUp Plug-in requires <a href="https://www.sketchup.com/">SketchUp 2019 - 2020 Pro</a> (not available for Linux).</li>
+<li>Download and install SketchUp. Presently, the OpenStudio SketchUp Plug-in requires <a href="https://www.sketchup.com/">SketchUp 2019 - 2021 Pro</a> (not available for Linux).</li>
 <li>Download the OpenStudio SketchUp Plug-in RBZ package <a href="https://github.com/NREL/openstudio-sketchup-plugin/releases">here</a>.</li>
 <li>Follow the <a href="https://help.sketchup.com/en/extension-warehouse/adding-extensions-sketchup">Installing extensions manually in SketchUp Preferences</a> to install the Plug-in.</li>
 </ol>
 <p><strong>Optional - Setup a Building Component Library (BCL) Account</strong></p>
-<p>BCL content can now be accessed from within the OpenStudio SketchUp Plug-in and from the standalone OpenStudio Application. To take advantage of this integration, you will need to follow the steps outlined here to request a BCL key.</p>
-<ol>
-<li>Login to <a href="https://bcl.nrel.gov/">Building Component Library (BCL)</a>. Create an account if you don't have one. Follow the instructions from the email sent to you upon registration and then login.</li>
-<li>Click on the <code>My Dashboard</code> near the top right of the website.</li>
-<li>Copy the text after <code>API v1.1 key</code>: then paste the key into the OpenStudio Application, or the SketchUp Plug-in. <strong>You only need to configure the key in one place and it will be used globally throughout the OpenStudio Application tools.</strong> Additionally, this key will be maintained when you install updates to the OpenStudio Application.</li>
-</ol>
-<p>Enter the key through the OpenStudio SketchUp Plug-in under the menu <code>Extensions-&gt;OpenStudio User Scripts-&gt;Building Component Library-&gt;Setup BCL Key</code> and click <code>OK</code>. <strong>Or</strong> register the key through the OpenStudio Application under the menu <code>Components &amp; Measures-&gt;Find Components</code>. If a key is not already registered, it will prompt you for one.</p>
-<p><img alt="Key request dialog" src="../../img/bcl_key_request.png" /></p>
+<p><a href="https://bcl.nrel.gov/">Building Component Library (BCL)</a> content can now be accessed from within the OpenStudio SketchUp Plug-in and from the standalone OpenStudio Application without a BCL key.</p>
 <p><strong>Optional - Install Parametric Analysis Tool (PAT)</strong></p>
 <ol>
 <li>Download the latest release of PAT <a href="https://github.com/NREL/OpenStudio-PAT/releases">here</a> (not available for Linux).</li>

@@ -67,6 +67,10 @@
                 <a href="../../about/features">Current Features</a>
               </li>
             
+              <li>
+                <a href="../../about/roadmap">Roadmap Features</a>
+              </li>
+            
             </ul>
           </li>
           
@@ -244,6 +248,16 @@
       </ul>
     </li>
   
+    <li class="main"><a href="#environment-variables">Environment Variables</a>
+      <ul class="nav">
+        
+        <li><a href="#openstudio-application-environment-variables">OpenStudio Application Environment Variables</a></li>
+        
+        <li><a href="#qt-environment-variables">Qt Environment Variables</a></li>
+        
+      </ul>
+    </li>
+  
   </ul>
   <div class="caption">
     <ul> 
@@ -328,7 +342,7 @@
 <p><em>Above: Hit the Loads button to edit and view loads by space type. Click on the name of a component and select the right panel Edit tab to inspect and edit that item.</em></p>
 <hr />
 <h2 id="file-menu">File Menu</h2>
-<p>If you launch the OpenStudio Application from the SketchUp Plug-in, your open file will automatically open in the application. To save a file or open a new file from within the OpenStudio Application, access the corresponding options within the File menu. </p>
+<p>If you launch the OpenStudio Application from the SketchUp Plug-in, your open file will automatically open in the application. To save a file or open a new file from within the OpenStudio Application, access the corresponding options within the File menu.</p>
 <p>When you save an OpenStudio Model (OSM) in the OpenStudio Application or the SketchUp Plug-in, a folder is saved next to the OSM file. This folder contains external resources such as the weather file, scripts, and simulation results.</p>
 <p>Load Library is also a very important feature. This allows you to load building component libraries for specific building types. These libraries are the same as those used in the SketchUp Plug-in templates.</p>
 <p><a href="../../img/os_interface/file_menu.png"><img alt="File Menu" src="../../img/os_interface/file_menu.png" title="File Menu&quot; &quot;Click to view" /></a></p>
@@ -337,7 +351,7 @@
 <h2 id="preferences-menu">Preferences Menu</h2>
 <p>The Units menu lets you switch between SI and IP units. This affects both input fields and output data on the Results Summary tab. It does not currently affect standard EnergyPlus output files.</p>
 <p>The SketchUp Plug-in has access to this as well under <code>Extensions-&gt;OpenStudio-&gt;Preferences</code>.</p>
-<p>"Change Default Libraries" allows one to restore default libraries. This feature complements the Load Library feature within the File menu. Loading several libraries could increase the duration to boot the OpenStudio Application. To reduce this duration, restore default libraries. </p>
+<p>"Change Default Libraries" allows one to restore default libraries. This feature complements the Load Library feature within the File menu. Loading several libraries could increase the duration to boot the OpenStudio Application. To reduce this duration, restore default libraries.</p>
 <p><a href="../../img/os_interface/prefer_menu.png"><img alt="Preferences Menu" src="../../img/os_interface/prefer_menu.png" title="Click to view" /></a></p>
 <p><em>Above: The Preferences menu contains the units, measure directory, and tool location options.</em></p>
 <hr />
@@ -355,6 +369,27 @@
 <p>The first time you open this window you will be prompted for an API key, unless you have already used BCL functionality in the SketchUp Plug-in. <a href="../../getting_started/getting_started#connecting-with-the-building-component-library">Instructions for finding your API Key</a> are in the "Getting Started" section.</p>
 <p><a href="../../img/os_interface/bcl_window.png"><img alt="BCL Window" src="../../img/os_interface/bcl_window.png" title="Click to view" /></a></p>
 <p><em>Above: This window gives you access to the online BCL to download measures or components.</em></p>
+<hr />
+<h2 id="environment-variables">Environment Variables</h2>
+<p>A variety of environment variables can be used to modify the OpenStudio Application's operation.  Environment variables can be set on the command line for a specific session or stored permanently in the advanced system settings on Windows or in your profile file (eg <code>~/.bashrc</code>) on Unix.</p>
+<h3 id="openstudio-application-environment-variables">OpenStudio Application Environment Variables</h3>
+<ul>
+<li><code>OPENSTUDIO_APPLICATION_DEBUG</code>, if set then debug level logging is enabled</li>
+<li><code>OPENSTUDIO_APPLICATION_LOGFILE_PATH</code>, if set to a path then logging information is sent to the file path</li>
+<li><code>OPENSTUDIO_APPLICATION_SLEEP_AT_START</code>, if set to an integer the application sleeps that many seconds before starting to allow a debugger to attach</li>
+<li><code>OPENSTUDIO_APPLICATION_START_TAB_INDEX</code>, if set to an integer the application opens the specified tab first (enum VerticalTabID in OSDocument.hpp) { SITE = 0, SCHEDULES = 1, CONSTRUCTIONS = 2, LOADS = 3, SPACE_TYPES = 4, GEOMETRY = 5, FACILITY = 6, SPACES = 7, THERMAL_ZONES = 8, HVAC_SYSTEMS = 9, OUTPUT_VARIABLES = 10, SIMULATION_SETTINGS = 11, RUBY_SCRIPTS = 12, RUN_SIMULATION = 13, RESULTS_SUMMARY = 14 }</li>
+</ul>
+<h3 id="qt-environment-variables">Qt Environment Variables</h3>
+<p>Qt Environment Variables are described in the Qt documentation.</p>
+<ul>
+<li><code>QT_AUTO_SCREEN_SCALE_FACTOR</code></li>
+<li><code>QT_DEVICE_PIXEL_RATIO</code></li>
+<li><code>QT_SCALE_FACTOR</code></li>
+<li><code>QT_SCREEN_SCALE_FACTORS</code></li>
+<li><code>QTWEBENGINE_CHROMIUM_FLAGS</code></li>
+<li><code>QTWEBENGINEPROCESS_PATH</code></li>
+<li><code>QTWEBENGINE_REMOTE_DEBUGGING</code></li>
+</ul>
 
           <div class="footer">
   <p class="text-center"><a href="https://unmethours.com/questions/scope:all/sort:activity-desc/tags:openstudio/">Get Help</a> | <a href="mailto:osc@openstudiocoalition.org">Contact the OpenStudio Coalition</a></p>

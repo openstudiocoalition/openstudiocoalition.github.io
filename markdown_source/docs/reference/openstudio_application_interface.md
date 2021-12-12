@@ -87,7 +87,7 @@ You can use the Multi-edit feature on individual columns (as shown below) or on 
 ------
 
 ## File Menu
-If you launch the OpenStudio Application from the SketchUp Plug-in, your open file will automatically open in the application. To save a file or open a new file from within the OpenStudio Application, access the corresponding options within the File menu. 
+If you launch the OpenStudio Application from the SketchUp Plug-in, your open file will automatically open in the application. To save a file or open a new file from within the OpenStudio Application, access the corresponding options within the File menu.
 
 When you save an OpenStudio Model (OSM) in the OpenStudio Application or the SketchUp Plug-in, a folder is saved next to the OSM file. This folder contains external resources such as the weather file, scripts, and simulation results.
 
@@ -104,7 +104,7 @@ The Units menu lets you switch between SI and IP units. This affects both input 
 
 The SketchUp Plug-in has access to this as well under `Extensions->OpenStudio->Preferences`.
 
-"Change Default Libraries" allows one to restore default libraries. This feature complements the Load Library feature within the File menu. Loading several libraries could increase the duration to boot the OpenStudio Application. To reduce this duration, restore default libraries. 
+"Change Default Libraries" allows one to restore default libraries. This feature complements the Load Library feature within the File menu. Loading several libraries could increase the duration to boot the OpenStudio Application. To reduce this duration, restore default libraries.
 
 [![Preferences Menu](img/os_interface/prefer_menu.png "Click to view")](img/os_interface/prefer_menu.png)
 
@@ -136,3 +136,28 @@ The first time you open this window you will be prompted for an API key, unless 
 [![BCL Window](img/os_interface/bcl_window.png "Click to view")](img/os_interface/bcl_window.png)
 
 *Above: This window gives you access to the online BCL to download measures or components.*
+
+------
+
+## Environment Variables
+
+A variety of environment variables can be used to modify the OpenStudio Application's operation.  Environment variables can be set on the command line for a specific session or stored permanently in the advanced system settings on Windows or in your profile file (eg `~/.bashrc`) on Unix.
+
+### OpenStudio Application Environment Variables
+
+- `OPENSTUDIO_APPLICATION_DEBUG`, if set then debug level logging is enabled
+- `OPENSTUDIO_APPLICATION_LOGFILE_PATH`, if set to a path then logging information is sent to the file path
+- `OPENSTUDIO_APPLICATION_SLEEP_AT_START`, if set to an integer the application sleeps that many seconds before starting to allow a debugger to attach
+- `OPENSTUDIO_APPLICATION_START_TAB_INDEX`, if set to an integer the application opens the specified tab first (enum VerticalTabID in OSDocument.hpp) { SITE = 0, SCHEDULES = 1, CONSTRUCTIONS = 2, LOADS = 3, SPACE_TYPES = 4, GEOMETRY = 5, FACILITY = 6, SPACES = 7, THERMAL_ZONES = 8, HVAC_SYSTEMS = 9, OUTPUT_VARIABLES = 10, SIMULATION_SETTINGS = 11, RUBY_SCRIPTS = 12, RUN_SIMULATION = 13, RESULTS_SUMMARY = 14 }
+
+### Qt Environment Variables
+
+Qt Environment Variables are described in the Qt documentation.
+
+- `QT_AUTO_SCREEN_SCALE_FACTOR`
+- `QT_DEVICE_PIXEL_RATIO`
+- `QT_SCALE_FACTOR`
+- `QT_SCREEN_SCALE_FACTORS`
+- `QTWEBENGINE_CHROMIUM_FLAGS`
+- `QTWEBENGINEPROCESS_PATH`
+- `QTWEBENGINE_REMOTE_DEBUGGING`
