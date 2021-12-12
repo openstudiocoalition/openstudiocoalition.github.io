@@ -12,7 +12,7 @@ Non-monetary in-kind support is also appreciated and includes:
 - Testing of release candidates and new features
 - Direct code contributions for bug fixes and new features
 - Documentation or training material contributions
-## List of Features Needing Funding
+## List of Features Seeking Funding
 
 ###Distributed Energy Resources
    - Expand capabilities for the app to model solar, storage, electric vehicles, and heat pumps (water and space conditioning)
