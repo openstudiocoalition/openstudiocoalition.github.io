@@ -13,9 +13,7 @@ Effective early May 2020, NREL will no longer distribute the OpenStudio Applicat
    - Expand capabilities for the app to model solar, storage, electric vehicles, and heat pumps (water and space conditioning)
 
 ###BCL Expansion
-   - Develop and provide guidance on building component library (BCL) measures to allow for decarbonization analysis
-   - Develop measures for REopt and/or SAM to allows energy efficiency measures to be modeled along with DERs
-   - Integrate U.S. DOE National Lab demand flexibility algorithms via BCL measures 
+   - Develop and support building component library (BCL) measures to allow for decarbonization analysis.  This could include measures which integrate REopt, SAM, demand flexibility, or other DER focused tools.
    
 ###Interface
    - Modernize UI design
