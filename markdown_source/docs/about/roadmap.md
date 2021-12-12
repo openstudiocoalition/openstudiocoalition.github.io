@@ -25,8 +25,6 @@ Effective early May 2020, NREL will no longer distribute the OpenStudio Applicat
 ###Compliance Capabilities
    - Complete the testing and documentation required for California Title 24 software compliance
    
-
-   
 ###Trainings
    - Recorded/OnDemand trainings
    - Live trainings
