@@ -94,8 +94,6 @@ cd ..
 /bin/rm -Rf !(markdown_source)
 cd markdown_source
 cp -R site/* ..
-cp favicon.ico ..
-cp index.html ..
 cp CNAME ..
 ```
 This will generate the static site in the `site/` directory.  Delete all the files in the root level of the repository except for the markdown_source directory. Then copy the files from the `site/` directory into the root level of the repository.  Add any new files and delete any missing ones from the repo.  Finally your changes the repo, the public site serves the content on the master branch.
