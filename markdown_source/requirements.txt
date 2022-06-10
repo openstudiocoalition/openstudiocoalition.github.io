@@ -1,1 +1,3 @@
-mkdocs==0.11.1
+mkdocs==1.3.0
+# For simplex theme
+mkdocs-bootswatch==1.1
