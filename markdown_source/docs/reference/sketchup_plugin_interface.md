@@ -156,12 +156,12 @@ Tools in this set create new zones, groups, and geometry.
 #### New Space
 You can use the New Space tool to create a new OpenStudio Space. Activate the tool and then click where you want your zone origin to be. An OpenStudio Space is a top-level object in your SketchUp workspace. If you want to draw in the space, you first need to select the space, then enter it. There are two methods to select a space:
 
-1. Click on the space. This may be difficult when other objects get in the way. 
-2. Find and click on the space within SketchUp's Outliner Window. This option is suitable when option 1 is not. 
+1. Click on the space. This may be difficult when other objects get in the way.
+2. Find and click on the space within SketchUp's Outliner Window. This option is suitable when option 1 is not.
 
 Now that the space has been selected, a user can enter the space before drawing surfaces. The three methods to enter a selected space are:
 
-1. Double-click on the space, or double-click on the space within SketchUp's Outliner Window. 
+1. Double-click on the space, or double-click on the space within SketchUp's Outliner Window.
 2. Right-click on the space, or right-click on the space within SketchUp's Outliner Window. From the resulting contextual menu, click "Edit Group".
 3. Click the Edit menu. Under this menu, choose "Group", or "Solid Group". Then click "Edit Group".
 
@@ -187,12 +187,12 @@ While inside a space, beside drawing spaces, you can add objects. Shading groups
 #### New Shading Surface Group
 The New Shading Surface Group tool is used to create a new EnergyPlus shading group. Activate the tool and then click where you want your shading group origin to be. An EnergyPlus shading group can be a top-level object in your SketchUp workspace, or it can be placed within a space. If you want to draw in the group, you first need to select the group, then enter it. There are two methods to select a group:
 
-1. Click on the group. This may be difficult when other objects get in the way. 
-2. Find and click on the group within SketchUp's Outliner Window. This option is suitable when option 1 is not. 
+1. Click on the group. This may be difficult when other objects get in the way.
+2. Find and click on the group within SketchUp's Outliner Window. This option is suitable when option 1 is not.
 
 Now that the group has been selected, a user can enter the group before drawing Surfaces. The three methods to enter a selected group are:
 
-1. Double-click on the group, or double-click on the group within SketchUp's Outliner Window. 
+1. Double-click on the group, or double-click on the group within SketchUp's Outliner Window.
 2. Right-click on the group, or right-click on the group within SketchUp's Outliner Window. From the resulting contextual menu, click "Edit Group".
 3. Click the Edit menu. Under this menu, choose "Group", or "Solid Group". Then click "Edit Group".
 
@@ -207,12 +207,12 @@ You can create shading surface groups within or outside a space. Once you enter 
 #### New Interior Partition Surface Group
 The New Interior Partition Surface Group tool is used to create a new OpenStudio Interior Partition Group. Activate the tool and then click where you want your interior partition group origin to be. If you want to draw in the group, you first need to select the group, then enter it. There are two methods to select a group:
 
-1. Click on the group. This may be difficult when other objects get in the way. 
-2. Find and click on the group within SketchUp's Outliner Window. This option is suitable when option 1 is not. 
+1. Click on the group. This may be difficult when other objects get in the way.
+2. Find and click on the group within SketchUp's Outliner Window. This option is suitable when option 1 is not.
 
 Now that the group has been selected, a user can enter the group before drawing surfaces. The three methods to enter a selected group are:
 
-1. Double-click on the group, or double-click on the group within SketchUp's Outliner Window. 
+1. Double-click on the group, or double-click on the group within SketchUp's Outliner Window.
 2. Right-click on the group, or right-click on the group within SketchUp's Outliner Window. From the resulting contextual menu, click "Edit Group".
 3. Click the Edit menu. Under this menu, choose "Group", or "Solid Group". Then click "Edit Group".
 
@@ -638,7 +638,7 @@ For information on the SketchUp Plug-in version go to `Extensions->OpenStudio->P
 
 ![Preferences Dialog](img/plugin_reference_guide/preferences.png)
 
-*Above: The Preferences dialog enables you to set options related to updates, new thermal zone creation, user scripts, text editor, template OSM files, and the EnergyPlus engine.*
+*Above: The Preferences dialog enables you to set options related to updates, new thermal zone creation, user scripts. Most importantly, the Preferences dialog allows you to change the version of the OpenStudio Application used by the OpenStudio SketchUp Plug-in.*
 
 #### Check for Update
 Check to see if you are using the most current release of the OpenStudio SketchUp Plugin by going to `Extensions->OpenStudio->Check For Update`.

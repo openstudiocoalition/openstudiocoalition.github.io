@@ -2,8 +2,7 @@
 This page walks you through installing the OpenStudio Application, the basics of its suite of applications, and the fundamental workflow.
 
 ## Installation Instructions
-OpenStudio Application is supported on 64-bit versions of Windows 7 &ndash; Windows 10, OS X 10.12 &ndash; 10.14, and Ubuntu 18.04.
-OpenStudio Application supports the latest EnergyPlus release which is bundled with the OpenStudio Application installer. The dependencies for the OpenStudio Application 1.3.0 include EnergyPlus 9.3.0, Radiance 5.0.a.12, SketchUp 2019 Pro, and Ruby 2.5.5.
+OpenStudio Application is supported on 64-bit versions of Windows, OS X, and Ubuntu. OpenStudio Application is supported on 64-bit ARM versions of OS X. Each OpenStudio Application release supports the latest EnergyPlus release which is bundled with the OpenStudio Application installer. Check the [version compatibility-matrix](https://github.com/openstudiocoalition/OpenStudioApplication/wiki/OpenStudio-Application-Version-Compatibility-Matrix) for more details about each version.
 
 ###Installation Steps
 __Download and install OpenStudio Application__
@@ -22,7 +21,8 @@ __Optional - Download and install SketchUp and the Openstudio SketchUp Plug-in [
 
 There are a few options for generating geometry for the OpenStudio Application, including the built-in FloorspaceJS interface. One option is to use the OpenStudio Sketchup Plug-in. To use the plug-in:
 
-1. Download and install SketchUp. Presently, the OpenStudio SketchUp Plug-in requires [SketchUp 2019 - 2021 Pro](https://www.sketchup.com/) (not available for Linux).
+1. Download and install [SketchUp](https://www.sketchup.com/), only the Pro or Studio versions of SketchUp are compatible . Check the [version compatibility-matrix](
+https://github.com/openstudiocoalition/openstudio-sketchup-plugin/wiki/OpenStudio-SketchUp-Plug-in-Wiki#openstudio-sketchup-plug-in-version-compatibility-matrix) to see which versions of SketchUp and the OpenStudio SketchUp Plug-in are compatible with the installed version of the OpenStudio Application.
 2. Download the OpenStudio SketchUp Plug-in RBZ package [here](https://github.com/NREL/openstudio-sketchup-plugin/releases).
 3. Follow the [Installing extensions manually in SketchUp Preferences](https://help.sketchup.com/en/extension-warehouse/adding-extensions-sketchup) to install the Plug-in.
 
