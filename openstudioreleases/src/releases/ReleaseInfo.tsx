@@ -59,7 +59,8 @@ type Props = {
   release: Release;
 };
 export const ReleaseInfo = ({ release }: Props) => {
-  const onDownload = async (release: Release, asset: AssetsItem) => {
+  const onDownload = async (e, release: Release, asset: AssetsItem) => {
+    e.preventDefault();
     try {
       const key = getFirebaseKeyFromReleaseAsset(release, asset);
 
@@ -112,24 +113,13 @@ export const ReleaseInfo = ({ release }: Props) => {
             <ListItem key={asset.name}>
               <ListItemText>
                 <Link
-                  href={asset.browser_download_url}
+                  href={'#'}
                   target='_blank'
                   rel='noopener'
+                  onClick={(e) => onDownload(e, release, asset)}
                 >
                   {asset.name}
                 </Link>
-                <Button
-                  variant='contained'
-                  color='primary'
-                  sx={{
-                    marginTop: 2,
-                    display: 'block',
-                    width: '100%',
-                  }}
-                  onClick={() => onDownload(release, asset)}
-                >
-                  Download
-                </Button>
               </ListItemText>
             </ListItem>
           ))}
