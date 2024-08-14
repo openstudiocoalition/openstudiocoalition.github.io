@@ -115,7 +115,7 @@ export const Login = () => {
               Sign In
             </Button>
             <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
-              Don't have an account? <Link to="/register">Register</Link>
+              Don't have an account? <Link to={`${BASENAME}/register`}>Register</Link>
             </Typography>
           </CardContent>
         </Card>

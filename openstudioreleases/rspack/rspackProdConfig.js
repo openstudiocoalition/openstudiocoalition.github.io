@@ -21,11 +21,19 @@ module.exports = merge(rspackCommonConfig, {
     assetModuleFilename: 'app/static/img/[hash][ext][query]',
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({ verbose: true }),
     new rspack.HtmlRspackPlugin({
       template: path.join(cwd, './src/index.html'),
       filename: 'app/index.html',
       publicPath: '/',
+    }),
+    new rspack.CopyRspackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, '../public'),
+          to: 'app',
+        },
+      ],
     }),
   ],
   optimization: {

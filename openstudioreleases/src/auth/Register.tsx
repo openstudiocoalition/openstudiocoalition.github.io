@@ -175,7 +175,7 @@ export const Register = () => {
               Register
             </Button>
             <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
-              Have an account? <Link to="/login">Login</Link>
+              Have an account? <Link to={`${BASENAME}/login`}>Login</Link>
             </Typography>
           </CardContent>
         </Card>
