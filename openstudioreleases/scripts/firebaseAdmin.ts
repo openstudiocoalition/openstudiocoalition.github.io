@@ -1,12 +1,13 @@
 import { cert } from 'firebase-admin/app';
 import * as firebaseAdmin from 'firebase-admin';
-// move this to .env
-import serviceAccount from '../firebase-admin-test-project.json';
+
+import firebaseConfig from '../firebase-config.json';
+import serviceAccount from '../firebase-service-account.json';
 import * as admin from 'firebase-admin';
 
 firebaseAdmin.initializeApp({
   credential: cert(serviceAccount),
-  storageBucket: 'gs://testproject-c3dda.appspot.com',
+  storageBucket: firebaseConfig.storageBucket,
 });
 
 export const firebaseBucket = admin.storage().bucket();

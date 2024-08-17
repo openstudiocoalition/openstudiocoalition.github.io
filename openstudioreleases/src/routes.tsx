@@ -3,6 +3,7 @@ import { Login } from './auth/Login';
 import { Root } from './Root';
 import { Releases } from './releases/Releases';
 import { Register } from './auth/Register';
+import { ResetPassword } from './auth/ResetPassword';
 
 export const BASENAME = '/app';
 
@@ -18,6 +19,10 @@ export const routes: RouteObject[] = [
   {
     path: `${BASENAME}/register`,
     element: <Register />,
+  },
+  {
+    path: `${BASENAME}/reset-password`,
+    element: <ResetPassword />,
   },
   {
     path: `${BASENAME}`,

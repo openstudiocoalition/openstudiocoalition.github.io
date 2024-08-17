@@ -9,7 +9,7 @@
     "@mui/material": "^5.16.7",
     "adm-zip": "^0.5.15",
     "core-js": "^3.38.0",
-    "firebase": "^10.12.4",
+    "firebase": "^10.13.0",
     "firebase-admin": "^12.3.1",
     "formik": "^2.4.6",
     "isomorphic-fetch": "^3.0.0",
@@ -18,7 +18,7 @@
     "react-dom": "^18.3.1",
     "react-ga4": "^2.1.0",
     "react-markdown": "^9.0.1",
-    "react-router-dom": "^6.25.1",
+    "react-router-dom": "^6.26.1",
     "regenerator-runtime": "^0.14.1",
     "yup": "^1.4.0"
   },
@@ -28,7 +28,7 @@
     "@rspack/plugin-node-polyfill": "0.5.8",
     "@rspack/plugin-react-refresh": "1.0.0",
     "@swc-node/register": "^1.10.9",
-    "@swc/core": "^1.7.10",
+    "@swc/core": "^1.7.11",
     "@types/adm-zip": "~0.5.5",
     "@types/core-js": "~2.5.8",
     "@types/gh-pages": "~6.1.0",
@@ -39,7 +39,7 @@
     "@types/regenerator-runtime": "~0.13.6",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.23.1",
     "esbuild-register": "^3.6.0",
     "gh-pages": "^6.1.1",
     "octokit": "^4.0.2",
@@ -53,8 +53,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production rspack build --config rspack/rspackProdConfig.js",
     "dev": "rspack serve --config rspack/rspackDevConfig.js",
-    "es": "ESBUILD_RUN=true node --no-experimental-fetch -r esbuild-register -r isomorphic-fetch",
-    "s": "ESBUILD_RUN=true node -r @swc-node/register --trace-deprecation --trace-warnings",
+    "es": "set ESBUILD_RUN=true && node --no-experimental-fetch -r esbuild-register -r isomorphic-fetch",
+    "s": "set ESBUILD_RUN=true && node -r @swc-node/register --trace-deprecation --trace-warnings",
     "ghpages": "yarn build && gh-pages -d dist",
     "sync-releases": "yarn es scripts/getReleaseInfo.ts"
   }

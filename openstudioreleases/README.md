@@ -19,7 +19,7 @@ yarn es scripts/getReleaseInfo.ts
 
 ## Firebase
 
-[Test Project](https://console.firebase.google.com/u/0/project/testproject-c3dda/overview)
+[Test Project](https://console.firebase.google.com/u/2/project/osc-downloads/overview)
 
 ### Firebase Auth
 
@@ -27,7 +27,7 @@ We use Firebase Auth to authenticate users.
 
 Only Email/Password is supported.
 
-Modify settings [here](https://console.firebase.google.com/u/0/project/testproject-c3dda/authentication/settings)
+Modify settings [here](https://console.firebase.google.com/u/2/project/osc-downloads/authentication/settings)
 
 ### Firebase Firestore
 
@@ -63,7 +63,7 @@ yarn es scripts/getUsers.ts
 
 We use Firebase Storage to store release assets
 
-Modify the [rules](https://console.firebase.google.com/u/0/project/testproject-c3dda/storage/testproject-c3dda.appspot.com/rules)
+Modify the [rules](https://console.firebase.google.com/u/2/project/osc-downloads/storage/osc-downloads.appspot.com/rules)
 
 This is the rule to enable any logged user to download the release assets
 
@@ -83,7 +83,7 @@ service firebase.storage {
 }
 ```
 
-The bucket name is `gs://testproject-c3dda.appspot.com`
+The bucket name is `gs://osc-downloads.appspot.com`
 
 Install the Google Cloud SDK
 
@@ -96,13 +96,13 @@ gcloud init
 Upload `cors.json` to the bucket
 
 ```bash
-gsutil cors set cors.json gs://testproject-c3dda.appspot.com
+gcloud storage buckets update gs://osc-downloads.appspot.com --cors-file=cors.json
 ```
 
 ### Download and Upload release assets
 
 ```bash
-yarn es scripts/downloadReleaseAssets.ts
+yarn es scripts/syncReleaseAssets.ts
 ```
 
 ## Google Analytics

@@ -1,10 +1,12 @@
-import { Octokit } from 'octokit';
+//import { Octokit } from 'octokit';
 import { writeJson } from './writeJson';
 
 // yarn es scripts/getReleaseInfo.ts
 const run = async () => {
   const owner = 'openstudiocoalition';
   const repo = 'OpenStudioApplication';
+
+  const { Octokit } = await import('octokit');
 
   const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,

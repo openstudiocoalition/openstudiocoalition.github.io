@@ -1,8 +1,8 @@
 import { writeJson } from './writeJson';
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
-// move this to .env
-import serviceAccount from '../firebase-admin-test-project.json';
+
+import serviceAccount from '../firebase-service-account.json';
 
 initializeApp({
   credential: cert(serviceAccount)

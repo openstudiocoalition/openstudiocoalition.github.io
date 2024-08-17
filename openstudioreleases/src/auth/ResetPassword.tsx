@@ -2,22 +2,21 @@ import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
-import { firebaseAuth} from '../firebase'
+import { onAuthStateChanged, sendPasswordResetEmail } from 'firebase/auth';
+import { firebaseAuth } from '../firebase'
 import { enqueueSnackbar } from 'notistack';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { usePageView } from '../ga/usePageView';
-import { gaLoginEvent } from '../ga/gaEvents';
 import { BASENAME } from '../routes';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import IconButton from '@mui/material/IconButton';
 
 type Values = {
   email: string;
-  password: string;
 };
 
-export const Login = () => {
+export const ResetPassword = () => {
   usePageView();
   const navigate = useNavigate();
 
@@ -32,33 +31,37 @@ export const Login = () => {
     return () => unsubscribe();
   }, []);
 
+  const handleBack = () => {
+    navigate(-1); // This will navigate back to the previous page
+  };
+
   const onSubmit = async (values: Values) => {
     // call firebase and redirect
     console.log('onSubmit: ', values);
 
     try {
-      const userCredential =await signInWithEmailAndPassword(firebaseAuth, values.email, values.password);
+      const { email } = values;
 
-      gaLoginEvent(userCredential.user.uid);
+      const result = await sendPasswordResetEmail(firebaseAuth, email);
 
-      navigate(`${BASENAME}/releases`);
+      console.log('result: ', result);
+
+      enqueueSnackbar('Check your email for instructions on resetting your password');
     } catch (err) {
       console.log({
         err
       });
 
-      enqueueSnackbar('Invalid email or password');
+      enqueueSnackbar('Error registering user');
     }
   };
 
   const formikbag = useFormik({
     initialValues: {
       email: '',
-      password: '',
     },
     validationSchema: yup.object().shape({
       email: yup.string().required(),
-      password: yup.string().required(),
     }),
     validateOnMount: true,
     onSubmit,
@@ -84,21 +87,23 @@ export const Login = () => {
           }}
         >
           <CardContent>
-            <Typography variant='h5' component='div' gutterBottom>
-              Login
-            </Typography>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <IconButton onClick={handleBack} size="small">
+                <ArrowBackIcon fontSize="small" />
+              </IconButton>
+              <Typography variant='h5' component='div'>
+                Reset Password
+              </Typography>
+            </Box>
             <TextFieldFormik
               name={'email'}
               label='Email'
               variant='outlined'
-              fullWidth
-              margin='normal'
-            />
-            <TextFieldFormik
-              name={'password'}
-              label='Password'
-              variant='outlined'
-              type='password'
               fullWidth
               margin='normal'
             />
@@ -112,14 +117,8 @@ export const Login = () => {
               }}
               onClick={handleSubmit}
             >
-              Sign In
+              Reset Password
             </Button>
-            <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
-              Forget your password? <Link to={`${BASENAME}/reset-password`}>Reset Password</Link>
-            </Typography>
-            <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
-              Don't have an account? <Link to={`${BASENAME}/register`}>Register</Link>
-            </Typography>
           </CardContent>
         </Card>
       </Box>
