@@ -6,9 +6,9 @@ export const isExecutable = (filename: string) => {
 
 export const getFirebaseKeyFromReleaseAsset = (release: Release, asset: AssetsItem) => {
   // firebase does not handle executable files well
-  if (isExecutable(asset.name)) {
-    return `assets/${release.tag_name}/${asset.name}.zip`;
-  }
+  //if (isExecutable(asset.name)) {
+  //  return `assets/${release.tag_name}/${asset.name}.zip`;
+  //}
 
   return `assets/${release.tag_name}/${asset.name}`;
 };

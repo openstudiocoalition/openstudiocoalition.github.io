@@ -61,13 +61,13 @@ const downloadUploadAsset = async (asset: any, release: any) => {
   }
 
   // after download we need to zip the file
-  if (isExecutable(asset.name)) {
-    const zipfilepath = `${outputPath}.zip`;
-
-    if (!(await checkFileExists(zipfilepath))) {
-      await zipFile(outputPath, zipfilepath);
-    }
-  }
+  //if (isExecutable(asset.name)) {
+  //  const zipfilepath = `${outputPath}.zip`;
+  //
+  //  if (!(await checkFileExists(zipfilepath))) {
+  //    await zipFile(outputPath, zipfilepath);
+  //  }
+  //}
 
   // upload to storage
   await uploadStorage(outputPath, firebaseKey);

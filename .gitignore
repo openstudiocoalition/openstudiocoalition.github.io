@@ -79,7 +79,7 @@ tmp
 /playwright/.cache/
 .vercel
 
-firebase-admin-test-project.json
-OpenStudioApplication-1.7.1.dmg
+firebase-service-account.json
+firebase-config.json
 assets
 yarn.lock
