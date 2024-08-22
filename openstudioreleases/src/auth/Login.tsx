@@ -2,15 +2,23 @@ import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
-import { firebaseAuth} from '../firebase'
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GithubAuthProvider,
+  linkWithCredential,
+  type AuthCredential,
+} from 'firebase/auth';
+import { firebaseAuth, githubProvider } from '../firebase';
 import { enqueueSnackbar } from 'notistack';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { usePageView } from '../ga/usePageView';
 import { gaLoginEvent } from '../ga/gaEvents';
 import { BASENAME } from '../routes';
+import { FaGithub } from 'react-icons/fa';
 
 type Values = {
   email: string;
@@ -20,6 +28,8 @@ type Values = {
 export const Login = () => {
   usePageView();
   const navigate = useNavigate();
+  const [pendingCredentials, setPendingCredentials] =
+    useState<AuthCredential>();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
@@ -32,21 +42,54 @@ export const Login = () => {
     return () => unsubscribe();
   }, []);
 
-  const onSubmit = async (values: Values) => {
-    // call firebase and redirect
-    console.log('onSubmit: ', values);
-
+  const handleGithubLogin = async () => {
     try {
-      const userCredential =await signInWithEmailAndPassword(firebaseAuth, values.email, values.password);
+      const result = await signInWithPopup(firebaseAuth, githubProvider);
+
+      gaLoginEvent(result.user.uid);
+
+      navigate(`${BASENAME}/releases`);
+    } catch (error) {
+
+      console.log(error);
+
+      if (error.code === 'auth/account-exists-with-different-credential') {
+        const credential = GithubAuthProvider.credentialFromError(error);
+
+        setPendingCredentials(credential);
+
+        enqueueSnackbar(
+          'You already login using email and password, login with email and password to link github login',
+        );
+
+        navigate(`${BASENAME}/login`);
+        return;
+      }
+
+      enqueueSnackbar('Error registering user');
+    }
+  };
+
+  const onSubmit = async (values: Values) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        firebaseAuth,
+        values.email,
+        values.password,
+      );
 
       gaLoginEvent(userCredential.user.uid);
 
-      navigate(`${BASENAME}/releases`);
-    } catch (err) {
-      console.log({
-        err
-      });
+      if (pendingCredentials) {
+        await linkWithCredential(
+          userCredential.user,
+          pendingCredentials,
+        );
+      }
 
+      navigate(`${BASENAME}/releases`);
+    } catch (error) {
+      console.log(error);
       enqueueSnackbar('Invalid email or password');
     }
   };
@@ -114,11 +157,27 @@ export const Login = () => {
             >
               Sign In
             </Button>
+            <Button
+              variant='contained'
+              color='primary'
+              startIcon={<FaGithub />}
+              onClick={handleGithubLogin}
+              sx={{
+                backgroundColor: '#333',
+                color: '#fff',
+                width: '100%',
+                marginTop: 2,
+              }}
+            >
+              Sign in with GitHub
+            </Button>
             <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
-              Forget your password? <Link to={`${BASENAME}/reset-password`}>Reset Password</Link>
+              Forget your password?{' '}
+              <Link to={`${BASENAME}/reset-password`}>Reset Password</Link>
             </Typography>
             <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
-              Don't have an account? <Link to={`${BASENAME}/register`}>Register</Link>
+              Don't have an account?{' '}
+              <Link to={`${BASENAME}/register`}>Register</Link>
             </Typography>
           </CardContent>
         </Card>

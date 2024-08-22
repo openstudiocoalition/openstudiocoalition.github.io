@@ -36,22 +36,13 @@ export const ResetPassword = () => {
   };
 
   const onSubmit = async (values: Values) => {
-    // call firebase and redirect
-    console.log('onSubmit: ', values);
-
     try {
       const { email } = values;
 
       const result = await sendPasswordResetEmail(firebaseAuth, email);
 
-      console.log('result: ', result);
-
       enqueueSnackbar('Check your email for instructions on resetting your password');
     } catch (err) {
-      console.log({
-        err
-      });
-
       enqueueSnackbar('Error registering user');
     }
   };

@@ -91,8 +91,6 @@ export const ReleaseInfo = ({ release }: Props) => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-
-      console.log('File downloaded successfully');
     } catch (error) {
       console.error('Error downloading file:', error);
     }

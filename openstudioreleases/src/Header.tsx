@@ -4,8 +4,6 @@ import { firebaseAuth} from './firebase'
 
 export const Header = () => {
   const handleSignOut = async () => {
-    // Add sign-out logic here
-    console.log('Signing out...');
     await signOut(firebaseAuth);
   };
 

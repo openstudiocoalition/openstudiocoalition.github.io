@@ -13,8 +13,6 @@ export const Root = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
-      console.log('onAuthStateChanged: ', user)
-
       if (user) {
         setUser(user);
 

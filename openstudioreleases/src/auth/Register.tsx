@@ -2,15 +2,25 @@ import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
-import { onAuthStateChanged, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { firebaseAuth, firebaseFirestore} from '../firebase'
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithPopup,
+  GithubAuthProvider,
+  linkWithCredential,
+  EmailAuthProvider,
+  type User,
+  type AuthCredential
+} from 'firebase/auth';
+import { firebaseAuth, firebaseFirestore, githubProvider } from '../firebase';
 import { enqueueSnackbar } from 'notistack';
 import {Link, useNavigate} from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { doc, setDoc } from 'firebase/firestore';
 import { usePageView } from '../ga/usePageView';
 import { gaLoginEvent } from '../ga/gaEvents';
 import { BASENAME } from '../routes';
+import { FaGithub } from 'react-icons/fa';
 
 type Values = {
   firstName: string;
@@ -25,22 +35,11 @@ type Values = {
 export const Register = () => {
   usePageView();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
-      if (user) {
-        navigate(`${BASENAME}/releases`);
-      }
-    });
-
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
-  }, []);
+  const [pendingCredentials, setPendingCredentials] =
+    useState<AuthCredential>();
+  const [currentUser, setUser] = useState<User>();
 
   const onSubmit = async (values: Values) => {
-    // call firebase and redirect
-    console.log('onSubmit: ', values);
-
     try {
       const { firstName, lastName, country, company, occupation, email, password } = values;
 
@@ -64,11 +63,9 @@ export const Register = () => {
       });
 
       navigate(`${BASENAME}/releases`);
-    } catch (err) {
-      console.log({
-        err
-      });
 
+    } catch (error) {
+      console.log(error);
       enqueueSnackbar('Error registering user');
     }
   };
@@ -96,7 +93,48 @@ export const Register = () => {
     onSubmit,
   });
 
-  const { handleSubmit } = formikbag;
+  const { handleSubmit, setFieldValue } = formikbag;
+
+  const handleGithubRegister = async () => {
+    try {
+      const result = await signInWithPopup(firebaseAuth, githubProvider);
+
+      const credential = GithubAuthProvider.credentialFromResult(result)
+
+      setUser(result.user);
+      setPendingCredentials(credential);
+
+      const [firstName, lastName] = result.user.displayName.split(' ');
+      const email = result.user.email;
+
+      await setDoc(doc(firebaseFirestore, 'users', result.user.uid), {
+        firstName,
+        lastName,
+        email,
+      });
+
+      navigate(`${BASENAME}/releases`);
+
+    } catch (error) {
+
+      console.log(error);
+
+      if (error.code === 'auth/account-exists-with-different-credential') {
+        const credential = GithubAuthProvider.credentialFromError(error);
+
+        setPendingCredentials(credential);
+
+        enqueueSnackbar(
+          'You already login using email and password, login with email and password to link github login',
+        );
+
+        navigate(`${BASENAME}/login`);
+        return;
+      }
+
+      enqueueSnackbar('Error registering user');
+    }
+  }
 
   return (
     <FormikProvider value={formikbag}>
@@ -173,6 +211,20 @@ export const Register = () => {
               onClick={handleSubmit}
             >
               Register
+            </Button>
+            <Button
+              variant='contained'
+              color='primary'
+              startIcon={<FaGithub />}
+              onClick={handleGithubRegister}
+              sx={{
+                backgroundColor: '#333',
+                color: '#fff',
+                width: '100%',
+                marginTop: 2,
+              }}
+            >
+              Register with GitHub
             </Button>
             <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
               Have an account? <Link to={`${BASENAME}/login`}>Login</Link>
