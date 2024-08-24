@@ -59,6 +59,11 @@ a.navbar-brand > img {
   padding-bottom: 20px;
 }
 
+.bs-docs-sidebar .btn-primary{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
   .bs-docs-sidebar .nav > .active > ul {
