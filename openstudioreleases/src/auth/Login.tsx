@@ -157,20 +157,6 @@ export const Login = () => {
             >
               Sign In
             </Button>
-            <Button
-              variant='contained'
-              color='primary'
-              startIcon={<FaGithub />}
-              onClick={handleGithubLogin}
-              sx={{
-                backgroundColor: '#333',
-                color: '#fff',
-                width: '100%',
-                marginTop: 2,
-              }}
-            >
-              Sign in with GitHub
-            </Button>
             <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
               Forget your password?{' '}
               <Link to={`${BASENAME}/reset-password`}>Reset Password</Link>

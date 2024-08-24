@@ -214,20 +214,6 @@ export const Register = () => {
             >
               Register
             </Button>
-            <Button
-              variant='contained'
-              color='primary'
-              startIcon={<FaGithub />}
-              onClick={handleGithubRegister}
-              sx={{
-                backgroundColor: '#333',
-                color: '#fff',
-                width: '100%',
-                marginTop: 2,
-              }}
-            >
-              Register with GitHub
-            </Button>
             <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
               Have an account? <Link to={`${BASENAME}/login`}>Login</Link>
             </Typography>
