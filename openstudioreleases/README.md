@@ -102,6 +102,7 @@ gcloud storage buckets update gs://osc-downloads.appspot.com --cors-file=cors.js
 ### Download and Upload release assets
 
 ```bash
+yarn es scripts/getReleaseInfo.ts
 yarn es scripts/syncReleaseAssets.ts
 ```
 

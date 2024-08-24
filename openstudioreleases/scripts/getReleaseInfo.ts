@@ -17,7 +17,13 @@ const run = async () => {
     repo,
   });
 
-  const allReleases = releases.map(r => ({
+  const semver = require('semver');
+  const filteredReleases = releases.filter((release) => {
+    const version = semver.clean(release.tag_name);
+    return version && semver.gt(version, "1.6.9");
+  });
+
+  const allReleases = filteredReleases.map(r => ({
     name: r.name,
     tag_name: r.tag_name,
     body: r.body,
