@@ -104,8 +104,10 @@ export const Register = () => {
       setUser(result.user);
       setPendingCredentials(credential);
 
-      const [firstName, lastName] = result.user.displayName.split(' ');
-      const email = result.user.email;
+      const names = result.user.displayName.split(' ');
+      const firstName = names[0] || "";
+      const lastName = names.slice(1).join(" ") || "";
+      const email = result.user.email || "";
 
       await setDoc(doc(firebaseFirestore, 'users', result.user.uid), {
         firstName,
