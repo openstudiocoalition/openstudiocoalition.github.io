@@ -80,10 +80,12 @@ export const Register = () => {
       occupation: '',
       email: '',
       password: '',
+      passwordConfirmation: '',
     },
     validationSchema: yup.object().shape({
       email: yup.string().required(),
       password: yup.string().required(),
+      passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
       firstName: yup.string().required(),
       lastName: yup.string().required(),
       country: yup.string(),
@@ -198,6 +200,14 @@ export const Register = () => {
             <TextFieldFormik
               name={'password'}
               label='Password'
+              variant='outlined'
+              type='password'
+              fullWidth
+              margin='normal'
+            />
+            <TextFieldFormik
+              name={'passwordConfirmation'}
+              label='Confirm Password'
               variant='outlined'
               type='password'
               fullWidth
