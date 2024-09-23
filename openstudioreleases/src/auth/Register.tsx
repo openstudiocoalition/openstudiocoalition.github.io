@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
+import { CountrySelectFormik } from '../fields/CountrySelectFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
 import {
@@ -173,7 +174,7 @@ export const Register = () => {
               fullWidth
               margin='normal'
             />
-            <TextFieldFormik
+            <CountrySelectFormik
               name={'country'}
               label='Country'
               variant='outlined'
