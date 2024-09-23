@@ -26,7 +26,7 @@ const run = async () => {
   const allReleases = filteredReleases.map(r => ({
     name: r.name,
     tag_name: r.tag_name,
-    body: r.body,
+    body: r.body.replaceAll(':heavy_check_mark:', '✔️').replaceAll(':heavy_plus_sign:', '➕'),
     assets: r.assets.map(a => ({
       url: a.url,
       name: a.name,
