@@ -1,6 +1,48 @@
 # OpenStudioCoalition GitHub IO Release Pages
 
+## Install Yarn and package dependencies
+
+Install the `yarn` package manager. Assuming you have installed nodejs and npm, `npm install -g yarn`
+
+Now install the dependencies:
+
+```shell
+yarn install
+```
+
+## Setup secrets
+
+### Download Firebase config file
+
+Go to [Test Project](https://console.firebase.google.com/u/2/project/osc-downloads/overview), you can access this with the OSC email.
+
+https://support.google.com/firebase/answer/7015592?hl=en#zippy=%2Cin-this-article
+
+Go to the Test Project's Settings, get values from the osc "Config" snippet and place it at `firebase-config.json` next to this readme, changing the format to be a JSON one:
+
+```json
+{
+  "apiKey": "XXXXX",
+  "authDomain": "XXXXX",
+  "projectId": "osc-downloads",
+  "storageBucket": "XXXXX",
+  "messagingSenderId": "XXXXX",
+  "appId": "XXXXX",
+  "measurementId": "XXXXX"
+}
+```
+
+Additionally, do `cp .env.example .env`
+
+Then edit it to add the values to each key.
+
+### Google Analytics
+
+Set the `GA_ID` in the `.env` file. This is the Measurement ID for the OS App website itself (OS App Git - GA4)
+
+## Running the website
 Run dev mode
+
 ```bash
 yarn dev
 ```
@@ -11,7 +53,25 @@ Build
 yarn build
 ```
 
+### Too many open files error
+
+*Note:* if you get this error: `Error: EMFILE: too many open files, watch 'path/to/openstudiocoalition.github.io/openstudioreleases/public'`
+
+On ubuntu 24.04, I modified `/etc/sysctl.conf`, added
+
+```
+# Default: 128
+fs.inotify.max_user_instances = 512
+# Default: 65536
+fs.inotify.max_user_watches = 524288
+```
+
+Reloaded: `sudo sysctl --system`
+
+
 ## Update release assets
+
+This will parse the Github Releases and save a JSON at `src/releases/releases.json`
 
 ```bash
 yarn es scripts/getReleaseInfo.ts
@@ -37,7 +97,7 @@ This is the firestore rule to let the logged user to modify their own data.
 
 This is needed for firstName, lastName, company, occupation, country
 
-```yaml
+```javascript
 rules_version = '2';
 
 service cloud.firestore {
@@ -53,7 +113,13 @@ service cloud.firestore {
 
 The data is stored in the `users` collection.
 
-The script below will get all users from the database and save to a json file
+The script below will get all users from the database and save to a json file.
+
+For it to work, you need the `firebase-service-account.json` with the private key next to this README.md (Ask the maintainers).
+
+To generate one you will need to go to the [Firebase project Service Accounts settings](https://console.firebase.google.com/u/0/project/osc-downloads/settings/serviceaccounts/adminsdk)
+
+Generate a new private key, and save it to `firebase-service-account.json`. **Note: as soon as you generate a new private key, the old key will stop working, so ask the maintainers to provide it instead**
 
 ```bash
 yarn es scripts/getUsers.ts
@@ -67,7 +133,7 @@ Modify the [rules](https://console.firebase.google.com/u/2/project/osc-downloads
 
 This is the rule to enable any logged user to download the release assets
 
-```yaml
+```javascript
 rules_version = '2';
 
 service firebase.storage {
@@ -106,8 +172,6 @@ yarn es scripts/getReleaseInfo.ts
 yarn es scripts/syncReleaseAssets.ts
 ```
 
-## Google Analytics
-
-Set the `GA_ID` in the `.env` file
+# TODO: explain this
 
 set `.env.prd` for production build
