@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
 import { CountrySelectFormik } from '../fields/CountrySelectFormik';
+import { CheckboxFormik } from '../fields/CheckboxFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
 import {
@@ -31,6 +32,8 @@ type Values = {
   occupation: string;
   email: string;
   password: string;
+  signMailingList: boolean;
+  joinBetaTester: boolean;
 };
 
 export const Register = () => {
@@ -81,6 +84,8 @@ export const Register = () => {
       email: '',
       password: '',
       passwordConfirmation: '',
+      signMailingList: true,
+      joinBetaTester: true,
     },
     validationSchema: yup.object().shape({
       email: yup.string().required(),
@@ -91,6 +96,8 @@ export const Register = () => {
       country: yup.string(),
       company: yup.string(),
       occupation: yup.string(),
+      signMailingList: yup.boolean(),
+      joinBetaTester: yup.boolean(),
     }),
     validateOnMount: true,
     onSubmit,
@@ -210,6 +217,18 @@ export const Register = () => {
               label='Confirm Password'
               variant='outlined'
               type='password'
+              fullWidth
+              margin='normal'
+            />
+            <CheckboxFormik
+              name={'signMailingList'}
+              label='Sign up for the OSC Mailing list'
+              fullWidth
+              margin='normal'
+            />
+            <CheckboxFormik
+              name={'joinBetaTester'}
+              label='Accept to be contacted for beta testing Release Candidates and New Features'
               fullWidth
               margin='normal'
             />
