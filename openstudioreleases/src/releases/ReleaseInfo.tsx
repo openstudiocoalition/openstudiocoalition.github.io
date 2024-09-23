@@ -9,6 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 import Markdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw'
 import { firebaseStorage } from '../firebase';
 import { getDownloadURL, getMetadata, ref } from 'firebase/storage';
 import { enqueueSnackbar } from 'notistack';
@@ -102,7 +103,7 @@ export const ReleaseInfo = ({ release }: Props) => {
         <Typography variant='h5' component='div' gutterBottom>
           {release.name}
         </Typography>
-        <Markdown>{release.body}</Markdown>
+        <Markdown rehypePlugins={[rehypeRaw]}>{release.body}</Markdown>
         <Typography variant='subtitle1' gutterBottom>
           Assets:
         </Typography>
