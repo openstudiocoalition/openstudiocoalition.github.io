@@ -6,9 +6,9 @@ type Props = {
   label: string,
   error?: boolean,
   helperText?: string,
-  onChange?: (event: any, value: any, reason: string) => void,
+  setValue?: (value: any, shouldValidate?: boolean) => void,
 }
-export const CountrySelect = ({ label, error, helperText, onChange }: Props) => {
+export const CountrySelect = ({ label, error, helperText, setValue }: Props) => {
   return (
     <Autocomplete
       id='country-select-demo'
@@ -16,7 +16,9 @@ export const CountrySelect = ({ label, error, helperText, onChange }: Props) => 
       options={countries}
       autoHighlight
       getOptionLabel={(option) => option.label}
-      onChange={onChange}
+      onChange={(event, value) => {
+        setValue(value.label || '');
+      }}
       renderOption={(props, option) => {
         const { key, ...optionProps } = props;
         return (
