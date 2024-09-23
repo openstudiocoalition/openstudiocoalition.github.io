@@ -198,6 +198,13 @@ export const Register = () => {
               margin='normal'
             />
             <TextFieldFormik
+              name={'company'}
+              label='Company'
+              variant='outlined'
+              fullWidth
+              margin='normal'
+            />
+            <TextFieldFormik
               name={'email'}
               label='Email'
               variant='outlined'
