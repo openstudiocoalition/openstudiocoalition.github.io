@@ -24,6 +24,8 @@ import { usePageView } from '../ga/usePageView';
 import { gaLoginEvent } from '../ga/gaEvents';
 import { BASENAME } from '../routes';
 import { FaGithub } from 'react-icons/fa';
+import { FirebaseError } from '@firebase/util'
+import { enqueuePeristentErrorSnackbar } from '../utils/Snackbars'
 
 export const Register = () => {
   usePageView();
@@ -57,11 +59,22 @@ export const Register = () => {
         joinBetaTester,
       });
 
+      enqueueSnackbar("User sucessfully created", {variant: 'success'});
+
       navigate(`${BASENAME}/releases`);
 
     } catch (error) {
-      console.log(error);
-      enqueueSnackbar('Error registering user');
+      if (error instanceof FirebaseError) {
+        console.log(`${error.name}: ${error.message}`);
+        if (error.code === 'auth/email-already-in-use') {
+          enqueuePeristentErrorSnackbar('Email is already in use!');
+        } else {
+          enqueuePeristentErrorSnackbar(`Error registering user: ${error.name}: ${error.message}`);
+        }
+      } else {
+        console.log(error);
+        enqueuePeristentErrorSnackbar(`Error registering user: ${error}`);
+      }
     }
   };
 
