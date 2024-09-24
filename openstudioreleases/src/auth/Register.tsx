@@ -45,7 +45,7 @@ export const Register = () => {
 
   const onSubmit = async (values: Values) => {
     try {
-      const { firstName, lastName, country, company, occupation, email, password } = values;
+      const { firstName, lastName, country, company, occupation, email, password, signMailingList, joinBetaTester } = values;
 
       const userCredential = await createUserWithEmailAndPassword(firebaseAuth, email, password);
 
@@ -64,6 +64,8 @@ export const Register = () => {
         company,
         country,
         occupation,
+        signMailingList,
+        joinBetaTester,
       });
 
       navigate(`${BASENAME}/releases`);
@@ -93,7 +95,7 @@ export const Register = () => {
       passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
       firstName: yup.string().required(),
       lastName: yup.string().required(),
-      country: yup.string(),
+      country: yup.string().required(),
       company: yup.string(),
       occupation: yup.string(),
       signMailingList: yup.boolean(),
