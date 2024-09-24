@@ -14,11 +14,11 @@ yarn install
 
 ### Download Firebase config file
 
-Go to [Test Project](https://console.firebase.google.com/u/2/project/osc-downloads/overview), you can access this with the OSC email.
+Go to [OSC Downloads](https://console.firebase.google.com/u/2/project/osc-downloads/overview), you can access this with the OSC email.
 
 https://support.google.com/firebase/answer/7015592?hl=en#zippy=%2Cin-this-article
 
-Go to the Test Project's Settings, get values from the osc "Config" snippet and place it at `firebase-config.json` next to this readme, changing the format to be a JSON one:
+Go to the OSC Downloads's Settings, get values from the osc "Config" snippet and place it at `firebase-config.json` next to this readme, changing the format to be a JSON one:
 
 ```json
 {
@@ -79,7 +79,7 @@ yarn es scripts/getReleaseInfo.ts
 
 ## Firebase
 
-[Test Project](https://console.firebase.google.com/u/2/project/osc-downloads/overview)
+[OSC Downloads](https://console.firebase.google.com/u/2/project/osc-downloads/overview)
 
 ### Firebase Auth
 
@@ -159,7 +159,7 @@ exec -l $SHELL
 gcloud init
 ```
 
-Upload `cors.json` to the bucket
+Upload `./config/cors.json` to the bucket
 
 ```bash
 gcloud storage buckets update gs://osc-downloads.appspot.com --cors-file=cors.json
