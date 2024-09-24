@@ -19,8 +19,8 @@ export const Releases = () => {
       >
         <Container maxWidth='md'>
           <Stack spacing={2}>
-            {releases.map((release) => (
-              <ReleaseInfo release={release} key={release.name} />
+            {releases.map((release, index) => (
+              <ReleaseInfo release={release} key={release.name} index={index}/>
             ))}
           </Stack>
         </Container>

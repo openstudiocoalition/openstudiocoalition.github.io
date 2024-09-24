@@ -31,6 +31,8 @@ const run = async () => {
   const allReleases = filteredReleases.map(r => ({
     name: r.name,
     tag_name: r.tag_name,
+    published_at: r.published_at,
+    prerelease: r.prerelease,
     body: r.body
            .replaceAll(':heavy_check_mark:', '✔️')
            .replaceAll(':heavy_plus_sign:', '➕')

@@ -1,6 +1,8 @@
 import {
   Button,
   Card,
+  CardActions,
+  CardHeader,
   CardContent,
   Divider,
   Link,
@@ -20,6 +22,10 @@ import { gaDownloadClick } from '../ga/gaEvents';
 import { FaWindows } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { FaUbuntu } from "react-icons/fa";
+import { useState } from 'react'
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export const extractPlatform = (fileName: string) => {
   if (fileName.includes('macOS')) {
@@ -35,9 +41,11 @@ export const extractPlatform = (fileName: string) => {
 
 export type Release = {
   name: string;
+  published_at: string;
   tag_name: string;
   body: string;
   assets: AssetsItem[];
+  prerelease: boolean;
 };
 export type AssetsItem = {
   url: string;
@@ -63,6 +71,7 @@ export const checkFileExistsStorage = async (
 
 type Props = {
   release: Release;
+  index: number;
 };
 
 
@@ -84,8 +93,35 @@ const assetIcon = (platform) => {
   }
 };
 
+interface ExpandMoreProps extends IconButtonProps {
+  expand: boolean;
+}
 
-export const ReleaseInfo = ({ release }: Props) => {
+const ExpandMore = styled((props: ExpandMoreProps) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme }) => ({
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+  variants: [
+    {
+      props: ({ expand }) => !expand,
+      style: {
+        transform: 'rotate(0deg)',
+      },
+    },
+    {
+      props: ({ expand }) => !!expand,
+      style: {
+        transform: 'rotate(180deg)',
+      },
+    },
+  ],
+}));
+
+export const ReleaseInfo = ({ release, index }: Props) => {
   const onDownload = async (e, release: Release, asset: AssetsItem) => {
     e.preventDefault();
     try {
@@ -123,12 +159,31 @@ export const ReleaseInfo = ({ release }: Props) => {
     }
   };
 
+  const [expanded, setExpanded] = useState(index == 0);
+
+  function handleExpandClick() {
+    setExpanded(!expanded);
+  }
+
   return (
     <Card>
+      <CardHeader
+        title={release.name}
+        titleTypographyProps={{color: release.prerelease ? 'orange' : 'green', variant:'h3'}}
+        subheader={`Published ${new Date(release.published_at).toISOString().split('T')[0]}`}
+        action={
+          <ExpandMore
+            expand={expanded}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </ExpandMore>
+        }
+      />
+      {expanded &&
       <CardContent>
-        <Typography variant='h5' component='div' gutterBottom>
-          {release.name}
-        </Typography>
         <Markdown rehypePlugins={[rehypeRaw]}>{release.body}</Markdown>
         <Divider/>
         <Typography variant='h4' gutterBottom>
@@ -152,6 +207,7 @@ export const ReleaseInfo = ({ release }: Props) => {
           ))}
         </List>
       </CardContent>
+      }
     </Card>
   );
 };
