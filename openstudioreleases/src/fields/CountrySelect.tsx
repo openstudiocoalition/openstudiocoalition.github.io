@@ -3,21 +3,28 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
 type Props = {
+  initCountryLabelState: any,
+  setInitCountryLabelState: any,
   label: string,
   error?: boolean,
   helperText?: string,
   setValue?: (value: any, shouldValidate?: boolean) => void,
 }
-export const CountrySelect = ({ label, error, helperText, setValue }: Props) => {
+export const CountrySelect = ({ initCountryLabelState, setInitCountryLabelState, label, error, helperText, setValue }: Props) => {
+
   return (
     <Autocomplete
       id='country-select-demo'
-      sx={{ width: 300 }}
       options={countries}
       autoHighlight
       getOptionLabel={(option) => option.label}
+      value={initCountryLabelState}
+      isOptionEqualToValue={(option, value) => option.code === value.code }
       onChange={(event, value) => {
-        setValue(value.label || '');
+        console.log("value=", value);
+        console.log("initCountryLabelState=", initCountryLabelState);
+        setValue(value?.label || null);
+        setInitCountryLabelState(CountryFromLabel(value?.label || null))
       }}
       renderOption={(props, option) => {
         const { key, ...optionProps } = props;
@@ -54,6 +61,10 @@ export const CountrySelect = ({ label, error, helperText, setValue }: Props) => 
     />
   );
 };
+
+export const CountryFromLabel = (countryLabel: string) => {
+  return countries.find((e) => (e.label == countryLabel)) ?? { code: '', label: '', phone: '' };
+}
 
 interface CountryType {
   code: string;

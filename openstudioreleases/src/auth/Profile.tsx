@@ -2,6 +2,7 @@ import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { type UserValues, userValueDefaults } from './UserValues.type';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
 import { CountrySelectFormik } from '../fields/CountrySelectFormik';
+import { CountryFromLabel } from '../fields/CountrySelect';
 import { CheckboxFormik } from '../fields/CheckboxFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
@@ -18,39 +19,71 @@ import {
 import { firebaseAuth, firebaseFirestore, githubProvider } from '../firebase';
 import { enqueueSnackbar } from 'notistack';
 import {Link, useNavigate} from 'react-router-dom';
-import { useState } from 'react';
-import { doc, setDoc } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { usePageView } from '../ga/usePageView';
 import { gaLoginEvent } from '../ga/gaEvents';
 import { BASENAME } from '../routes';
-import { FaGithub } from 'react-icons/fa';
-import { FirebaseError } from '@firebase/util'
+import { Header } from '../Header';
 import { enqueuePeristentErrorSnackbar } from '../utils/Snackbars'
 
-export const Register = () => {
+const getDocument = async (user_uid: string) => {
+
+  let values: UserValues = await getDoc(doc(firebaseFirestore, 'users', user_uid))
+  .then((docSnap) => {
+    // console.log("Inside the then");
+    if (docSnap.exists()) {
+      // console.log("docSnap.data()", docSnap.data());
+      return {
+        ...userValueDefaults,
+        ...docSnap.data(),
+      };
+    } else {
+      // docSnap.data() will be undefined in this case
+      // console.log(`No such document: users.${user_uid}`);
+      return userValueDefaults;
+    }
+  })
+  .catch((error) => {
+    // console.error(`No such document: users.${user_uid}`, error);
+    return userValueDefaults;
+  });
+
+  // console.log("values", values);
+  return values
+};
+
+
+export const Profile = () => {
   usePageView();
   const navigate = useNavigate();
-  const [pendingCredentials, setPendingCredentials] =
-    useState<AuthCredential>();
-  const [currentUser, setUser] = useState<User>();
 
+  const user = firebaseAuth.currentUser;
+  if (!user) {
+    return null;
+  }
+
+  const [initialValues, setInitialValues] = useState<UserValues>(userValueDefaults);
   const [initCountryLabelState, setInitCountryLabelState] = useState(null);
+  async function fetchInitialValues() {
+     const values = await getDocument(user.uid);
+     setInitialValues(values);
+     setInitCountryLabelState(CountryFromLabel(values.country));
+  }
+
+  useEffect(() => {
+    fetchInitialValues()
+  }, [])
 
   const onSubmit = async (values: UserValues) => {
     try {
-      const { firstName, lastName, country, company, occupation, email, password, signMailingList, joinBetaTester } = values;
-
-      const userCredential = await createUserWithEmailAndPassword(firebaseAuth, email, password);
-
-      gaLoginEvent(userCredential.user.uid);
-
-      const { user } = userCredential;
+      const { firstName, lastName, country, company, occupation, email, signMailingList, joinBetaTester } = values;
 
       await updateProfile(user, {
         displayName: `${firstName} ${lastName}`
       });
 
-      await setDoc(doc(firebaseFirestore, 'users', user.uid), {
+      await updateDoc(doc(firebaseFirestore, 'users', user.uid), {
         firstName,
         lastName,
         email,
@@ -61,31 +94,17 @@ export const Register = () => {
         joinBetaTester,
       });
 
-      enqueueSnackbar("User sucessfully created", {variant: 'success'});
-
-      navigate(`${BASENAME}/releases`);
+      enqueueSnackbar('User Profile Updated', { variant: 'success' });
 
     } catch (error) {
-      if (error instanceof FirebaseError) {
-        console.log(`${error.name}: ${error.message}`);
-        if (error.code === 'auth/email-already-in-use') {
-          enqueuePeristentErrorSnackbar('Email is already in use!');
-        } else {
-          enqueuePeristentErrorSnackbar(`Error registering user: ${error.name}: ${error.message}`);
-        }
-      } else {
-        console.log(error);
-        enqueuePeristentErrorSnackbar(`Error registering user: ${error}`);
-      }
+      console.log(error);
+      enqueuePeristentErrorSnackbar(`Error Updating user profile: ${error}`);
     }
   };
 
   const formikbag = useFormik({
-    initialValues: userValueDefaults,
+    initialValues: initialValues,
     validationSchema: yup.object().shape({
-      email: yup.string().required(),
-      password: yup.string().required(),
-      passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
       firstName: yup.string().required(),
       lastName: yup.string().required(),
       country: yup.string().required(),
@@ -96,54 +115,14 @@ export const Register = () => {
     }),
     validateOnMount: true,
     onSubmit,
+    enableReinitialize: true,
   });
 
   const { handleSubmit, setFieldValue } = formikbag;
 
-  const handleGithubRegister = async () => {
-    try {
-      const result = await signInWithPopup(firebaseAuth, githubProvider);
-
-      const credential = GithubAuthProvider.credentialFromResult(result)
-
-      setUser(result.user);
-      setPendingCredentials(credential);
-
-      const names = result.user.displayName.split(' ');
-      const firstName = names[0] || "";
-      const lastName = names.slice(1).join(" ") || "";
-      const email = result.user.email || "";
-
-      await setDoc(doc(firebaseFirestore, 'users', result.user.uid), {
-        firstName,
-        lastName,
-        email,
-      });
-
-      navigate(`${BASENAME}/releases`);
-
-    } catch (error) {
-
-      console.log(error);
-
-      if (error.code === 'auth/account-exists-with-different-credential') {
-        const credential = GithubAuthProvider.credentialFromError(error);
-
-        setPendingCredentials(credential);
-
-        enqueueSnackbar(
-          'You already login using email and password, login with email and password to link github login',
-        );
-
-        navigate(`${BASENAME}/login`);
-        return;
-      }
-
-      enqueueSnackbar('Error registering user');
-    }
-  }
-
   return (
+   <>
+    <Header />
     <FormikProvider value={formikbag}>
       <Box
         sx={{
@@ -162,7 +141,7 @@ export const Register = () => {
         >
           <CardContent>
             <Typography variant='h5' component='div' gutterBottom>
-              Register
+             Profile Information
             </Typography>
             <TextFieldFormik
               name={'firstName'}
@@ -203,24 +182,9 @@ export const Register = () => {
             />
             <TextFieldFormik
               name={'email'}
+              disabled
               label='Email'
               variant='outlined'
-              fullWidth
-              margin='normal'
-            />
-            <TextFieldFormik
-              name={'password'}
-              label='Password'
-              variant='outlined'
-              type='password'
-              fullWidth
-              margin='normal'
-            />
-            <TextFieldFormik
-              name={'passwordConfirmation'}
-              label='Confirm Password'
-              variant='outlined'
-              type='password'
               fullWidth
               margin='normal'
             />
@@ -244,14 +208,12 @@ export const Register = () => {
               }}
               onClick={handleSubmit}
             >
-              Register
+              Update Profile
             </Button>
-            <Typography variant='body2' align='center' sx={{ marginTop: 2 }}>
-              Have an account? <Link to={`${BASENAME}/login`}>Login</Link>
-            </Typography>
           </CardContent>
         </Card>
       </Box>
     </FormikProvider>
+  </>
   );
 };

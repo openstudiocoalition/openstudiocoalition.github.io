@@ -4,6 +4,7 @@ import { Root } from './Root';
 import { Releases } from './releases/Releases';
 import { Register } from './auth/Register';
 import { ResetPassword } from './auth/ResetPassword';
+import { Profile } from './auth/Profile';
 
 export const BASENAME = '/app';
 
@@ -24,6 +25,11 @@ export const routes: RouteObject[] = [
     path: `${BASENAME}/reset-password`,
     element: <ResetPassword />,
   },
+  {
+    path: `${BASENAME}/profile`,
+    element: <Profile />,
+  },
+
   {
     path: `${BASENAME}`,
     element: <Root />,
