@@ -1,4 +1,5 @@
 import { Box, Card, CardContent, Typography, Button } from '@mui/material';
+import { type UserValues, userValueDefaults } from './UserValues.type';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
 import { CountrySelectFormik } from '../fields/CountrySelectFormik';
 import { CheckboxFormik } from '../fields/CheckboxFormik';
@@ -24,18 +25,6 @@ import { gaLoginEvent } from '../ga/gaEvents';
 import { BASENAME } from '../routes';
 import { FaGithub } from 'react-icons/fa';
 
-type Values = {
-  firstName: string;
-  lastName: string;
-  country: string;
-  company: string;
-  occupation: string;
-  email: string;
-  password: string;
-  signMailingList: boolean;
-  joinBetaTester: boolean;
-};
-
 export const Register = () => {
   usePageView();
   const navigate = useNavigate();
@@ -43,7 +32,7 @@ export const Register = () => {
     useState<AuthCredential>();
   const [currentUser, setUser] = useState<User>();
 
-  const onSubmit = async (values: Values) => {
+  const onSubmit = async (values: UserValues) => {
     try {
       const { firstName, lastName, country, company, occupation, email, password, signMailingList, joinBetaTester } = values;
 
@@ -77,18 +66,7 @@ export const Register = () => {
   };
 
   const formikbag = useFormik({
-    initialValues: {
-      firstName: '',
-      lastName: '',
-      country: '',
-      company: '',
-      occupation: '',
-      email: '',
-      password: '',
-      passwordConfirmation: '',
-      signMailingList: true,
-      joinBetaTester: true,
-    },
+    initialValues: userValueDefaults,
     validationSchema: yup.object().shape({
       email: yup.string().required(),
       password: yup.string().required(),
@@ -232,13 +210,11 @@ export const Register = () => {
             <CheckboxFormik
               name={'signMailingList'}
               label='Sign up for the OSC Mailing list'
-              fullWidth
               margin='normal'
             />
             <CheckboxFormik
               name={'joinBetaTester'}
               label='Accept to be contacted for beta testing Release Candidates and New Features'
-              fullWidth
               margin='normal'
             />
             <Button
