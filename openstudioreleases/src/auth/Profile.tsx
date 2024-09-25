@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography, Button } from '@mui/material';
+import { Box, Card, CardContent, Typography, Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
 import { type UserValues, userValueDefaults } from './UserValues.type';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
 import { CountrySelectFormik } from '../fields/CountrySelectFormik';
@@ -7,23 +7,15 @@ import { CheckboxFormik } from '../fields/CheckboxFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
 import {
-  createUserWithEmailAndPassword,
-  updateProfile,
-  signInWithPopup,
-  GithubAuthProvider,
-  linkWithCredential,
-  EmailAuthProvider,
   type User,
-  type AuthCredential
+  updateProfile,
 } from 'firebase/auth';
-import { firebaseAuth, firebaseFirestore, githubProvider } from '../firebase';
+import { firebaseAuth, firebaseFirestore } from '../firebase';
 import { enqueueSnackbar } from 'notistack';
-import {Link, useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { deleteDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { usePageView } from '../ga/usePageView';
-import { gaLoginEvent } from '../ga/gaEvents';
-import { BASENAME } from '../routes';
 import { Header } from '../Header';
 import { enqueuePeristentErrorSnackbar } from '../utils/Snackbars'
 
@@ -58,10 +50,10 @@ export const Profile = () => {
   usePageView();
   const navigate = useNavigate();
 
-  const user = firebaseAuth.currentUser;
-  if (!user) {
+  if (!firebaseAuth.currentUser) {
     return null;
   }
+  const user: User = firebaseAuth.currentUser;
 
   const [initialValues, setInitialValues] = useState<UserValues>(userValueDefaults);
   const [initCountryLabelState, setInitCountryLabelState] = useState(null);
@@ -100,6 +92,43 @@ export const Profile = () => {
       console.log(error);
       enqueuePeristentErrorSnackbar(`Error Updating user profile: ${error}`);
     }
+  };
+
+  const [openDeleteDialog, setOpenDeleteDialog] = useState(false);
+
+  const handleDeleteDialogClickOpen = () => {
+    setOpenDeleteDialog(true);
+  };
+
+  const handleDeleteDialogClose = () => {
+    setOpenDeleteDialog(false);
+  };
+
+  const onDeleteAccountSubmit = async () => {
+    // User deletion will fail if last sign in is too old... And I can't just go ahead and delete it first because I can't delete the doc then.
+    // So takes an arbitrary value of 2min since last sign in, and if not, return earliy
+    let is_login_recent_enough = false;
+    if (user.metadata.lastSignInTime != null) {
+      const TWO_MINUTES = 2*60*1000;
+      const duration = Date.now() - Date.parse(user.metadata.lastSignInTime);
+      if (duration <= TWO_MINUTES) {
+        is_login_recent_enough = true;
+      }
+    }
+    if (!is_login_recent_enough) {
+      enqueuePeristentErrorSnackbar("Cannot delete user profile because last sign in is too old. Sign out and in again please");
+      return;
+    }
+
+    await deleteDoc(doc(firebaseFirestore, 'users', user.uid));
+    enqueueSnackbar('User Information Deleted', { variant: 'success' });
+    //await deleteUser(user);
+    user.delete().then(() => {
+      enqueueSnackbar('User Deleted', { variant: 'success' });
+    }).catch((error) => {
+      enqueuePeristentErrorSnackbar(`Error Deleting user profile: ${error}`);
+    });
+    // user.delete();
   };
 
   const formikbag = useFormik({
@@ -210,6 +239,39 @@ export const Profile = () => {
             >
               Update Profile
             </Button>
+            <Button
+              variant='contained'
+              color='error'
+              sx={{
+                marginTop: 2,
+                display: 'block',
+                width: '100%',
+              }}
+              onClick={handleDeleteDialogClickOpen}
+            >
+              Delete My Account
+            </Button>
+            <Dialog
+              open={openDeleteDialog}
+              onClose={handleDeleteDialogClose}
+              aria-labelledby="delete-account-dialog-title"
+              aria-describedby="delete-account-dialog-description"
+            >
+              <DialogTitle id="delete-account-dialog-title">
+                {"Delete your account?"}
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id="delete-account-dialog-description">
+                  This is a destructive action, your account will not be recoverable.
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleDeleteDialogClose} autoFocus>Abort</Button>
+                <Button onClick={onDeleteAccountSubmit} color="error">
+                  Delete
+                </Button>
+              </DialogActions>
+            </Dialog>
           </CardContent>
         </Card>
       </Box>
