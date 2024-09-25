@@ -52,7 +52,7 @@ export const CountrySelect = ({ initCountryLabelState, setInitCountryLabelState,
           label={label}
           inputProps={{
             ...params.inputProps,
-            autoComplete: 'new-password', // disable autocomplete and autofill
+            autoComplete: 'off', // disable autocomplete and autofill
           }}
           error={error}
           helperText={helperText}

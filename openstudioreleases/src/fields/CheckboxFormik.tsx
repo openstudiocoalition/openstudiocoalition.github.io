@@ -9,7 +9,7 @@ export const CheckboxFormik = ({ label, ...props }) => {
     <FormControlLabel control={<Checkbox
       {...field}
       {...props}
-      defaultChecked
+      checked={field.value}
     />} label={<Typography sx={{ fontSize: 10 }}>{label}</Typography>} />
   );
 };
