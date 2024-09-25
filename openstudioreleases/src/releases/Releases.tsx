@@ -1,21 +1,15 @@
 import releases from './releases.json';
 import { ReleaseInfo } from './ReleaseInfo';
-import { Button, Box, Checkbox, FormControlLabel, Container, Stack } from '@mui/material';
+import { Box, Checkbox, FormControlLabel, Container, Stack } from '@mui/material';
 import { Header } from '../Header';
 import { useState } from 'react';
 
 export const Releases = () => {
 
   const [displayPreReleases, setDisplayPreReleases] = useState(false);
-  const [buttonText, setButtonText] = useState("Display Prereleases");
   
   function handleDisplayPreReleases() {
     setDisplayPreReleases(!displayPreReleases);
-    if (!displayPreReleases) {
-        setButtonText("Hide Prereleases");
-    } else {
-        setButtonText("Show Prereleases");
-    }
   }
 
   return (
@@ -31,18 +25,6 @@ export const Releases = () => {
           />
         }
       />
-      <Button
-          variant='contained'
-          color={displayPreReleases ? 'success' : 'error'}
-          sx={{
-            marginTop: 2,
-            display: 'block',
-            // width: '100%',
-          }}
-          onClick={handleDisplayPreReleases}
-        >
-        {buttonText}
-      </Button>
       <Box
         sx={{
           display: 'flex',
