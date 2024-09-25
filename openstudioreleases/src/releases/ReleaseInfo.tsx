@@ -72,6 +72,7 @@ export const checkFileExistsStorage = async (
 type Props = {
   release: Release;
   index: number;
+  displayPreReleases: boolean;
 };
 
 
@@ -121,7 +122,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   ],
 }));
 
-export const ReleaseInfo = ({ release, index }: Props) => {
+export const ReleaseInfo = ({ release, index, displayPreReleases }: Props) => {
   const onDownload = async (e, release: Release, asset: AssetsItem) => {
     e.preventDefault();
     try {
@@ -163,6 +164,10 @@ export const ReleaseInfo = ({ release, index }: Props) => {
 
   function handleExpandClick() {
     setExpanded(!expanded);
+  }
+
+  if (release.prerelease && !displayPreReleases) {
+    return null;
   }
 
   return (
