@@ -21,17 +21,32 @@ const run = async () => {
 
     console.log('Listing users:');
 
-    let users = [];
+    let promises : Promise<FirebaseFirestore.WriteResult>= [];
     snapshot.forEach((doc) => {
-      users = [
-        ...users,
-        doc.data(),
-      ];
-      console.log(`ID: ${doc.id}, Data: ${JSON.stringify(doc.data())}`);
+      const data = doc.data();
+
+      if (!data.hasOwnProperty('signMailingList')) {
+        const ref = doc.ref;
+        promises.push(
+          ref.update({
+            signMailingList: true
+          })
+        );
+        console.log(`ID: ${doc.id}, Data: ${JSON.stringify(doc.data())}`);
+      }
+      if (!data.hasOwnProperty('joinBetaTester')) {
+        const ref = doc.ref;
+        promises.push(
+          ref.update({
+            joinBetaTester: false
+          })
+        );
+        console.log(`ID: ${doc.id}, Data: ${JSON.stringify(doc.data())}`);
+      }
+
     });
 
-    console.log(`We have ${users.length} Registered Users`);
-    await writeJson('users', users);
+    return Promise.all(promises);
 };
 
 (async () => {
