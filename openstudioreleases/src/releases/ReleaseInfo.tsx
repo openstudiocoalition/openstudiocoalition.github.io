@@ -1,5 +1,4 @@
 import {
-  Button,
   Card,
   CardActions,
   CardHeader,
@@ -26,6 +25,7 @@ import { useState } from 'react'
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { FaGithub } from 'react-icons/fa';
 
 export const extractPlatform = (fileName: string) => {
   if (fileName.includes('macOS')) {
@@ -160,15 +160,18 @@ export const ReleaseInfo = ({ release, index, displayPreReleases }: Props) => {
     }
   };
 
+  if (release.prerelease && !displayPreReleases) {
+    return null;
+  }
+
   const [expanded, setExpanded] = useState(index == 0);
 
   function handleExpandClick() {
     setExpanded(!expanded);
   }
 
-  if (release.prerelease && !displayPreReleases) {
-    return null;
-  }
+  const githubReleaseUrl: string = `https://github.com/openstudiocoalition/OpenStudioApplication/releases/tag/${release.tag_name}`;
+  const shareTitle: string = `OpenStudioApplication Release ${release.name}`;
 
   return (
     <Card>
@@ -213,6 +216,11 @@ export const ReleaseInfo = ({ release, index, displayPreReleases }: Props) => {
         </List>
       </CardContent>
       }
+      <CardActions disableSpacing>
+        <IconButton component={Link} href={githubReleaseUrl} target="_blank" rel="noopener" title="View on Github">
+          <FaGithub />
+        </IconButton>
+      </CardActions>
     </Card>
   );
 };
