@@ -25,7 +25,7 @@ const run = async () => {
     snapshot.forEach((doc) => {
       users = [
         ...users,
-        doc.data(),
+        {...doc.data(), id: doc.id},
       ];
       console.log(`ID: ${doc.id}, Data: ${JSON.stringify(doc.data())}`);
     });

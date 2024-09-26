@@ -83,3 +83,4 @@ firebase-service-account.json
 firebase-config.json
 assets
 yarn.lock
+users.json
