@@ -18,6 +18,7 @@ import { deleteDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { usePageView } from '../ga/usePageView';
 import { Header } from '../Header';
 import { enqueuePeristentErrorSnackbar } from '../utils/Snackbars'
+import { BASENAME } from '../routes';
 
 const getDocument = async (user_uid: string) => {
 
@@ -125,6 +126,7 @@ export const Profile = () => {
     //await deleteUser(user);
     user.delete().then(() => {
       enqueueSnackbar('User Deleted', { variant: 'success' });
+      navigate(BASENAME);
     }).catch((error) => {
       enqueuePeristentErrorSnackbar(`Error Deleting user profile: ${error}`);
     });
