@@ -1,5 +1,8 @@
 import { Box, Card, CardContent, Typography, Button } from '@mui/material';
+import { type UserValues, userValueDefaults } from './UserValues.type';
 import { TextFieldFormik } from '../fields/TextFieldFormik';
+import { CountrySelectFormik } from '../fields/CountrySelectFormik';
+import { CheckboxFormik } from '../fields/CheckboxFormik';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
 import {
@@ -21,16 +24,8 @@ import { usePageView } from '../ga/usePageView';
 import { gaLoginEvent } from '../ga/gaEvents';
 import { BASENAME } from '../routes';
 import { FaGithub } from 'react-icons/fa';
-
-type Values = {
-  firstName: string;
-  lastName: string;
-  country: string;
-  company: string;
-  occupation: string;
-  email: string;
-  password: string;
-};
+import { FirebaseError } from '@firebase/util'
+import { enqueuePeristentErrorSnackbar } from '../utils/Snackbars'
 
 export const Register = () => {
   usePageView();
@@ -39,9 +34,11 @@ export const Register = () => {
     useState<AuthCredential>();
   const [currentUser, setUser] = useState<User>();
 
-  const onSubmit = async (values: Values) => {
+  const [initCountryLabelState, setInitCountryLabelState] = useState(null);
+
+  const onSubmit = async (values: UserValues) => {
     try {
-      const { firstName, lastName, country, company, occupation, email, password } = values;
+      const { firstName, lastName, country, company, occupation, email, password, signMailingList, joinBetaTester } = values;
 
       const userCredential = await createUserWithEmailAndPassword(firebaseAuth, email, password);
 
@@ -60,34 +57,42 @@ export const Register = () => {
         company,
         country,
         occupation,
+        signMailingList,
+        joinBetaTester,
       });
+
+      enqueueSnackbar("User sucessfully created", {variant: 'success'});
 
       navigate(`${BASENAME}/releases`);
 
     } catch (error) {
-      console.log(error);
-      enqueueSnackbar('Error registering user');
+      if (error instanceof FirebaseError) {
+        console.log(`${error.name}: ${error.message}`);
+        if (error.code === 'auth/email-already-in-use') {
+          enqueuePeristentErrorSnackbar('Email is already in use!');
+        } else {
+          enqueuePeristentErrorSnackbar(`Error registering user: ${error.name}: ${error.message}`);
+        }
+      } else {
+        console.log(error);
+        enqueuePeristentErrorSnackbar(`Error registering user: ${error}`);
+      }
     }
   };
 
   const formikbag = useFormik({
-    initialValues: {
-      firstName: '',
-      lastName: '',
-      country: '',
-      company: '',
-      occupation: '',
-      email: '',
-      password: '',
-    },
+    initialValues: userValueDefaults,
     validationSchema: yup.object().shape({
       email: yup.string().required(),
       password: yup.string().required(),
+      passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
       firstName: yup.string().required(),
       lastName: yup.string().required(),
-      country: yup.string(),
+      country: yup.string().required(),
       company: yup.string(),
       occupation: yup.string(),
+      signMailingList: yup.boolean(),
+      joinBetaTester: yup.boolean(),
     }),
     validateOnMount: true,
     onSubmit,
@@ -173,16 +178,25 @@ export const Register = () => {
               fullWidth
               margin='normal'
             />
-            <TextFieldFormik
+            <CountrySelectFormik
               name={'country'}
               label='Country'
               variant='outlined'
               fullWidth
               margin='normal'
+              initCountryLabelState={initCountryLabelState}
+              setInitCountryLabelState={setInitCountryLabelState}
             />
             <TextFieldFormik
               name={'occupation'}
               label='Occupation'
+              variant='outlined'
+              fullWidth
+              margin='normal'
+            />
+            <TextFieldFormik
+              name={'company'}
+              label='Company'
               variant='outlined'
               fullWidth
               margin='normal'
@@ -200,6 +214,24 @@ export const Register = () => {
               variant='outlined'
               type='password'
               fullWidth
+              margin='normal'
+            />
+            <TextFieldFormik
+              name={'passwordConfirmation'}
+              label='Confirm Password'
+              variant='outlined'
+              type='password'
+              fullWidth
+              margin='normal'
+            />
+            <CheckboxFormik
+              name={'signMailingList'}
+              label='Sign up for the OSC Mailing list'
+              margin='normal'
+            />
+            <CheckboxFormik
+              name={'joinBetaTester'}
+              label='Accept to be contacted for beta testing Release Candidates and New Features'
               margin='normal'
             />
             <Button

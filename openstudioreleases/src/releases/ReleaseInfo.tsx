@@ -1,6 +1,7 @@
 import {
-  Button,
   Card,
+  CardActions,
+  CardHeader,
   CardContent,
   Divider,
   Link,
@@ -8,11 +9,8 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  SvgIcon,
   Typography,
 } from '@mui/material';
-import AppleIcon from '@mui/icons-material/Apple';
-import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw'
 import { firebaseStorage } from '../firebase';
@@ -20,16 +18,14 @@ import { getDownloadURL, getMetadata, ref } from 'firebase/storage';
 import { enqueueSnackbar } from 'notistack';
 import { getFirebaseKeyFromReleaseAsset } from './getFirebaseKeyFromReleaseAsset';
 import { gaDownloadClick } from '../ga/gaEvents';
-
-const wrapSvgPath = (path, viewBox='0 0 24 24') => (props) => (
-    <SvgIcon {...props} viewBox={viewBox}>{path}</SvgIcon>
-);
-
-const linuxPath = (<path
-    d="M14.62 8.35c-.42.28-1.75 1.04-1.95 1.19c-.39.31-.75.29-1.14-.01c-.2-.16-1.53-.92-1.95-1.19c-.48-.31-.45-.7.08-.92c1.64-.69 3.28-.64 4.91.03c.49.21.51.6.05.9m7.22 7.28c-.93-2.09-2.2-3.99-3.84-5.66a4.3 4.3 0 0 1-1.06-1.88c-.1-.33-.17-.67-.24-1.01c-.2-.88-.29-1.78-.7-2.61c-.73-1.58-2-2.4-3.84-2.47c-1.81.05-3.16.81-3.95 2.4c-.21.43-.36.88-.46 1.34c-.17.76-.32 1.55-.5 2.32c-.15.65-.45 1.21-.96 1.71c-1.61 1.57-2.9 3.37-3.88 5.35c-.14.29-.28.58-.37.88c-.19.66.29 1.12.99.96c.44-.09.88-.18 1.3-.31c.41-.15.57-.05.67.35c.65 2.15 2.07 3.66 4.24 4.5c4.12 1.56 8.93-.66 9.97-4.58c.07-.27.17-.37.47-.27c.46.14.93.24 1.4.35c.49.09.85-.16.92-.64c.03-.26-.06-.49-.16-.73" />
-);
-
-export const LinuxIcon = wrapSvgPath(linuxPath);
+import { FaWindows } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { FaUbuntu } from "react-icons/fa";
+import { useState } from 'react'
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { FaGithub } from 'react-icons/fa';
 
 export const extractPlatform = (fileName: string) => {
   if (fileName.includes('macOS')) {
@@ -45,9 +41,11 @@ export const extractPlatform = (fileName: string) => {
 
 export type Release = {
   name: string;
+  published_at: string;
   tag_name: string;
   body: string;
   assets: AssetsItem[];
+  prerelease: boolean;
 };
 export type AssetsItem = {
   url: string;
@@ -73,29 +71,58 @@ export const checkFileExistsStorage = async (
 
 type Props = {
   release: Release;
+  index: number;
+  displayPreReleases: boolean;
 };
 
 
 const assetIcon = (platform) => {
   if (platform == 'mac') {
     return <ListItemIcon>
-             <AppleIcon />
+             <FaApple color="black" size="1.2em" />
            </ListItemIcon>;
   }
   if (platform == 'windows') {
     return <ListItemIcon>
-             <MicrosoftIcon />
+             <FaWindows color="#08a1f7" size="1.2em" />
            </ListItemIcon>;
   }
   if (platform == 'linux') {
     return <ListItemIcon>
-             <LinuxIcon />
+             <FaUbuntu color="#E95420" size="1.2em" />
            </ListItemIcon>;
   }
 };
 
+interface ExpandMoreProps extends IconButtonProps {
+  expand: boolean;
+}
 
-export const ReleaseInfo = ({ release }: Props) => {
+const ExpandMore = styled((props: ExpandMoreProps) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme }) => ({
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+  variants: [
+    {
+      props: ({ expand }) => !expand,
+      style: {
+        transform: 'rotate(0deg)',
+      },
+    },
+    {
+      props: ({ expand }) => !!expand,
+      style: {
+        transform: 'rotate(180deg)',
+      },
+    },
+  ],
+}));
+
+export const ReleaseInfo = ({ release, index, displayPreReleases }: Props) => {
   const onDownload = async (e, release: Release, asset: AssetsItem) => {
     e.preventDefault();
     try {
@@ -133,12 +160,38 @@ export const ReleaseInfo = ({ release }: Props) => {
     }
   };
 
+  if (release.prerelease && !displayPreReleases) {
+    return null;
+  }
+
+  const [expanded, setExpanded] = useState(index == 0);
+
+  function handleExpandClick() {
+    setExpanded(!expanded);
+  }
+
+  const githubReleaseUrl: string = `https://github.com/openstudiocoalition/OpenStudioApplication/releases/tag/${release.tag_name}`;
+  const shareTitle: string = `OpenStudioApplication Release ${release.name}`;
+
   return (
     <Card>
+      <CardHeader
+        title={release.name}
+        titleTypographyProps={{color: release.prerelease ? 'orange' : 'green', variant:'h3'}}
+        subheader={`Published ${new Date(release.published_at).toISOString().split('T')[0]}`}
+        action={
+          <ExpandMore
+            expand={expanded}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </ExpandMore>
+        }
+      />
+      {expanded &&
       <CardContent>
-        <Typography variant='h5' component='div' gutterBottom>
-          {release.name}
-        </Typography>
         <Markdown rehypePlugins={[rehypeRaw]}>{release.body}</Markdown>
         <Divider/>
         <Typography variant='h4' gutterBottom>
@@ -162,6 +215,12 @@ export const ReleaseInfo = ({ release }: Props) => {
           ))}
         </List>
       </CardContent>
+      }
+      <CardActions disableSpacing>
+        <IconButton component={Link} href={githubReleaseUrl} target="_blank" rel="noopener" title="View on Github">
+          <FaGithub />
+        </IconButton>
+      </CardActions>
     </Card>
   );
 };

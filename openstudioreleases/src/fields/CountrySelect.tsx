@@ -3,20 +3,29 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
 type Props = {
+  initCountryLabelState: any,
+  setInitCountryLabelState: any,
   label: string,
   error?: boolean,
   helperText?: string,
-  onChange?: (event: any, value: any, reason: string) => void,
+  setValue?: (value: any, shouldValidate?: boolean) => void,
 }
-export const CountrySelect = ({ label, error, helperText, onChange }: Props) => {
+export const CountrySelect = ({ initCountryLabelState, setInitCountryLabelState, label, error, helperText, setValue }: Props) => {
+
   return (
     <Autocomplete
       id='country-select-demo'
-      sx={{ width: 300 }}
       options={countries}
       autoHighlight
       getOptionLabel={(option) => option.label}
-      onChange={onChange}
+      value={initCountryLabelState}
+      isOptionEqualToValue={(option, value) => option.code === value.code }
+      onChange={(event, value) => {
+        console.log("value=", value);
+        console.log("initCountryLabelState=", initCountryLabelState);
+        setValue(value?.label || null);
+        setInitCountryLabelState(CountryFromLabel(value?.label || null))
+      }}
       renderOption={(props, option) => {
         const { key, ...optionProps } = props;
         return (
@@ -43,7 +52,7 @@ export const CountrySelect = ({ label, error, helperText, onChange }: Props) => 
           label={label}
           inputProps={{
             ...params.inputProps,
-            autoComplete: 'new-password', // disable autocomplete and autofill
+            autoComplete: 'off', // disable autocomplete and autofill
           }}
           error={error}
           helperText={helperText}
@@ -53,6 +62,10 @@ export const CountrySelect = ({ label, error, helperText, onChange }: Props) => 
   );
 };
 
+export const CountryFromLabel = (countryLabel: string) => {
+  return countries.find((e) => (e.label == countryLabel)) ?? { code: '', label: '', phone: '' };
+}
+
 interface CountryType {
   code: string;
   label: string;
@@ -61,7 +74,7 @@ interface CountryType {
 }
 
 // From https://bitbucket.org/atlassian/atlaskit-mk-2/raw/4ad0e56649c3e6c973e226b7efaeb28cb240ccb0/packages/core/select/src/data/countries.js
-const countries: readonly CountryType[] = [
+export const countries: readonly CountryType[] = [
   { code: 'AD', label: 'Andorra', phone: '376' },
   {
     code: 'AE',
