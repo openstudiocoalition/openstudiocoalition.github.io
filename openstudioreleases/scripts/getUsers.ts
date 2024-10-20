@@ -1,3 +1,4 @@
+import { writeCsv } from './writeCsv';
 import { writeJson } from './writeJson';
 import { initializeApp, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
@@ -31,6 +32,7 @@ const run = async () => {
     });
 
     console.log(`We have ${users.length} Registered Users`);
+    await writeCsv('users', users);
     await writeJson('users', users);
 };
 

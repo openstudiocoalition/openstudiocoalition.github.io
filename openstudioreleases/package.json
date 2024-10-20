@@ -41,6 +41,7 @@
     "@types/regenerator-runtime": "~0.13.6",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
+    "csv-stringify": "^6.5.1",
     "esbuild": "^0.23.1",
     "esbuild-register": "^3.6.0",
     "gh-pages": "^6.1.1",
