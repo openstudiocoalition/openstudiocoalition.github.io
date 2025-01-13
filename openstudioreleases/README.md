@@ -38,7 +38,7 @@ Then edit it to add the values to each key.
 
 ### Google Analytics
 
-Set the `GA_ID` in the `.env` file. This is the Measurement ID for the OS App website itself (OS App Git - GA4)
+Set the `GA_ID` in the `.env` file. This is the Measurement ID for the osc-downloads data stream.
 
 ## Running the website
 Run dev mode
