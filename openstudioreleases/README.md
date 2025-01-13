@@ -174,4 +174,4 @@ yarn es scripts/syncReleaseAssets.ts
 
 # Set development or production
 
-set `.env.prd` for production build
+set `NODE_ENV` in the `.env` to either "development" or "production" before making a build
