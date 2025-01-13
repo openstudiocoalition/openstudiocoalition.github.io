@@ -1,5 +1,64 @@
 [
   {
+    "name": "v1.9.0-rc1",
+    "tag_name": "v1.9.0-rc1",
+    "published_at": "2025-01-12T23:09:50Z",
+    "prerelease": true,
+    "body": "Pre-release RC1 for 1.9.0 release\r\n\r\n## Changelog\r\n\r\n\r\n**Date Range: 2024-09-18** (v1.8.0) - **2025-01-12:**\r\n\r\n**New Issues: 18**\r\n\r\n**Closed Issues: 27**\r\n\r\n**Accepted Pull Requests: 12**\r\n\r\n**Total Open Issues: 115**\r\n\r\n**Total Open Pull Requests: 2**\r\n\r\n\r\n<details>\r\n\r\n  <summary>Click to see details</summary>\r\n\r\n**Closed Issues: 27**\r\n- ➕ [#42]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/42 ), Consider linking to FloorSpaceJS instead of embedding\r\n- ✔️ [#116]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/116 ), Space Types library item collapses after dragging in Space Type from library\r\n- ✔️ [#213]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/213 ), A bug related to OS:Schedule:File and OS:External:File with OpenStudio App\r\n- ➕ [#262]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/262 ), Add file system browse control for measure path arguments\r\n- ✔️ [#263]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/263 ), Cannot enter path arguments in apply measure now\r\n- ➕ [#271]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/271 ), Allow compact schedules editing in the schedules graphical editor\r\n- ✔️ [#272]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/272 ), OS:SpaceInfiltration:DesignFlowRate edit panel displays wrong units\r\n- ➕ [#279]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/279 ), Package Reporting Measure with OS App\r\n- ✔️ [#280]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/280 ), Generated files in Apply Measure Now\r\n- ✔️ [#322]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/322 ), Delete the coil unit in the air loop\r\n- ➕ [#417]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/417 ), Allow access to AdditionalProperties\r\n- ✔️ [#493]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/493 ), Geometry editor is missing the ruler when grid view is on\r\n- ➕ [#668]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/668 ), Upgrade from Conan v1 to Conan v2\r\n- ✔️ [#743]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/743 ),  v1.8.0-rc3 Testing: Call for help from the community\r\n- ✔️ [#758]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/758 ), Results tab shows Your file couldn’t be accessed\r\n- ✔️ [#762]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/762 ), The problem of gathering Openstudio reports\r\n- ➕ [#763]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/763 ), Support Debian\r\n- ✔️ [#764]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/764 ), Version 2.9.1 not working for some Intel chips\r\n- ✔️ [#766]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/766 ), Units selection reverts when opening or reverting\r\n- ✔️ [#767]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/767 ), Python Measures break after opening OS 1.4.0\r\n- ✔️ [#768]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/768 ), OS:Rendering:Color objects added every time the geometry tab is clicked and the model is saved again\r\n- ➕ [#769]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/769 ), HVAC Schedule Flaw\r\n- ➕ [#772]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/772 ), Providing Supply and Demand node in the OpenStudio Application for WaterHeater:Mixed\r\n- ➕ [#773]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/773 ), WaterHeater:HeatPump Field !- Tank Element Control Logic is not exposed\r\n- ✔️ [#777]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/777 ), Add back capability to add AirLoopHVAC:ReturnPlenum\r\n- ✔️ [#778]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/778 ), Unable to assign zone name to Refrigeration:Case\r\n- ➕ [#779]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/779 ), SolarCollector:FlatPlate:Water volumetric water flow rate specified in CFM\r\n\r\n**Accepted Pull Requests: 12**\r\n- ✔️ [#754]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/754 ), Add an Ubuntu-2404 runner\r\n- ✔️ [#755]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/755 ), PR to master for 1.8.0\r\n- ✔️ [#756]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/756 ), Update README.md\r\n- ✔️ [#759]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/759 ), Fix #758 - Properly encode path to QUrl when trying to display results\r\n- ➕ [#761]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/761 ), Fix #262 #263 - Handle Path Arguments (QFileDialog)\r\n- ✔️ [#765]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/765 ), Fix #763 - Adjust deps for debian bookworm\r\n- ✔️ [#771]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/771 ), Update to OS 3.9.0\r\n- ✔️ [#774]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/774 ), Update qss script\r\n- ✔️ [#775]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/775 ), Update installer qss script\r\n- ✔️ [#780]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/780 ), Show empty required object-list fields with warning icon, remove unused IGdefaultRemoved slot\r\n- ✔️ [#781]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/781 ), Write settings on change, fixes #766\r\n- ✔️ [#783]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/783 ), PR to create 1.9.0-RC1\r\n\r\n**Total Open Issues: 115** (#130, #132, #111, #113, #158, #133, #134, #172, #135, #136, #139, #174, #157, #166, #138, #167, #137, #121, #176, #114, #144, #152, #171, #141, #140, #122, #164, #170, #165, #151, #154, #148, #117, #150, #169, #153, #124, #160, #155, #125, #156, #105, #159, #161, #120, #127, #118, #119, #128, #129, #146, #147, #168, #19, #78, #101, #96, #104, #199, #206, #224, #234, #239, #253, #254, #273, #278, #289, #293, #298, #300, #335, #336, #337, #338, #357, #371, #377, #380, #381, #389, #396, #400, #410, #411, #416, #423, #472, #481, #485, #491, #495, #520, #529, #542, #555, #571, #615, #649, #658, #659, #679, #680, #687, #704, #709, #711, #742, #751, #752, #757, #760, #770, #776, #782)\r\n\r\n**Total Open Pull Requests: 2** (#236, #470)\r\n\r\n</details>\r\n",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219928134",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-macOS13-arm64.dmg",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-macOS13-arm64.dmg"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219929115",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-macOS13-arm64.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-macOS13-arm64.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219933303",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-macOS13-x86_64.dmg",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-macOS13-x86_64.dmg"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219933312",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-macOS13-x86_64.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-macOS13-x86_64.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219926214",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-Ubuntu22.04.deb",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-Ubuntu22.04.deb"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219926241",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-Ubuntu22.04.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-Ubuntu22.04.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219926247",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-Ubuntu24.04.deb",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-Ubuntu24.04.deb"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219926284",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-Ubuntu24.04.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-Ubuntu24.04.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219940673",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-Windows.exe",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-Windows.exe"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/219940720",
+        "name": "OpenStudioApplication-1.9.0-rc1+898f15e6c5-Windows.zip",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.9.0-rc1/OpenStudioApplication-1.9.0-rc1%2B898f15e6c5-Windows.zip"
+      }
+    ]
+  },
+  {
     "name": "v1.8.0",
     "tag_name": "v1.8.0",
     "published_at": "2024-09-20T23:44:26Z",
@@ -245,7 +304,7 @@
     "tag_name": "v1.7.2",
     "published_at": "2024-07-18T03:17:59Z",
     "prerelease": false,
-    "body": "",
+    "body": "## What's Changed\r\n\r\n* v1.7.2 patch to not automatically download results measure by [@macumber](https://github.com/macumber) in [#723](https://github.com/openstudiocoalition/OpenStudioApplication/pull/723)\r\n\r\n\r\n**Full Changelog**: [v1.7.1...v1.7.2](https://github.com/openstudiocoalition/OpenStudioApplication/compare/v1.7.1...v1.7.2)",
     "assets": [
       {
         "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/180284871",
