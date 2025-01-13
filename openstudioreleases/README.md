@@ -172,6 +172,6 @@ yarn es scripts/getReleaseInfo.ts
 yarn es scripts/syncReleaseAssets.ts
 ```
 
-# TODO: explain this
+# Set development or production
 
 set `.env.prd` for production build
