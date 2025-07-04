@@ -56,7 +56,7 @@ _________________
 ## Graphics Problems in OpenStudio Application
 Several users have reported graphics issues with the Geometry and Results Summary tabs within the OpenStudio Application.  In many cases, adjusting power saving settings of the graphics cards has resolved these issues.  For computers with NVIDA graphics cards, you can access these settings via the NVIDIA Control Panel under "3D Settings->Manage 3D Settings".  In this panel, make sure that "Preferred graphics processor" is set to "High-performance NVIDIA processor".
 
-![Adjust NVIDIA Settings](img/help/nvidia_settings.png)
+![Adjust NVIDIA Settings](../img/help/nvidia_settings.png)
 
 Additionally, you may be able to find more information by running the OpenStudio Application from a command prompt and capturing the standard output in a file:
 
@@ -71,11 +71,11 @@ At times OpenStudio objects that should have a parent, such as surfaces and inte
 
 Below is a screenshot of what the measure looks like in the Apply Measure Now window. By default the remove unused objects boxes are un-checked. You will always get the remove orphan functionality.
 
-![Remove Orphan Objects and Unused Resources - Arguments](img/help/orphan_purge_argview.png)
+![Remove Orphan Objects and Unused Resources - Arguments](../img/help/orphan_purge_argview.png)
 
 Below is a screenshot of the log after running the measure. The log will list each section being checked, so as the functionality is expanded you will know what object types are being checked for for orphan.
 
-![Remove Orphan Objects and Unused Resources - Output](img/help/orphan_purge_outputview.png)
+![Remove Orphan Objects and Unused Resources - Output](../img/help/orphan_purge_outputview.png)
 _________________
 
 ## Energy Modeling Forum

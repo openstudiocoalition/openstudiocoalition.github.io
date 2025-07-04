@@ -16,7 +16,7 @@ The OpenStudio Application uses the [OpenStudio SDK](https://openstudio-sdk-docu
 #### FloorspceJS
 
 - Draw 2D building geometry (that will be extruded to 3D) using the built-in FloorspaceJS interface
-- Trace images of floor plans, or maps 
+- Trace images of floor plans, or maps
 - Building envelope, shading on windows, shading from other buildings, etc.
 - Assign constructions, space types, thermal zones
 - Add daylighting sensors
@@ -121,7 +121,7 @@ The following table is intended to provide users with some guidance around which
 
 - Viewing and editing your model in a grid view allows you to see many objects at once and compare settings.
 
-[![Grid view example](img/features/grid_thumb.png)](img/features/grid_thumb.png)
+[![Grid view example](../img/features/grid_thumb.png)](../img/features/grid_thumb.png)
 
 ### HVAC
 
@@ -166,7 +166,7 @@ The following table is intended to provide users with some guidance around which
 - Gas, electric, hot water and DX (heat pump) heating and/or preheat coils
 - Steam humidifiers (electrically powered) used with zone humidistats
 - Direct and indirect evaporative coolers
-- Sensible and latent heat recovery 
+- Sensible and latent heat recovery
 - VAV-Reheat and CAV-Reheat terminals (gas, electric, and hot water reheat coils)
 - VAV terminals without reheat
 - Series and parallel fan powered boxes with reheat (all fuel types)
@@ -176,11 +176,11 @@ The following table is intended to provide users with some guidance around which
 
 ##### Air System Controls
 
-- Controls for all air systems: 
+- Controls for all air systems:
 	- Air aystem availability manager controls
 		- Scheduled on/off
-		- Hybrid ventilation controls 
-		- Night ventilation controls 
+		- Hybrid ventilation controls
+		- Night ventilation controls
 		- Hybrid ventilation controls
 		- Night-cycle controls (whole system and/or terminal fans)
 		- Optimum start controls
@@ -188,13 +188,13 @@ The following table is intended to provide users with some guidance around which
 		- High temperature turn on/off
 		- Low temperature turn on/off
 	- Outdoor and supply air temperature/humidity controls
-		- Scheduled supply air temp 
-		- Supply air temp reset based on OA 
+		- Scheduled supply air temp
+		- Supply air temp reset based on OA
 		- Supply air temp follow OA Temp
-		- Supply air humidity minimum / maximum with deadband 
-	- Demand-controlled ventilation controls	
-- Controls for single and multizone VAV air systems: 
-	- Scheduled supply air temp 
+		- Supply air humidity minimum / maximum with deadband
+	- Demand-controlled ventilation controls
+- Controls for single and multizone VAV air systems:
+	- Scheduled supply air temp
 	- Supply air temp reset based on OA
 	- Supply air temp reset based on zone temp (warmest)
 	- Supply air flow reset based on zone temp (warmest)
@@ -202,7 +202,7 @@ The following table is intended to provide users with some guidance around which
 	- Single-zone VAV heat (one control zone, many slaves)
 		- Heating only
 		- Cooling only
-		- Both heating and cooling 
+		- Both heating and cooling
 
 ##### Zone-level Heating and Cooling Systems
 
@@ -245,12 +245,12 @@ The following table is intended to provide users with some guidance around which
 
 ##### Domestic Water Systems
 
-- Hot water heaters 
-	- Tank type/tankless water heaters (all fuels) 
+- Hot water heaters
+	- Tank type/tankless water heaters (all fuels)
 	- Heat pump water heaters
 	- Stratified tank water heaters
 	- Storage tank fed from boiler(s)/heat exchanger(s)
-- Solar hot water (flat plate or integral collectors) for pre-heating 
+- Solar hot water (flat plate or integral collectors) for pre-heating
 - Constant speed and/or variable speed recirculation/booster pumps
 - Equipment that uses warm water (showers, faucets, etc.), can specify mixed water temp
 - Equipment that uses cold water only
@@ -312,7 +312,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 
 - OpenStudio Measures provide reliable and repeatable mechanism to apply transforms to models
 - Eliminates ambiguity and user error; all rules encapsulated in measure itself
-- More than 316 measures available [online](bcl.nrel.gov) and always growing
+- More than 316 measures available [online](https://bcl.nrel.gov) and always growing
 - Write measure once and apply to many projects
 - Perform complex ECMs, like full HVAC replacement, easily
 - Quickly access online and local libraries of measures from drag-and-drop interface
@@ -343,7 +343,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 
 ### Share Modeling Best-Practices
 
-- Online database called [BCL](bcl.nrel.gov) (Building Component Library) can be used to share measures
+- Online database called [BCL](https://bcl.nrel.gov) (Building Component Library) can be used to share measures
 - BCL can be used to share building components
 - Instantaneous world-wide distribution and updating of content
 - Allows utilities to ensure uniformity and best-practices across many energy consulting firms

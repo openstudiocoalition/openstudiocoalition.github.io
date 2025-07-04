@@ -1,40 +1,39 @@
-site_name: 'OpenStudio Coalition User Docs'
-site_favicon: favicon.ico
-site_logo: 'OSC_32x32.png'
+site_name: OpenStudio Coalition User Docs
 
-pages:
-- [index.md]
+nav:
+  - Home: index.md
+  - About:
+    - About the OpenStudio Coalition: about/openstudio_coalition.md
+    - Join the Mailing List: about/mailing_list.md
+    - Software License: about/software_license.md
+    - Current Features: about/features.md
+    - Roadmap Features: about/roadmap.md
+    - Privacy Policy: about/privacy_policy.md
+  - Getting Started:
+    - Installation and Introductory Tutorial: getting_started/getting_started.md
+    - Creating Your Model: getting_started/creating_your_model.md
+    - Best Practices: getting_started/best_practices.md
+    - Running Simulations & Viewing Results: getting_started/running_your_simulation.md
+    - Building Component Library: getting_started/using_bcl.md
+    - Large Scale Analysis: getting_started/large_scale_analysis.md
+    - Troubleshooting: getting_started/troubleshooting.md
+  - Tutorials:
+    - Utility Rate Tariffs: tutorials/utility_rate_tariffs.md
+    - Life Cycle Cost Analysis: tutorials/life_cycle_costing_examples.md
+    - Import gbXML: tutorials/tutorial_gbxmlimport.md
+    - Shading Controls: tutorials/tutorial_shadingcontrols.md
+    - Window Property Frame and Divider: tutorials/tutorial_windowproperty_frameanddivider.md
+  - Reference:
+    - OpenStudio Application Interface Guide: reference/openstudio_application_interface.md
+    - SketchUp Plug-in Interface Guide: reference/sketchup_plugin_interface.md
+    - FloorspaceJS: reference/geometry_editor.md
+    - OpenStudio Results Measure: reference/openstudio_results_measure.md
 
-- [about/openstudio_coalition.md, About, About the OpenStudio Coalition]
-- [about/mailing_list.md, About, Join the Mailing List]
-- [about/software_license.md, About, Software License]
-- [about/features.md, About, Current Features]
-- [about/roadmap.md, About, Roadmap Features]
-- [about/privacy_policy.md, About, Privacy Policy]
+theme:
+  name: simplex
+  custom_dir: bootstrap_nrel
 
-- [getting_started/getting_started.md, Getting Started, Installation and Introductory Tutorial]
-- [getting_started/creating_your_model.md, Getting Started, Creating Your Model]
-- [getting_started/best_practices.md, Getting Started, Best Practices]
-- [getting_started/running_your_simulation.md, Getting Started, Running Simulations & Viewing Results]
-- [getting_started/using_bcl.md, Getting Started, Building Component Library]
-- [getting_started/large_scale_analysis.md, Getting Started, Large Scale Analysis]
-- [getting_started/troubleshooting.md, Getting Started, Troubleshooting]
-
-- [tutorials/utility_rate_tariffs.md, Tutorials, Utility Rate Tariffs]
-- [tutorials/life_cycle_costing_examples.md, Tutorials, Life Cycle Cost Analysis]
-- [tutorials/tutorial_gbxmlimport.md, Tutorials, Import gbXML]
-- [tutorials/tutorial_ifcimport.md, Tutorials, Import IFC]
-- [tutorials/radiance_tutorial.md, Tutorials, Radiance and OpenStudio]
-- [tutorials/tutorial_shadingcontrols.md, Tutorials, Shading Controls]
-- [tutorials/tutorial_windowproperty_frameanddivider.md, Tutorials, Window Property Frame and Divider]
-
-- [reference/openstudio_application_interface.md, Reference, OpenStudio Application Interface Guide]
-- [reference/sketchup_plugin_interface.md, Reference, SketchUp Plug-in Interface Guide]
-- [reference/geometry_editor.md, Reference, FloorspaceJS]
-- [reference/openstudio_results_measure.md, Reference, OpenStudio Results Measure]
-
-theme: simplex
-theme_dir: 'bootstrap_nrel'
-
-
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
 
