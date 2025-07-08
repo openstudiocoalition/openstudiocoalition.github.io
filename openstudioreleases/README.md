@@ -73,6 +73,9 @@ Reloaded: `sudo sysctl --system`
 
 This will parse the Github Releases and save a JSON at `src/releases/releases.json`
 
+**BEWARE**: If the assets have been gone from Github it will remove them.
+So instead, we let it parse only the most current releases, commit only the git hunks for the new releases. Remember to bump the semver version in scripts/getReleaseInfo.ts
+
 ```bash
 yarn es scripts/getReleaseInfo.ts
 ```
