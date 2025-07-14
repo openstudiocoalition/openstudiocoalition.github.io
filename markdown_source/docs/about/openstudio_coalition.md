@@ -15,20 +15,13 @@ It is the intent of the founding members to seek external funding to support the
 ## Organization Resources
 The National Renewable Energy Laboratory (NREL) transferred control of the OpenStudioApplication and openstudio-sketchup-plugin repositories to the OpenStudio Coalition in July 2020.  This transfer included all source code developed for these tools by NREL as well as issue tracking information, documentation, and release packages.  The OpenStudio Coalition has assumed control of these resources and will be managing them going forward.
 
-## Collaborators
+## External Contributors
 
-The following persons and organizations have been instrumental to the improvement and success of the application:
+The OpenStudio Coalition is greatful to everyone who contibutes to the project by testing pre-release builds, submitting GitHub issues, or contributing code.  If you would like to help, please contact us for ideas on how to contribute.  If you have contributed and would like to be recognized below, please contact us about being added to the list below.
 
-- [Helix Energy Partners LLC](https://www.helix-engineers.net/)
-- [Martin Duvanel](https://www.linkedin.com/in/martin-duvanel/)
-- Manu Varkey
-- Dana Kang
-- Eric Ringold
-- [Antoine Galataud](https://www.linkedin.com/in/antoine-galataud-856b321/)
-- Luis Lara
-- kentakahas
-- Jocelyn Lorrey
-- Nick Schrader
+- Recognized contributors:
+    - [Helix Energy Partners LLC](https://www.helix-engineers.net/)
+
 
 ## For More Information:
 
