@@ -37,11 +37,11 @@ __Optional - Install Parametric Analysis Tool (PAT)__
 ## Workflow Overview
 The typical OpenStudio Application workflow is shown in the diagram below.
 
-[![Workflow Diagram](img/workflow_diagram.png "Click to view")](img/workflow_diagram.png)
+[![Workflow Diagram](../img/workflow_diagram.png "Click to view")](../img/workflow_diagram.png)
 
 *About: Click on the diagram above to view a larger version.*
 
-Data Viewer is used to view simulation results. The section within documentation for Running Simulation & Viewing Results has information on using [Data Viewer](../tutorials/running_your_simulation/#using-data-viewer).
+Data Viewer is used to view simulation results. The section within documentation for Running Simulation & Viewing Results has information on using [Data Viewer](../getting_started/running_your_simulation.md#using-data-viewer).
 
 The [Parametric Analysis Tool Interface Guide](http://nrel.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/) provides an introduction to the interface and workflow for creating multiple design alternatives from a seed model.
 
@@ -52,13 +52,13 @@ The tutorial below was created before the grid view was added to the Space Types
 
 Libraries that are included with the OpenStudio Application contain data for constructions, loads, and schedules for 6 vintages across all U.S. climate zones. They also contain data for 9 vintages specific to DEER. The Libraries do not contain any geometry. Load libraries by using the menu under __File/Load Library__. Then select your vintage from the default file set. The Library data is organized such that you can access specific constructions and loads, or you can apply construction sets and space types that contain whole packages of subsequent dependent characteristics. For example a Library Space Type contains several specific loads and associated schedules for that space type, all of which become part of your model if you add the Space Type to your model. You can also load previously generated models as Libraries through the __File/Load Library__ menu by navigating to any OpenStudio Model file from the browser window that pops up. It can take a few minutes to load.
 
-![New OpenStudio Model From Template Dialog](img/menu_libraries.png)
+![New OpenStudio Model From Template Dialog](../img/menu_libraries.png)
 
 *Above: Load a new Library using the menu.*
 
 It is good practice to regularly clear the Libraries that load when the OpenStudio Application opens by using the menu under __Preferences/Change Default Libraries__ and selecting __Restore Defaults__. If the OpenStudio Application is loading several Libraries it will slow down significantly.
 
-![New OpenStudio Model From Template Dialog](img/default_libraries.png)
+![New OpenStudio Model From Template Dialog](../img/default_libraries.png)
 
 Vintages:
 
@@ -68,7 +68,7 @@ Vintages:
 
 Climate Zones: 1 - 8
 
-![Climate Zone Map](img/create_model/climate_zones.png)
+![Climate Zone Map](../img/create_model/climate_zones.png)
 
 ### FloorspaceJS - Building Envelope
 

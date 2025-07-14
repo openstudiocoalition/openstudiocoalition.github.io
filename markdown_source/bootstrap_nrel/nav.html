@@ -8,8 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ homepage_url }}"><img alt="" src="{{ base_url }}/img/OSC_32x32.png"> {{
-          site_name }}</a>
+        <a class="navbar-brand" href="{{ nav.homepage.url }}"><img alt="" src="{{ base_url }}/img/OSC_32x32.png">{{ config.site_name }}</a>
       </div>
       <div class="navbar-collapse collapse">
         <!-- Main navigation -->
@@ -23,7 +22,7 @@
               {% for nav_item in nav_item.children %}
               <li
               {% if nav_item.active %} class="active"{% endif %}>
-              <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+              <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
           </li>
           {% endfor %}
         </ul>
@@ -31,7 +30,7 @@
         {% else %}
         <li
         {% if nav_item.active %} class="active"{% endif %}>
-        <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+        <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
         </li>
         {% endif %}
         {% endfor %}

@@ -8,9 +8,7 @@ The documentation is written in Markdown, and uses [MkDocs] (http://www.mkdocs.o
 ### Mac
 Install MkDocs by following the directions at [MkDocs](http://www.mkdocs.org); you will need python.
 
-We recommend using mkdocs version 0.11.1, as newer versions have caused issues with this doc site.
-
-To force-install version 0.11.1 of MkDocs on Mac/Linux, run:
+To install MkDocs on Mac/Linux, run:
 ```python
 # Create a clean virtualenv (optional)
 mkvirtualenv mkdocs_osapp

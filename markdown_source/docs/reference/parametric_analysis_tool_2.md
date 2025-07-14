@@ -7,7 +7,7 @@ ___________________
 
 When you launch PAT you have the option to create a new project or open an existing project.
 
-![PAT Opening Screen](img/pat2/launch_01.png)
+![PAT Opening Screen](../img/pat2/launch_01.png)
 <br><br>
 
 To create a new project :
@@ -15,11 +15,11 @@ To create a new project :
 - Click the "Make New Project" button.
 - Type the name for the project, and click "Continue."  _Note that project names should not include spaces._
 
-![Make New Project](img/pat2/launch_02.png)
+![Make New Project](../img/pat2/launch_02.png)
 
 - Browse to the directory where you want the project saved, and click the "Open" button.  _PAT will create a new directory for your project at this location._
 
-![Select Project Directory](img/pat2/launch_03.png)
+![Select Project Directory](../img/pat2/launch_03.png)
 <br><br>
 ___________________
 
@@ -27,7 +27,7 @@ ___________________
 
 You can open an existing PAT project when you first launch PAT or from the file menu. In either case a dialog will open to find the path where you created your Project. There is no file to select, just browse to the top level project directory.
 
-![Open Existing Project](img/pat2/launch_04.png)
+![Open Existing Project](../img/pat2/launch_04.png)
 <br><br>
 ___________________
 
@@ -48,7 +48,7 @@ ___________________
 ## Load a Seed Model and Weather File
 Select your seed model, the model that will serve as the basis for creating design alternatives, by clicking the folder symbol for the "Default Seed Model". Select your weather file by clicking the folder symbol for the "Default Weather File."
 
-![Select Baseline Model and Weather File](img/pat2/measures_02.png)
+![Select Baseline Model and Weather File](../img/pat2/measures_02.png)
 <br><br>
 
 Note: PAT 2.x allows the user to specify multiple seed and weather files that may all be used within a project.
@@ -108,13 +108,13 @@ After adding a measure to your project the blue plus will change to a green chec
 <br><br>
 After closing the BCL dialog, measures are now loaded into the project.  In this example, two measures have been added.
 
-![Measures Tab With Measures Loaded](img/pat2/measures_03.png)
+![Measures Tab With Measures Loaded](../img/pat2/measures_03.png)
 
 **The ordering of measures in PAT matters.** Measures run from top to bottom in the user interface, and they may be reordered using the up or down arrows at the right.  The "x," also at the right, may be used to delete a measure from the project.
 
 Note that each measure also has an arrow just to its left.  This arrow is used to expand and collapse the measure, allowing the user to specify variables, arguments, and more.
 <br><br>
-![Measures Tab With Measure Options](img/pat2/measures_04.png)
+![Measures Tab With Measure Options](../img/pat2/measures_04.png)
 
 ### Create Measure Options and Define Variables
 
@@ -122,17 +122,17 @@ Every measure in the manual analysis project needs at least one measure "option.
 
 Clicking the __"Add Measure Option"__ button adds a column to the right side of the grid for the measure.  Newly created options have a generic option name, description, and inherit any default values specified by the measure.
 
-![Measures Tab With Measure Options](img/pat2/measures_05.png)
+![Measures Tab With Measure Options](../img/pat2/measures_05.png)
 <br><br>
 The variable column and associated checkboxes are used to specify which arguments will vary across design options.  Each option must be given a unique (and meaningful) name that will be referenced when constructing design alternatives.  The option description field is free-form, and can be used to capture notes regarding the option that may be used by reporting measures.  In this example, three design options have been created with variable window to wall ratios.
-![Measures Tab With Measure Options](img/pat2/measures_06.png)
+![Measures Tab With Measure Options](../img/pat2/measures_06.png)
 <br><br>
 
 ### Add the OpenStudio Results Reporting Measure to the Project
 
 The standard OpenStudio Results Measure **must** be added to every project as an option for each design alternative.  Manual project reports and most algorithmic workflows rely on outputs defined by this measure to work properly.  PAT will run without this measure and an associated measure option, but results will not appear correctly.
 
-![Measures Tab With Measures Collapsed](img/pat2/measures_07.png)
+![Measures Tab With Measures Collapsed](../img/pat2/measures_07.png)
 <br><br>
 ___________________
 
@@ -140,7 +140,7 @@ ___________________
 
 The second tab is used to create design alternatives.  Buttons can be used to create and copy individual alternatives or create one alternative for each measure option in the project.  Design alternatives appear in a simple grid that allows rapid "pull down menu" selection of seed model, weather file, and measure options.  Design alternative name and description fields are free form.  It is considered a best practice to enter meaningful descriptions in these fields to document the project.
 
-![Populated Design Alternatives Tab](img/pat2/alternatives_02.png)
+![Populated Design Alternatives Tab](../img/pat2/alternatives_02.png)
 
 Design alternatives may be deleted using the "x" button on the left side of the screen.  Rows may be rearranged manually using the up and down arrows to the left, or sorted alphabetically by clicking the grid headings.  The order of design alternatives on this tab has no bearing on simulation order or results reporting.
 
@@ -152,7 +152,7 @@ ___________________
 
 This tab is unused in manual mode, and is revisted later in this document when discussing algorithmic workflows.
 
-![Output Tab in Manual Mode](img/pat2/tab3.png)
+![Output Tab in Manual Mode](../img/pat2/tab3.png)
 
 ___________________
 
@@ -160,19 +160,19 @@ ___________________
 
 PAT 2.x configures a "mini server" on your computer to perform local analysis.  This is essentially the same server that is used to run large-scale cloud analyses, enabling projects to scale and migrate between computing systems easily.  The local server begins to start up as soon as you launch PAT, and is usually ready to perform analysis within a minute.  This is indicated by a server status green checkmark at the top of the screen.
 
-![Run Tab pre run](img/pat2/run_01.png)
+![Run Tab pre run](../img/pat2/run_01.png)
 
 Clicking the Run Entire Workflow button starts an analysis.
 
-![Run Tab mid run](img/pat2/run_02.png)
+![Run Tab mid run](../img/pat2/run_02.png)
 
 As simulation results are completed, PAT's status will update to appraise you of progress.  Changing tabs during active simulation is prevented to avoid accidentally altering an analysis mid-run.
 
-![Run Tab complete](img/pat2/run_03.png)
+![Run Tab complete](../img/pat2/run_03.png)
 
 Completed design alternatives may be expanded to view measure or simulation log messages. The OpenStudio Standard Report, EnergyPlus output, results from any other reporting measure options may be viewed by clicking the graph symbol and selecting the report of interest.
 
-![Run Tab post run](img/pat2/run_04.png)
+![Run Tab post run](../img/pat2/run_04.png)
 <br><br>
 ___________________
 
@@ -182,15 +182,15 @@ PAT 2.x includes three built-in reports that help the user compare design altern
 
 The default summary table compares consumption, demand, and economic metrics for all of the design alternatives. A selection field near the top of the table allows the user to specify which of the alternatives is to be used as the datum for performance comparison.  Analysis results shown in subsequent rows are relative to the datum's modeled values.
 
-![Summary Table](img/pat2/results_01.png)
+![Summary Table](../img/pat2/results_01.png)
 <br><br>
 The reports selection field at the top of the window may also be used to produce end use stacked bar charts broken down by fuel type.
 
-![End Use Comparison](img/pat2/results_02.png)
+![End Use Comparison](../img/pat2/results_02.png)
 <br><br>
 The third default report is intended for use by modelers working with utility design assistance programs and the Energy Design Assistance Project Tracker (EDAPT). This report is used to generate data for upload to EDAPT.
 
-![EDAPT Export](img/pat2/results_03.png)
+![EDAPT Export](../img/pat2/results_03.png)
 <br><br>
 ___________________
 
@@ -198,7 +198,7 @@ ___________________
 
 The final tab provides a view into PAT's OpenStudio Server, and will not be necessary for users performing manual analyses.  It is of greater importance when performing algorithmic analysis, and will be discussed later in this document.
 
-![EDAPT Export](img/pat2/server_01.png)
+![EDAPT Export](../img/pat2/server_01.png)
 <br><br>
 
 ___________________
@@ -209,7 +209,7 @@ The File menu allows you to create a new project, open an existing project, save
 
 The Windows menu allows the user to open the BCL dialog, set the location of the "MyMeasures" directory, and open up a set of server troubleshooting tools that may be helpful for advanced users.
 
-![Server Troubleshooting Tools](img/pat2/server.png)
+![Server Troubleshooting Tools](../img/pat2/server.png)
 <br><br>
 
 ___________________
@@ -223,11 +223,11 @@ PAT 2.x has also been designed to enable large-scale exploration of design space
 
 The first distinction is the addition of "sampling method" as a selection field near the top of tab one.  This field includes a number of methods.
 
-![Algorithm Setup](img/pat2/alg_00.png)
+![Algorithm Setup](../img/pat2/alg_00.png)
 
 In this example, Latin Hypercube Sampling (LHS) is selected as the algorithm that will be used to guide exploration of the design space.  Immediately below the sampling method field are collapsable sections for algorithm settings, supplementary analysis files, and server scripts.  A documentation button provides guidance relevant to each algorithm and its settings.
 
-![Algorithm Setup](img/pat2/alg_02.png)
+![Algorithm Setup](../img/pat2/alg_02.png)
 
 Algorithmic mode significantly alters the measure section of tab one.  The concept of manual mode's measure "option" no longer applies and variable checkboxes now become selection fields that allow the user to specify the nature of measure quantities.
 
@@ -236,11 +236,11 @@ Algorithmic mode significantly alters the measure section of tab one.  The conce
 3. **Discrete** - Allows the user to specify a specific set of distinct values with associated weights.
 4. **Pivot** - Forces the entire analysis to be performed against each specified value.  _e.g. An analysis problem with 25 samples and 3 pivots would create a total of 75 data points._
 
-![Algorithm Setup](img/pat2/alg_04.png)
+![Algorithm Setup](../img/pat2/alg_04.png)
 
 _Above: A measure contains both continuous and discrete variables._
 
-![Algorithm Setup](img/pat2/alg_06.png)
+![Algorithm Setup](../img/pat2/alg_06.png)
 
 _Above: The DOE Prototype Measure is applied to an empty seed model with three pivots: SmallOffice, MediumOffice, and LargeOffice.  Subsequent measures will be applied to each of these building types, perhaps creating an office-centric technology potential analysis.  This project is available as the Office Study example [here](https://github.com/NREL/OpenStudio-PAT/tree/develop/sample_projects)._
 
@@ -249,7 +249,7 @@ _Above: The DOE Prototype Measure is applied to an empty seed model with three p
 
 Since the algorithm is specifying the design algorithms, there is no need to use the second tab.
 
-![Algorithm Setup](img/pat2/alg_05.png)
+![Algorithm Setup](../img/pat2/alg_05.png)
 
 
 ## The Outputs Tab in Algorithmic Mode
@@ -258,11 +258,11 @@ Analysis via algorithm tends to produce very large data sets.  As such, the meth
 
 By default the outputs tab expects the OpenStudio Results Measure to be available to provide a nominal set of outputs, although additional reporting measures can be used to add more outputs.
 
-![Algorithm Setup](img/pat2/out_01.png)
+![Algorithm Setup](../img/pat2/out_01.png)
 
 Pressing the "Select Outputs" button brings up a dialog of all measures specified by the reporting measure.  The user can choose to select all of the outputs, or individual outputs.
 
-![Algorithm Setup](img/pat2/out_02.png)
+![Algorithm Setup](../img/pat2/out_02.png)
 
 Selected outputs appear in the outputs tab along with additional fields.
 
@@ -271,14 +271,14 @@ Selected outputs appear in the outputs tab along with additional fields.
 3. **Target Value** - The target value for the output variable that will be sought by the goal-seeking algorithm.
 4. **Weighting Factor** - A multiplier used to create linear combinations of error functions in multi-objective optimization problems.
 
-![Algorithm Setup](img/pat2/out_03.png)
+![Algorithm Setup](../img/pat2/out_03.png)
 
 
 ## The Run Tab in Algorithmic Mode
 
 The size of algorithm-based analysis problems generally exceeds the computational capability of a personal computer.  PAT 2.x has been designed to run these sorts of analysis in the cloud or on dedicated servers.  While PAT's "mini-server" still launches in the background, the application does not currently support simulation using local computing resources.
 
-![Algorithm Setup](img/pat2/cloud_01.png)
+![Algorithm Setup](../img/pat2/cloud_01.png)
 
 Instead, PAT expects the user to select "Run on Cloud" as the Run option.  This selection produces a dialog that enables the user to specify either an "Existing Remote Server" or Amazon Cloud.  Provisioning a dedicated server with OpenStudio Server is beyond the scope of this tutorial.  Interested users are referred to the    [OpenStudio-Server GitHub repository](https://github.com/NREL/OpenStudio-server) for further guidance on the topic.
 
@@ -288,32 +288,32 @@ Amazon Web Service (AWS) has been pre-provisioned with Amazon Machine Images (AM
 2. Press the New Cluster button and choose a cluster name to store your AWS cluster settings.
 3. Press the New AWS Credentials button and follow the prompts to enter your Access and Secret Keys.  Like the Cluster name, the AWS credential name is used by PAT to help you manage multiple cluster or credential configurations.
 
-![Algorithm Setup](img/pat2/cloud_00.png)
+![Algorithm Setup](../img/pat2/cloud_00.png)
 
 A field labeled "AMI Name" is used to specify the version of OpenStudio that the server and worker nodes will be provisioned with.  The specific version of OpenStudio and the Standards Gem are listed next to this field once selected.
 
 The user is referred to AWS documentation related to server and worker options.  The PAT UI provides an a brief description of the compute node configuration and approximate cost/hour.  A PAT analysis requires a server and a minimum of one worker.
 
-![Algorithm Setup](img/pat2/cloud_02.png)
+![Algorithm Setup](../img/pat2/cloud_02.png)
 
 Once configured, the user should press the start button next to the Cluster Status indicator on the right side of the UI.  A dialog explaining the user's responsibility to monitor and manage AWS computing resources appears and must be acknowledge before proceeding.
 
-![Algorithm Setup](img/pat2/cloud_03.png)
+![Algorithm Setup](../img/pat2/cloud_03.png)
 
 At this point, the server and worker provisioning process begins.  As the dialog states, this process can take many minutes.  Clicking on the View AWS Console button allows the user to monitor the process.
 
-![Algorithm Setup](img/pat2/cloud_04.png)
+![Algorithm Setup](../img/pat2/cloud_04.png)
 
 Once the server is running, clicking the "Run Entire Workflow" button starts the analysis.  Progress can be monitored within PAT or via the OpenStudio Server.  One notable difference between running in manual mode with local computing resources and on the server is that detailed simulations are not automatically downloaded.  These files can be quite large.  Clicking on the blue "OSM" or "Results" cloud next to a data point will download the OpenStudio Model or completed data point zip file. The cloud buttons appear as green checkmarks when a download has occurred.  Data point files are lost when the server shuts down, so it is important to download results that may be of particular interest.
 
-![Algorithm Setup](img/pat2/cloud_05.png)
+![Algorithm Setup](../img/pat2/cloud_05.png)
 
 
 ## Exploring Algorithm Results with OpenStudio Server
 
 The OpenStudio Server tab is of much greater importance with algorithmic workflows.  This same content may also be accessed through any web browser by clinking PAT's "View Server" button in the run tab or manually directing a web browser to http://**yourserverurl**:8080.  The top level view of OpenStudio Server provides a summary of completed or in-progress projects and analyses along with navigation options.
 
-![OpenStudio Server Landing Page](img/pat2/server_01b.png)
+![OpenStudio Server Landing Page](../img/pat2/server_01b.png)
 
 The top level of an analysis (a specific run of a project) provides a high level summary of the project, links to more detail about the analysis, and status updates for all data points that have been completed, queued for simulation, or are in process.  Important links on this page include:
 
@@ -323,15 +323,15 @@ The top level of an analysis (a specific run of a project) provides a high level
 4. __Data points__ - The bottom of the analysis page includes a snapshot of all data points along with their status, run times, and data point-specific links including the data point JSON file (OSW) and the data point zip file.
 5. __Data and Visualizations__ - A number of useful project summaries and interactive visualization tools are built into OpenStudio Server.  One of these, the parallel coordinate plot, is described in further detail below.
 
-![OpenStudio Server Analysis Summary](img/pat2/server_02.png)
+![OpenStudio Server Analysis Summary](../img/pat2/server_02.png)
 
 The variables link near the top center of the analysis web page provides a concise summary of variables and arguments utilized by the analysis' algorithm.  While any applicable measures are summarized in an adjacent page, this section provides more detail about how data points have been generated.  In the example below, three building types form the core of the analysis.  A five level "Design of Experiments" with lighting power density reduction percentage and window to wall ratio variables complete the study space.  Other sampling methods (e.g. LHS) include thumbail graphics illustrating variable distributions.
 
-![OpenStudio Server Variables Summary](img/pat2/server_04.png)
+![OpenStudio Server Variables Summary](../img/pat2/server_04.png)
 
 Parallel coordinate plots provide an interactive means of exploring large data sets and teasing out valuable insights.  OpenStudio enables the user to select inputs and outputs that have been pre-defined in PAT's measures and outputs tabs.  Checkboxes turn inputs on and off, and the individual plot axes can be re-ordered via drag and drop.  In this first example, LHS is used to sample the parameter space for lighting power density, window to wall ratio, and the facade on which windows are placed.  Energy Use Intensity (EUI) is selected as the output of interest.
 
-![OpenStudio Server Parallel Coordinate Plot](img/pat2/server_05.png)
+![OpenStudio Server Parallel Coordinate Plot](../img/pat2/server_05.png)
 
 
 ## Example Projects
@@ -343,12 +343,12 @@ The "AddMonthlyJSONUtilityData" measure is used to add electric and gas consumpt
 
 As a closing example, consider the SEB "PSO_2013" project.  This project utilizes the particle swarm algorithm to explore variations of the SEB seed model.  OpenStudio Server's parallel coordinate plot is a convenient means of interacting with the large number of solutions generated during the analysis.  Input or output coordinate ranges may be selected using the mouse to filter out solutions of interest - in this case, data points with low Coefficient of Variation of the Root Mean Squared Error (CVRMSE) and Net Mean Bias Error (NMBE) for both gas and electricity consumption.  Data points which fall within the filtered ranges (indicated in blue) are provided as links below the plot.
 
-![OpenStudio Server with Multiple Projects](img/pat2/pso_01.png)
+![OpenStudio Server with Multiple Projects](../img/pat2/pso_01.png)
 
 Clicking on one of these data points allows us to see the specific measure variable values that define the data point.  This page also allows convenient download of the specific OpenStudio Workflow (OSW) that generate the point, the resulting model, simulation results, and associated reports.
 
-![OpenStudio Server with Multiple Projects](img/pat2/pso_02.png)
+![OpenStudio Server with Multiple Projects](../img/pat2/pso_02.png)
 
 Output from the Enhanced Calibration Report for this data point is one of the available report links, and allows us to quickly visualize the performance of this particular model variant relative to the building's original measured consumption data.
 
-![OpenStudio Server with Multiple Projects](img/pat2/pso_03.png)
+![OpenStudio Server with Multiple Projects](../img/pat2/pso_03.png)

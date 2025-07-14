@@ -1,11 +1,4 @@
 # Asbolute needed freeze
-mkdocs==0.11.1
-PyYAML==3.13
-# Rest of the env (installed by the others, and confirmed it works)
-ghp-import==2.1.0
-Jinja2==3.1.2
-Markdown==2.4.1
-MarkupSafe==2.1.1
-python-dateutil==2.8.2
-six==1.16.0
-watchdog==2.1.8
+mkdocs==1.6.1
+mkdocs-bootswatch==1.1
+mkdocs-get-deps
