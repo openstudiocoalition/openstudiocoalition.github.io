@@ -21,6 +21,7 @@ import { gaDownloadClick } from '../ga/gaEvents';
 import { FaWindows } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { FaUbuntu } from "react-icons/fa";
+import { FaRedhat } from "react-icons/fa";
 import { useState } from 'react'
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
@@ -34,6 +35,8 @@ export const extractPlatform = (fileName: string) => {
     return 'windows';
   } else if (fileName.includes('Ubuntu')) {
     return 'linux';
+  } else if (fileName.includes('AlmaLinux')) {
+    return 'almalinux';
   }
 
   return 'unknown';
@@ -90,6 +93,11 @@ const assetIcon = (platform) => {
   if (platform == 'linux') {
     return <ListItemIcon>
              <FaUbuntu color="#E95420" size="1.2em" />
+           </ListItemIcon>;
+  }
+  if (platform == 'almalinux') {
+    return <ListItemIcon>
+             <FaRedhat color="#EE0000" size="1.2em" />
            </ListItemIcon>;
   }
 };
