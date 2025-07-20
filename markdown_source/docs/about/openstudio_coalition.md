@@ -19,8 +19,7 @@ The National Renewable Energy Laboratory (NREL) transferred control of the OpenS
 
 The OpenStudio Coalition is greatful to everyone who contibutes to the project by testing pre-release builds, submitting GitHub issues, or contributing code.  If you would like to help, please contact us for ideas on how to contribute.  If you have contributed and would like to be recognized below, please contact us about being added to the list below.
 
-- Recognized contributors:
-    - [Helix Energy Partners LLC](https://www.helix-engineers.net/)
+  - [Helix Energy Partners LLC](https://www.helix-engineers.net/)
 
 
 ## For More Information:
