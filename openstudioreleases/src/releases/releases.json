@@ -1,5 +1,74 @@
 [
   {
+    "name": "v1.10.0-rc2",
+    "tag_name": "v1.10.0-rc2",
+    "published_at": "2025-07-19T21:36:26Z",
+    "prerelease": true,
+    "body": "Pre-release RC2 for 1.10.0 release\r\n\r\n## Changelog\r\n\r\n\r\n**Date Range: 2025-02-09** (v1.9.0) - **2025-07-19:**\r\n\r\n**New Issues: 24**\r\n\r\n**Closed Issues: 16**\r\n\r\n**Accepted Pull Requests: 14**\r\n\r\n**Total Open Issues: 126**\r\n\r\n**Total Open Pull Requests: 2**\r\n\r\n\r\n<details>\r\n\r\n  <summary>Click to see details</summary>\r\n\r\n**Closed Issues: 16**\r\n- ➕ [#153]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/153 ), Allow users to choose which design days (0.4%, 1%, 2%) are imported\r\n- ✔️ [#485]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/485 ), ucrtbase.dll Error on Windows 11 in Parallels\r\n- ➕ [#742]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/742 ), Is it possible to support QtWebengine (Geometry Tab) for VMs without GPU acceleration?\r\n- ✔️ [#784]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/784 ), v1.9.0-rc1 Testing: Call for help from the community\r\n- ➕ [#792]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/792 ), Add support for HotWaterEquipment and HotWaterEquipmentDefinition\r\n- ✔️ [#796]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/796 ), Add ScheduleFile entries in My Model for tabs where missing (eg: Loads)\r\n- ➕ [#799]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/799 ), Linux RPM built or building from sources documentation\r\n- ✔️ [#800]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/800 ), thermochromic material group\r\n- ✔️ [#804]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/804 ), I can't access BCL/browse today\r\n- ✔️ [#807]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/807 ), District Heating category is greyed out\r\n- ➕ [#808]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/808 ), Peer-to-peer trade for surplus on-site generation (local flexibility market)\r\n- ✔️ [#812]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/812 ), The v1.9.0 release has no installer binaries\r\n- ➕ [#815]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/815 ), [OS SDK 3.10.0] Add OutputControl:ResilienceSummaries\r\n- ➕ [#816]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/816 ), [OS SDK 3.10.0] - Add ZoneHVAC:EvaporativeCoolerUnit\r\n- ✔️ [#823]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/823 ), [v1.10.0-rc1] openstudio hung when I clicked Find Component (under the Components & Measures dropdown)\r\n- ➕ [#825]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/825 ), Terrain field is missing from Site tab\r\n\r\n**Accepted Pull Requests: 14**\r\n- ✔️ [#790]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/790 ), Merge for 1.9.0 release\r\n- ➕ [#791]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/791 ), Fix #153 - Allow users to specifically import 99%,99.6%, 0.4%,1% and 2% annual design days\r\n- ➕ [#793]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/793 ), Fix #792 - Add support for HotWaterEquipment and HotWaterEquipmentDefinition\r\n- ✔️ [#795]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/795 ), Issue #166 - Sort measures alphabetically in GUI\r\n- ✔️ [#797]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/797 ), Fix #796 - Add ScheduleFile to MainRightColumnController\r\n- ✔️ [#809]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/809 ), Update to OS SDK v3.10.0 and EnergyPlus v25.1.0-WithDSOASpaceListFixes\r\n- ✔️ [#813]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/813 ), Update version to 1.10.0-rc1\r\n- ✔️ [#814]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/814 ), PR to create 1.10.0-RC1\r\n- ➕ [#820]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/820 ),   Fix #816 - Add ZoneHVAC:EvaporativeCoolerUnit to OS App\r\n- ➕ [#821]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/821 ), Fix #815 - Add OutputControl:ResilienceSummaries to OS App\r\n- ➕ [#822]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/822 ), #799 - Add Support for AlmaLinux9\r\n- ✔️ [#824]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/824 ), Revert changes to BuildingComponentDialogCentralWidget from PR #795\r\n- ➕ [#826]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/826 ), #825 - Expose Terrain, Elevation and Keep Site Location Information on the Site Tab\r\n- ✔️ [#827]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/827 ), Merge for RC2\r\n\r\n**Total Open Issues: 126** (#130, #132, #111, #113, #158, #133, #134, #172, #135, #136, #139, #174, #157, #166, #138, #167, #137, #121, #176, #114, #144, #152, #171, #141, #140, #122, #164, #170, #165, #151, #154, #148, #117, #150, #169, #124, #160, #155, #125, #156, #105, #159, #161, #120, #127, #118, #119, #128, #129, #146, #147, #168, #19, #78, #101, #96, #104, #199, #206, #224, #234, #239, #253, #254, #273, #278, #289, #293, #298, #300, #335, #336, #337, #338, #357, #371, #377, #380, #381, #389, #396, #400, #410, #411, #416, #423, #472, #481, #491, #495, #520, #529, #542, #555, #571, #615, #649, #658, #659, #679, #680, #687, #704, #709, #711, #751, #752, #757, #760, #770, #776, #782, #786, #787, #794, #798, #801, #802, #803, #805, #806, #810, #811, #817, #818, #819)\r\n\r\n**Total Open Pull Requests: 2** (#236, #470)\r\n\r\n</details>\r\n",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274565984",
+        "name": "OpenStudioApplication-1.10.0-rc2+4e212b2f46-AlmaLinux9.6.rpm",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2B4e212b2f46-AlmaLinux9.6.rpm"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274566140",
+        "name": "OpenStudioApplication-1.10.0-rc2+4e212b2f46-AlmaLinux9.6.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2B4e212b2f46-AlmaLinux9.6.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274461618",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-macOS13-arm64.dmg",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-macOS13-arm64.dmg"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274462128",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-macOS13-arm64.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-macOS13-arm64.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274461616",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-macOS13-x86_64.dmg",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-macOS13-x86_64.dmg"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274461678",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-macOS13-x86_64.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-macOS13-x86_64.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274458421",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-Ubuntu22.04.deb",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-Ubuntu22.04.deb"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274458471",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-Ubuntu22.04.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-Ubuntu22.04.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274458742",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-Ubuntu24.04.deb",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-Ubuntu24.04.deb"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274458821",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-Ubuntu24.04.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-Ubuntu24.04.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274463153",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-Windows.exe",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-Windows.exe"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/274463176",
+        "name": "OpenStudioApplication-1.10.0-rc2+a64e47bea3-Windows.zip",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.10.0-rc2/OpenStudioApplication-1.10.0-rc2%2Ba64e47bea3-Windows.zip"
+      }
+    ]
+  },
+  {
     "name": "v1.10.0-rc1",
     "tag_name": "v1.10.0-rc1",
     "published_at": "2025-07-07T07:32:43Z",
