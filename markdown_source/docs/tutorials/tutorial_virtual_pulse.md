@@ -10,5 +10,5 @@
 ## Bring Models Into OpenStudio.
 You can start your workflow using the [VirtualPULSE](http://virtualpulse.buildsci.us/) workflow, and then bring in models from selected buildings into OpenStudio. At that point they are like any other OpenStudio models.
 
-![Apply VirtualPULSE model viewed in OpenStudio](img/virtual_pulse/view_osm.png)
+![Apply VirtualPULSE model viewed in OpenStudio](../img/virtual_pulse/view_osm.png)
 *Above: VirtualPULSE model viewed in OpenStudio.*

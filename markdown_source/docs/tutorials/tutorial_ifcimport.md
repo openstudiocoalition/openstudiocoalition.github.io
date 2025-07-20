@@ -1,7 +1,7 @@
 <h1>Import IFC</h1>
 This tutorial explains how to import an IFC file into OpenStudio using BIMserver.  This functionality is available in OpenStudio 1.7.1 and higher.  This functionality was developed by Chong Zhou as part of the [BIMDataHub](https://github.com/BIMDataHub) project at the [Consortium for Building Energy Innovation](http://www.cbei.psu.edu/).
 
-**Notice** The IFC plugin was built by the [BIMDataHub](https://github.com/BIMDataHub) group.  The functionality has not been maintained since 2016. 
+**Notice** The IFC plugin was built by the [BIMDataHub](https://github.com/BIMDataHub) group.  The functionality has not been maintained since 2016.
 
 ## Install BIMserver
 
@@ -17,7 +17,7 @@ Most users will want to install a stand-alone version of BIMserver on their loca
 
 - Double-click on the bimserver-[version].jar file to execute it. Enter the path to your JVM install, e.g. C:\Program Files\Java\jdk1.7.0_75.  Press the start button to start the BIMserver. Wait for BIMserver to expand all the files and configure itself and until the phrase "Server started successfully" appears. Click the Stop button to stop the BIMserver.
 
-![BIMserver install](img/ifcimport/ifcimport1.jpg)
+![BIMserver install](../img/ifcimport/ifcimport1.jpg)
 
 - Download the [latest OSMSerializer](https://github.com/BIMDataHub/OsmSerializer/releases) and copy the OSMSerializer.jar file into the plugins subfolder under the bimserver-[version] folder.
 
@@ -25,11 +25,11 @@ Most users will want to install a stand-alone version of BIMserver on their loca
 
 - Setup the BIMserver for the first time by clicking the "the admin page" in the browser.
 
-![BIMserver setup](img/ifcimport/ifcimport2.jpg)
+![BIMserver setup](../img/ifcimport/ifcimport2.jpg)
 
 - Enter the Administrator username (e.g. 'Administrator'), email (e.g. 'admin@bimserver.org'), and password (e.g. 'admin') then click Setup.
 
-![BIMserver setup](img/ifcimport/ifcimport3.jpg)
+![BIMserver setup](../img/ifcimport/ifcimport3.jpg)
 
 - The BIMserver is now correctly setup and running. You can close the browser and continue to use OpenStudio to import IFC file.  BIMserver needs to be running during the IFC import, you can stop BIMserver when you are done by pressing the Stop button.
 
@@ -44,31 +44,31 @@ If you want to host BIMserver on a public website you should install the server 
 ### Launch the Import IFC Utility.
 - Click File -> Import -> IFC.
 
-![Launch the Import IFC Utility](img/ifcimport/ifcimport4.jpg)
+![Launch the Import IFC Utility](../img/ifcimport/ifcimport4.jpg)
 
 - You will need to specify the BIMserver settings information the first time running the Import IFC Utility in OpenStudio. Please enter the BIMserver Address (e.g. http://127.0.0.1), Port (e.g. 8082), Username (e.g 'admin@bimserver.org'), and Password (e.g. 'admin') for the BIMserver and click Okay.
 
-![BIMserver settings](img/ifcimport/ifcimport5.jpg)
+![BIMserver settings](../img/ifcimport/ifcimport5.jpg)
 
 - The left part of the Import IFC Utility lists all BIM projects hosted on BIMserver. The right part displays a list of IFC revisions of a project.
 
-![Import Project](img/ifcimport/ifcimport6.jpg)
+![Import Project](../img/ifcimport/ifcimport6.jpg)
 
 ### Create a new Project
 - Create a new project by clicking the New Project Button and specify the name for the project e.g. "Test".
 
-![Import Project](img/ifcimport/ifcimport7.jpg)
+![Import Project](../img/ifcimport/ifcimport7.jpg)
 
 - You will see the newly created project on the left. It contains Project ID on the BIMserver and the Project Name separated by colon.
 
-![Import Project](img/ifcimport/ifcimport8.jpg)
+![Import Project](../img/ifcimport/ifcimport8.jpg)
 
 - Click the ">" button to view the current IFC files hosted on BIMserver. It will not display anything for now since we have not yet checked in the IFC file.
 
 ### Check in IFC File
 - After selecting a project and clicked ">" button, click the Check in IFC File button and select an IFC file to upload to BIMserver.
 
-![Import Project](img/ifcimport/ifcimport9.jpg)
+![Import Project](../img/ifcimport/ifcimport9.jpg)
 
 - Now you can click the ">" button again to refresh the IFC revision list. Select the newly added file. It displays the IFC Revision ID and the time when the IFC file is uploaded, separated by colon.
 
@@ -96,6 +96,6 @@ We provide an IFC to OSM transformation utility, using BIMserver as a middle-war
 ### What to do if you have some elements being transformed incorrectly or not transformed
 - Save the imported OSM model in OpenStudio by clicking File -> Save As in the menu.
 - Use SketchUp with the OpenStudio plug-in to open the new OSM file.
-- Modify the building geometry in SketchUp. For more information, please refer to [this tutorial](http://nrel.github.io/OpenStudio-user-documentation/getting_started/getting_started/#installation-instructions).
+- Modify the building geometry in SketchUp. For more information, please refer to [this tutorial](http://nrel.github.io/OpenStudio-user-documentation/getting_started/getting_started.md#installation-instructions).
 
 
