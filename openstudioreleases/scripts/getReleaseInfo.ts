@@ -20,7 +20,7 @@ const run = async () => {
   const semver = require('semver');
   const filteredReleases = releases.filter((release) => {
     const version = semver.clean(release.tag_name);
-    return version && semver.gt(version, "1.9.0");  // TODO: Bump me
+    return version && semver.gt(version, "1.10.0");  // TODO: Bump me
   });
 
   const PR_REGEX = /in https:\/\/github\.com\/openstudiocoalition\/OpenStudioApplication\/pull\/(\d+)/gm;

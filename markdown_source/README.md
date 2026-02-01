@@ -44,10 +44,10 @@ cd markdown_source
 /bin/rm -rf site
 mkdocs build
 cd ..
-/bin/rm -Rf !(markdown_source)
+find . \( -name markdown_source -o -name app -o -name openstudioreleases -o -name .git -o -name .gitignore -o -name README.md \) -prune -o -type f -print0 | xargs -0 rm -f
 cd markdown_source
 cp -R site/* ..
 cp CNAME ..
 ```
 
-This will generate the static site in the `site/` directory.  Delete all the files in the root level of the repository except for the markdown_source directory. Then copy the files from the `site/` directory into the root level of the repository.  Add any new files and delete any missing ones from the repo.  Finally your changes the repo, the public site serves the content on the master branch.
+This will generate the static site in the `site/` directory.  Delete all the files in the root level of the repository except for the markdown_source, app, openstudioreleases, .git directories. Then copy the files from the `site/` directory into the root level of the repository.  Add any new files and delete any missing ones from the repo.  Finally your changes the repo, the public site serves the content on the master branch.
