@@ -53,6 +53,8 @@ Build
 yarn build
 ```
 
+Copy the contents from ./dist/app over to the app directory in the top level of the repository.
+
 ### Too many open files error
 
 *Note:* if you get this error: `Error: EMFILE: too many open files, watch 'path/to/openstudiocoalition.github.io/openstudioreleases/public'`

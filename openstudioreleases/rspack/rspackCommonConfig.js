@@ -10,6 +10,9 @@ const isProduction = process.env.NODE_ENV === 'production';
  */
 module.exports = {
   context: cwd,
+  experiments: {
+    css: true,
+  },
   entry: {
     main: './src/index.tsx',
   },
