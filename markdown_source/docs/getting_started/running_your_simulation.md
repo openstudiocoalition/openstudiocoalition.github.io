@@ -22,7 +22,7 @@ You can also choose variables to collect data on by using the Add Output Variabl
 *Above: Screenshot of the variable measure being added to a project. Just type in the variable you want to collect. This will return the variable's value for all associated objects within the model. To get the variable's value for a specific object, enter the full name of this object.*
 
 ## Running a Simulation
-To run your simulation click the green Run button. 
+To run your simulation click the green Run button.
 
 [![Run Simulation Tab](../img/run/run.png "Click to view")](../img/run/run.png)
 
@@ -46,4 +46,4 @@ You can also use measures to add additional reports. For instance, you can downl
 *Above: The calibration report compares utility bills with the model.*
 
 ## Using Data Viewer
-Data Viewer (DView) displays time series results, which are produced from EnergyPlus report variable requests. It reads the SQLite database of the EnergyPlus engine and presents the time series data using line plots and heat maps. Furthermore, additional graphical/tabular formats can be harnessed to visualize simulation variables that are independent of time. [Learn more about DView using guides created by researchers at the National Renewable Energy Laboratory](https://github.com/NREL/wex/wiki/DView).
+Data Viewer (DView) displays time series results, which are produced from EnergyPlus report variable requests. It reads the SQLite database of the EnergyPlus engine and presents the time series data using line plots and heat maps. Furthermore, additional graphical/tabular formats can be harnessed to visualize simulation variables that are independent of time. [Learn more about DView using guides created by researchers at the National Renewable Energy Laboratory](https://github.com/NatLabRockies/wex/wiki/DView).

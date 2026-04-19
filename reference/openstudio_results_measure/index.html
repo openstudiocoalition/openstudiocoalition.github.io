@@ -355,7 +355,7 @@
 <p><a href="../../img/openstudio_results/measure_args.png"><img alt="View of Arguments in OpenStudio Results measure" src="../../img/openstudio_results/measure_args.png" /></a></p>
 <p><em>Above: View of Arguments in OpenStudio Results measure.</em></p>
 <h2 id="developing-your-own-reporting-measures">Developing Your Own Reporting Measures</h2>
-<p>This measure was created to fill a need in providing easy access to more detailed model and simulation results data, but it serves another role as well. It was created in a way that was very easy to use as a template for custom user reports. We setup a framework and added support for a variety of chart types. The only coding required to make your own custom report is to provide the data. While there is a <a href="http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/">Measure Writing Guide</a> within the OpenStudio Software Development Kit (SDK) documentation, it seemed fitting to explain here how you would add your own tables and charts to this report, or to create a new clean report.</p>
+<p>This measure was created to fill a need in providing easy access to more detailed model and simulation results data, but it serves another role as well. It was created in a way that was very easy to use as a template for custom user reports. We setup a framework and added support for a variety of chart types. The only coding required to make your own custom report is to provide the data. While there is a <a href="http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/">Measure Writing Guide</a> within the OpenStudio Software Development Kit (SDK) documentation, it seemed fitting to explain here how you would add your own tables and charts to this report, or to create a new clean report.</p>
 <p>The first step is to gather the data you want in a table or chart. This could be simulation results, model inputs, or even just hard coded table as in this example. It could also be read in from a text file. In the "resources" folder of the measure this is a file named "os_lib_reporting.rb". Most of the methods (start with "def OsLib_Reporting.my_method") in this file do one of two things. They define a section used in the report or they define a table that is used by one of the sections. The code below shows two sample methods with hard coded table data about tasty treats. You can copy and modify these methods to show what you want. The section description and all of the table data can be in one method, or if it is easier to break things up you can have a method for each table, and then call it from the method that makes the section. in this case.  <code>template_tables &lt;&lt; OsLib_Reporting.template_table(model,sqlFile,runner)</code> adds in a table defined elsewhere. The code for a sample section method and table method are shown below.</p>
 <pre><code class="language-ruby">  # create template section
   def OsLib_Reporting.template_section(model,sqlFile,runner,name_only = false)
@@ -454,11 +454,10 @@
   <p class="text-center"><a href="https://unmethours.com/questions/scope:all/sort:activity-desc/tags:openstudio/">Get
     Help</a> | <a href="mailto:osc@openstudiocoalition.org">Contact the OpenStudio Coalition</a></p>
   <p class="text-center"><a href="https://www.openstudio.net">OpenStudio</a><sup>&reg;</sup> is developed in
-    collaboration by NREL, ANL, LBNL, ORNL, and PNNL.</p>
+    collaboration by NLR, ANL, LBNL, ORNL, and PNNL.</p>
   <p class="text-center">OpenStudio<sup>&reg;</sup> is a registered trademark of the Alliance for Sustainable Energy,
     LLC.</p>
-  <p class="text-center"><a href="http://www.nrel.gov">NREL</a> is a National Laboratory of the U.S. Department of
-    Energy, Office of Energy Efficiency and Renewable Energy, operated by the Alliance for Sustainable Energy, LLC.</p>
+  <p class="text-center"><a href="http://www.nlr.gov">NLR</a> is a national laboratory of the U.S. Department of Energy.</p>
 </div>
     </div>
   </div>

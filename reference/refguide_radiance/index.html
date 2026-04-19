@@ -259,8 +259,8 @@
     <div class="col-md-9" role="main">
       <h1 id="openstudio-radiance-reference-guide">OpenStudio-Radiance Reference Guide</h1>
 <p>This reference guide explains the methods used in OpenStudio to utilize <a href="http://www.radiance-online.org/">Radiance</a> to simulate the daylight ingress in your OpenStudio model, allowing for higher fidelity simulations of daylighting-related energy efficiency measures. Radiance is not constrained to simple geometry, and the OpenStudio model supports interior architectural detail such as <a href="../sketchup_plugin_interface/#new-interior-partition-surface-group">interior partition surfaces</a> (for representing columns, soffits, furniture, etc) and air walls (for eliminating thermal zone boundaries that do not correspond to any actual building architecture). This allows for a more accurate characterization of the spatial distribution of daylight in the OpenStudio model.</p>
-<p>For OpenStudio <a href="https://github.com/NREL/OpenStudio/releases/tag/v1.7.0">v1.7.0</a>, added support for window shades and wall thickness has increased the utility of the Radiance simulation option in the OpenStudio application.</p>
-<p>With OpenStudio <a href="https://github.com/NREL/OpenStudio/releases/tag/v1.9.0">v1.9.0</a>, the Radiance simulation option has been refactored (moved) to a measure, eliminating the "daylight simulation engine" selection radio buttons from the app, and modifying the workflow slightly.</p>
+<p>For OpenStudio <a href="https://github.com/NatLabRockies/OpenStudio/releases/tag/v1.7.0">v1.7.0</a>, added support for window shades and wall thickness has increased the utility of the Radiance simulation option in the OpenStudio application.</p>
+<p>With OpenStudio <a href="https://github.com/NatLabRockies/OpenStudio/releases/tag/v1.9.0">v1.9.0</a>, the Radiance simulation option has been refactored (moved) to a measure, eliminating the "daylight simulation engine" selection radio buttons from the app, and modifying the workflow slightly.</p>
 <h2 id="overview">Overview</h2>
 <p>In short, OpenStudio manages the model translation, simulation, and results processing of an OpenStudio building model (.osm), deriving geometry, materials, loads, schedules, and site information from the OSM. An annual climate-based daylight simulation is performed, new lighting load schedules are generated and embedded in the osm for the subsequent EnergyPlus simulation. In addition, a number of daylight metrics are calculated for those spaces with daylighting objects in them (illuminance maps and glare sensors), and are reported in a comma-delineated format, suitable for import and plotting in the modeler's tool of choice.</p>
 <h2 id="modeling-shading-controls-with-the-3-phase-method">Modeling Shading Controls with the 3-Phase Method</h2>
@@ -283,11 +283,10 @@
   <p class="text-center"><a href="https://unmethours.com/questions/scope:all/sort:activity-desc/tags:openstudio/">Get
     Help</a> | <a href="mailto:osc@openstudiocoalition.org">Contact the OpenStudio Coalition</a></p>
   <p class="text-center"><a href="https://www.openstudio.net">OpenStudio</a><sup>&reg;</sup> is developed in
-    collaboration by NREL, ANL, LBNL, ORNL, and PNNL.</p>
+    collaboration by NLR, ANL, LBNL, ORNL, and PNNL.</p>
   <p class="text-center">OpenStudio<sup>&reg;</sup> is a registered trademark of the Alliance for Sustainable Energy,
     LLC.</p>
-  <p class="text-center"><a href="http://www.nrel.gov">NREL</a> is a National Laboratory of the U.S. Department of
-    Energy, Office of Energy Efficiency and Renewable Energy, operated by the Alliance for Sustainable Energy, LLC.</p>
+  <p class="text-center"><a href="http://www.nlr.gov">NLR</a> is a national laboratory of the U.S. Department of Energy.</p>
 </div>
     </div>
   </div>

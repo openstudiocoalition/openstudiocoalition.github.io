@@ -220,7 +220,7 @@ In the OpenStudio Application you can download items directly from the BCL by go
 
 The components are designed to provide data to the energy modeler and simplify the process of gathering inputs.
 
-Measures are scripts that can quickly alter your model or create different reports for viewing and checking your results. Learn more about measures in the [About Measures](http://nrel.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section. Learn how to [write your own custom measures](http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/).
+Measures are scripts that can quickly alter your model or create different reports for viewing and checking your results. Learn more about measures in the [About Measures](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section. Learn how to [write your own custom measures](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/).
 
 ------
 
@@ -251,7 +251,7 @@ The Spaces tab lets you edit the spaces, and view the surfaces and sub-surfaces 
 
 Each horizontal tab may have sub-buttons that hold additional settings. The available filters on each tab can help you find a particular space to edit.
 
-Some items are not editable within the Spaces tab. These items are within the Subsurfaces, Interior Partitions, and Shading tabs. These items have to be edited in the SketchUp Plug-in, Geometry tab, or using a measure. 
+Some items are not editable within the Spaces tab. These items are within the Subsurfaces, Interior Partitions, and Shading tabs. These items have to be edited in the SketchUp Plug-in, Geometry tab, or using a measure.
 
 
 [![Spaces Properties](../img/create_model/spaces_properties.png "Click to view")](../img/create_model/spaces_properties.png)
@@ -442,9 +442,9 @@ An alternate view of the refrigeration systems is provided by the grid view. The
 
 There are two major divisions, one for Display Cases and another for Walk-ins. Under each division a drop box is available to add new cases. There are also buttons to move through the case settings and enter the data on each case.
 
-Click the shaded portion of any column headers that you want to view that column in the "Custom" category. Navigate to the created view by clicking the Custom button. 
+Click the shaded portion of any column headers that you want to view that column in the "Custom" category. Navigate to the created view by clicking the Custom button.
 
-No provision was made to delete a case or walk in within the grid view. To delete a case or walk in, assign it to a rack, then delete it from the layout view. 
+No provision was made to delete a case or walk in within the grid view. To delete a case or walk in, assign it to a rack, then delete it from the layout view.
 
 ------
 

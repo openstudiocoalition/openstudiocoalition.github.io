@@ -87,9 +87,9 @@ _________________
 ## Submit a Bug
 Please let us know if you find a bug in the OpenStudio software.
 
-<a class="btn btn-primary" role="button" href="https://github.com/NREL/OpenStudioApplication/issues">Submit an OpenStudio Application Bug</a>
+<a class="btn btn-primary" role="button" href="https://github.com/openstudiocoalition/OpenStudioApplication/issues">Submit an OpenStudio Application Bug</a>
 
-<a class="btn btn-primary" role="button" href="https://github.com/NREL/openstudio-sketchup-plugin/issues">Submit an OpenStudio SketchUp Plugin Bug</a>
+<a class="btn btn-primary" role="button" href="https://github.com/openstudiocoalition/openstudio-sketchup-plugin/issues">Submit an OpenStudio SketchUp Plugin Bug</a>
 
 _________________
 

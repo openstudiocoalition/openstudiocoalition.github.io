@@ -308,7 +308,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 - Extensive online library of building materials from ASHRAE Handbook of Fundamentals
 - Extensive online library of weather files and design day conditions
 
-### Parametric Analysis Using [PAT](https://github.com/NREL/OpenStudio-PAT/releases)
+### Parametric Analysis Using [PAT](https://github.com/NatLabRockies/OpenStudio-PAT/releases)
 
 - OpenStudio Measures provide reliable and repeatable mechanism to apply transforms to models
 - Eliminates ambiguity and user error; all rules encapsulated in measure itself
@@ -334,7 +334,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 - Reports are shareable via email
 - Reports can be simple or highly interactive using standard JavaScript Libraries
 
-### Cloud Computing Using [PAT](https://github.com/NREL/OpenStudio-PAT/releases)
+### Cloud Computing Using [PAT](https://github.com/NatLabRockies/OpenStudio-PAT/releases)
 
 - Any user with an Amazon account can run simulations on cloud with 1 click
 - Very affordable vs. engineer's time (16 simulations in parallel for ~$2.00/hr)

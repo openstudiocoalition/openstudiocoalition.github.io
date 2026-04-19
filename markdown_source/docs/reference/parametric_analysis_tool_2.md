@@ -56,8 +56,8 @@ ___________________
 
 ## Add Measures and Create Measure Options
 
-If you want to learn more about measures, check out the [About Measures](http://nrel.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
-<br>Check out the [Measure Writing Guide](http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) to start writing your own custom measures.
+If you want to learn more about measures, check out the [About Measures](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
+<br>Check out the [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) to start writing your own custom measures.
 
 PAT works with three classes of measures:
 
@@ -242,7 +242,7 @@ _Above: A measure contains both continuous and discrete variables._
 
 ![Algorithm Setup](../img/pat2/alg_06.png)
 
-_Above: The DOE Prototype Measure is applied to an empty seed model with three pivots: SmallOffice, MediumOffice, and LargeOffice.  Subsequent measures will be applied to each of these building types, perhaps creating an office-centric technology potential analysis.  This project is available as the Office Study example [here](https://github.com/NREL/OpenStudio-PAT/tree/develop/sample_projects)._
+_Above: The DOE Prototype Measure is applied to an empty seed model with three pivots: SmallOffice, MediumOffice, and LargeOffice.  Subsequent measures will be applied to each of these building types, perhaps creating an office-centric technology potential analysis.  This project is available as the Office Study example [here](https://github.com/NatLabRockies/OpenStudio-PAT/tree/develop/sample_projects)._
 
 
 ## The Design Alternatives Tab in Algorithmic Mode
@@ -280,7 +280,7 @@ The size of algorithm-based analysis problems generally exceeds the computationa
 
 ![Algorithm Setup](../img/pat2/cloud_01.png)
 
-Instead, PAT expects the user to select "Run on Cloud" as the Run option.  This selection produces a dialog that enables the user to specify either an "Existing Remote Server" or Amazon Cloud.  Provisioning a dedicated server with OpenStudio Server is beyond the scope of this tutorial.  Interested users are referred to the    [OpenStudio-Server GitHub repository](https://github.com/NREL/OpenStudio-server) for further guidance on the topic.
+Instead, PAT expects the user to select "Run on Cloud" as the Run option.  This selection produces a dialog that enables the user to specify either an "Existing Remote Server" or Amazon Cloud.  Provisioning a dedicated server with OpenStudio Server is beyond the scope of this tutorial.  Interested users are referred to the    [OpenStudio-Server GitHub repository](https://github.com/NatLabRockies/OpenStudio-server) for further guidance on the topic.
 
 Amazon Web Service (AWS) has been pre-provisioned with Amazon Machine Images (AMIs) for OpenStudio Server that enable users to leverage large-scale computing with minimal effort and cost.  New users will need to establish an [account](https://aws.amazon.com).  Once created, use your AWS account to generate an Access and Secret key pair.
 
@@ -336,7 +336,7 @@ Parallel coordinate plots provide an interactive means of exploring large data s
 
 ## Example Projects
 
-Several sample PAT projects may be found [here](https://github.com/NREL/OpenStudio-PAT/tree/develop/sample_projects).  Both the Office_Hvac and Office_Study projects are configured to run in manual model using local computing resources.  The remaining "SEB" projects pertain to NREL's Site Entrance Building (SEB), and demonstrate the various algorithms available for use in the cloud.  Several of the SEB projects are also notable as examples of performing sampling or optimization-based calibrations of a model using Actual Meteorlogic Year (AMY) and consumption data.
+Several sample PAT projects may be found [here](https://github.com/NatLabRockies/OpenStudio-PAT/tree/develop/sample_projects).  Both the Office_Hvac and Office_Study projects are configured to run in manual model using local computing resources.  The remaining "SEB" projects pertain to NLR's Site Entrance Building (SEB), and demonstrate the various algorithms available for use in the cloud.  Several of the SEB projects are also notable as examples of performing sampling or optimization-based calibrations of a model using Actual Meteorlogic Year (AMY) and consumption data.
 The "AddMonthlyJSONUtilityData" measure is used to add electric and gas consumption data to the model.  The "CalibrationReportsEnhanced20" reporting measure is used to create analysis outputs and charts that describe the calibration's "goodness of fit."
 
 ### A Model Calibration Example

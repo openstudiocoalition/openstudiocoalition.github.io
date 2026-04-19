@@ -300,8 +300,8 @@
 <p>Note: PAT 2.x allows the user to specify multiple seed and weather files that may all be used within a project.</p>
 <hr />
 <h2 id="add-measures-and-create-measure-options">Add Measures and Create Measure Options</h2>
-<p>If you want to learn more about measures, check out the <a href="http://nrel.github.io/OpenStudio-user-documentation/getting_started/about_measures/">About Measures</a> section.
-<br>Check out the <a href="http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/">Measure Writing Guide</a> to start writing your own custom measures.</p>
+<p>If you want to learn more about measures, check out the <a href="http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/">About Measures</a> section.
+<br>Check out the <a href="http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/">Measure Writing Guide</a> to start writing your own custom measures.</p>
 <p>PAT works with three classes of measures:</p>
 <ol>
 <li><strong>OpenStudio Measures</strong> operate on the OpenStudio Model (.osm) before it is converted to an EnergyPlus input file (.idf).</li>
@@ -419,7 +419,7 @@ The third default report is intended for use by modelers working with utility de
 <p><img alt="Algorithm Setup" src="../../img/pat2/alg_04.png" /></p>
 <p><em>Above: A measure contains both continuous and discrete variables.</em></p>
 <p><img alt="Algorithm Setup" src="../../img/pat2/alg_06.png" /></p>
-<p><em>Above: The DOE Prototype Measure is applied to an empty seed model with three pivots: SmallOffice, MediumOffice, and LargeOffice.  Subsequent measures will be applied to each of these building types, perhaps creating an office-centric technology potential analysis.  This project is available as the Office Study example <a href="https://github.com/NREL/OpenStudio-PAT/tree/develop/sample_projects">here</a>.</em></p>
+<p><em>Above: The DOE Prototype Measure is applied to an empty seed model with three pivots: SmallOffice, MediumOffice, and LargeOffice.  Subsequent measures will be applied to each of these building types, perhaps creating an office-centric technology potential analysis.  This project is available as the Office Study example <a href="https://github.com/NatLabRockies/OpenStudio-PAT/tree/develop/sample_projects">here</a>.</em></p>
 <h2 id="the-design-alternatives-tab-in-algorithmic-mode">The Design Alternatives Tab in Algorithmic Mode</h2>
 <p>Since the algorithm is specifying the design algorithms, there is no need to use the second tab.</p>
 <p><img alt="Algorithm Setup" src="../../img/pat2/alg_05.png" /></p>
@@ -440,7 +440,7 @@ The third default report is intended for use by modelers working with utility de
 <h2 id="the-run-tab-in-algorithmic-mode">The Run Tab in Algorithmic Mode</h2>
 <p>The size of algorithm-based analysis problems generally exceeds the computational capability of a personal computer.  PAT 2.x has been designed to run these sorts of analysis in the cloud or on dedicated servers.  While PAT's "mini-server" still launches in the background, the application does not currently support simulation using local computing resources.</p>
 <p><img alt="Algorithm Setup" src="../../img/pat2/cloud_01.png" /></p>
-<p>Instead, PAT expects the user to select "Run on Cloud" as the Run option.  This selection produces a dialog that enables the user to specify either an "Existing Remote Server" or Amazon Cloud.  Provisioning a dedicated server with OpenStudio Server is beyond the scope of this tutorial.  Interested users are referred to the    <a href="https://github.com/NREL/OpenStudio-server">OpenStudio-Server GitHub repository</a> for further guidance on the topic.</p>
+<p>Instead, PAT expects the user to select "Run on Cloud" as the Run option.  This selection produces a dialog that enables the user to specify either an "Existing Remote Server" or Amazon Cloud.  Provisioning a dedicated server with OpenStudio Server is beyond the scope of this tutorial.  Interested users are referred to the    <a href="https://github.com/NatLabRockies/OpenStudio-server">OpenStudio-Server GitHub repository</a> for further guidance on the topic.</p>
 <p>Amazon Web Service (AWS) has been pre-provisioned with Amazon Machine Images (AMIs) for OpenStudio Server that enable users to leverage large-scale computing with minimal effort and cost.  New users will need to establish an <a href="https://aws.amazon.com">account</a>.  Once created, use your AWS account to generate an Access and Secret key pair.</p>
 <ol>
 <li>In the PAT Run Tab, select "Run on Cloud" with "Amazon Cloud" as the server type.</li>
@@ -474,7 +474,7 @@ The third default report is intended for use by modelers working with utility de
 <p>Parallel coordinate plots provide an interactive means of exploring large data sets and teasing out valuable insights.  OpenStudio enables the user to select inputs and outputs that have been pre-defined in PAT's measures and outputs tabs.  Checkboxes turn inputs on and off, and the individual plot axes can be re-ordered via drag and drop.  In this first example, LHS is used to sample the parameter space for lighting power density, window to wall ratio, and the facade on which windows are placed.  Energy Use Intensity (EUI) is selected as the output of interest.</p>
 <p><img alt="OpenStudio Server Parallel Coordinate Plot" src="../../img/pat2/server_05.png" /></p>
 <h2 id="example-projects">Example Projects</h2>
-<p>Several sample PAT projects may be found <a href="https://github.com/NREL/OpenStudio-PAT/tree/develop/sample_projects">here</a>.  Both the Office_Hvac and Office_Study projects are configured to run in manual model using local computing resources.  The remaining "SEB" projects pertain to NREL's Site Entrance Building (SEB), and demonstrate the various algorithms available for use in the cloud.  Several of the SEB projects are also notable as examples of performing sampling or optimization-based calibrations of a model using Actual Meteorlogic Year (AMY) and consumption data.
+<p>Several sample PAT projects may be found <a href="https://github.com/NatLabRockies/OpenStudio-PAT/tree/develop/sample_projects">here</a>.  Both the Office_Hvac and Office_Study projects are configured to run in manual model using local computing resources.  The remaining "SEB" projects pertain to NLR's Site Entrance Building (SEB), and demonstrate the various algorithms available for use in the cloud.  Several of the SEB projects are also notable as examples of performing sampling or optimization-based calibrations of a model using Actual Meteorlogic Year (AMY) and consumption data.
 The "AddMonthlyJSONUtilityData" measure is used to add electric and gas consumption data to the model.  The "CalibrationReportsEnhanced20" reporting measure is used to create analysis outputs and charts that describe the calibration's "goodness of fit."</p>
 <h3 id="a-model-calibration-example">A Model Calibration Example</h3>
 <p>As a closing example, consider the SEB "PSO_2013" project.  This project utilizes the particle swarm algorithm to explore variations of the SEB seed model.  OpenStudio Server's parallel coordinate plot is a convenient means of interacting with the large number of solutions generated during the analysis.  Input or output coordinate ranges may be selected using the mouse to filter out solutions of interest - in this case, data points with low Coefficient of Variation of the Root Mean Squared Error (CVRMSE) and Net Mean Bias Error (NMBE) for both gas and electricity consumption.  Data points which fall within the filtered ranges (indicated in blue) are provided as links below the plot.</p>
@@ -487,11 +487,10 @@ The "AddMonthlyJSONUtilityData" measure is used to add electric and gas consumpt
   <p class="text-center"><a href="https://unmethours.com/questions/scope:all/sort:activity-desc/tags:openstudio/">Get
     Help</a> | <a href="mailto:osc@openstudiocoalition.org">Contact the OpenStudio Coalition</a></p>
   <p class="text-center"><a href="https://www.openstudio.net">OpenStudio</a><sup>&reg;</sup> is developed in
-    collaboration by NREL, ANL, LBNL, ORNL, and PNNL.</p>
+    collaboration by NLR, ANL, LBNL, ORNL, and PNNL.</p>
   <p class="text-center">OpenStudio<sup>&reg;</sup> is a registered trademark of the Alliance for Sustainable Energy,
     LLC.</p>
-  <p class="text-center"><a href="http://www.nrel.gov">NREL</a> is a National Laboratory of the U.S. Department of
-    Energy, Office of Energy Efficiency and Renewable Energy, operated by the Alliance for Sustainable Energy, LLC.</p>
+  <p class="text-center"><a href="http://www.nlr.gov">NLR</a> is a national laboratory of the U.S. Department of Energy.</p>
 </div>
     </div>
   </div>
