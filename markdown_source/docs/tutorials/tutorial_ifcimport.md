@@ -96,6 +96,6 @@ We provide an IFC to OSM transformation utility, using BIMserver as a middle-war
 ### What to do if you have some elements being transformed incorrectly or not transformed
 - Save the imported OSM model in OpenStudio by clicking File -> Save As in the menu.
 - Use SketchUp with the OpenStudio plug-in to open the new OSM file.
-- Modify the building geometry in SketchUp. For more information, please refer to [this tutorial](http://nrel.github.io/OpenStudio-user-documentation/getting_started/getting_started.md#installation-instructions).
+- Modify the building geometry in SketchUp. For more information, please refer to [this tutorial](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/getting_started.md#installation-instructions).
 
 

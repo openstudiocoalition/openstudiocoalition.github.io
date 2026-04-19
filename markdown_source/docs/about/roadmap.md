@@ -2,13 +2,13 @@
 
 ## Background
 
-Effective early May 2020, NREL no longer maintains or updates the OpenStudio Application and the SketchUp Plug-in. The final NREL-provided software distribution of the OpenStudio Application remains available at [https://github.com/NREL/OpenStudioApplication/releases](https://github.com/NREL/OpenStudioApplication/releases).
+Effective early May 2020, NLR no longer maintains or updates the OpenStudio Application and the SketchUp Plug-in. The final NLR-provided software distribution of the OpenStudio Application remains available at [https://github.com/NatLabRockies/OpenStudio/releases/tag/v2.9.1](https://github.com/NatLabRockies/OpenStudio/releases/tag/v2.9.1).
 
-NREL will continue to develop, distribute, and maintain the OpenStudio SDK, OpenStudio Command Line Interface (CLI), OpenStudio Server, OpenStudio Standards, OpenStudio Measures, FloorspaceJS, Building Component Library (BCL), and Parametric Analysis Tool (PAT). See [https://openstudio.net/news/1536268924](https://openstudio.net/news/1536268924) for more details.
+NLR will continue to develop, distribute, and maintain the OpenStudio SDK, OpenStudio Command Line Interface (CLI), OpenStudio Server, OpenStudio Standards, OpenStudio Measures, FloorspaceJS, Building Component Library (BCL), and Parametric Analysis Tool (PAT). See [https://openstudio.net/news/1536268924](https://openstudio.net/news/1536268924) for more details.
 
 ## The OpenStudio Coalition
 
-After the final NREL-provided software distribution, the OpenStudio Coalition was formed to continue supporting the OpenStudio Application and SketchUp Plug-in. The OpenStudio Coalition plans to support releasing new versions of the OpenStudio Application and SketchUp Plug-in aligned with scheduled releases of the OpenStudio SDK.  The current level of support includes high priority bug fixes and minimal or no changes to the user interface with each release.
+After the final NLR-provided software distribution, the OpenStudio Coalition was formed to continue supporting the OpenStudio Application and SketchUp Plug-in. The OpenStudio Coalition plans to support releasing new versions of the OpenStudio Application and SketchUp Plug-in aligned with scheduled releases of the OpenStudio SDK.  The current level of support includes high priority bug fixes and minimal or no changes to the user interface with each release.
 
 ## New Partnerships and Open Source Software Contribution Opportunities
 

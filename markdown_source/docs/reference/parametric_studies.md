@@ -47,7 +47,7 @@ ___________________
 ## Organize and Edit Measures for Project
 To add measures to your project, drag measures from the library to the central panel.
 
-If you want to learn more about measures, check out the [About Measures](http://nrel.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
+If you want to learn more about measures, check out the [About Measures](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
 
 There are three types of measures:
 
@@ -63,7 +63,7 @@ The measures are applied to the model in order from top to bottom. You can reord
 
 *Above: The "Set Window to Wall Ratio by Facade Group 1" contains 3 versions of the same measure with different parameter settings. The next section will show how to set measure parameters.*
 
-Check out the [Measure Writing Guide](http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) and start writing your own custom measures.
+Check out the [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) and start writing your own custom measures.
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/3rmElK_OB28?start=112&end=273" allowfullscreen></iframe>
 
@@ -102,7 +102,7 @@ The "Check All" button can be used to select all the measures on a page view. If
 You can also search and browse measures on the [Building Component Library site.](https://bcl.nrel.gov/)
 
 ### Duplicating and Creating New Measures
-If you cannot find the measure you need, you can duplicate a measure and adjust it or you can write a custom measure. Learn more about writing measures in the [Measure Writing Guide](http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/)
+If you cannot find the measure you need, you can duplicate a measure and adjust it or you can write a custom measure. Learn more about writing measures in the [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/)
 
 ![Measures Buttons](../img/pat/measure_buttons.png)
 
@@ -112,7 +112,7 @@ Hit the "New Measure" icon to open a dialog to create your own measure. Write a 
 
 Duplicating a measure opens up a similar dialog, but the name of the measure will have "copy" added at the end.
 
-The [Measure Writing Guide](http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) will guide you through this process and provide best practices.
+The [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) will guide you through this process and provide best practices.
 
 ![New Measure Dialog](../img/pat/pat_new_measure.png)
 

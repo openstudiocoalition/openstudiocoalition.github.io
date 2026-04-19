@@ -23,7 +23,7 @@ There are a few options for generating geometry for the OpenStudio Application, 
 
 1. Download and install [SketchUp](https://www.sketchup.com/), only the Pro or Studio versions of SketchUp are compatible . Check the [version compatibility-matrix](
 https://github.com/openstudiocoalition/openstudio-sketchup-plugin/wiki/OpenStudio-SketchUp-Plug-in-Wiki#openstudio-sketchup-plug-in-version-compatibility-matrix) to see which versions of SketchUp and the OpenStudio SketchUp Plug-in are compatible with the installed version of the OpenStudio Application.
-2. Download the OpenStudio SketchUp Plug-in RBZ package [here](https://github.com/NREL/openstudio-sketchup-plugin/releases).
+2. Download the OpenStudio SketchUp Plug-in RBZ package [here](https://github.com/openstudiocoalition/openstudio-sketchup-plugin/releases).
 3. Follow the [Installing extensions manually in SketchUp Preferences](https://help.sketchup.com/en/extension-warehouse/adding-extensions-sketchup) to install the Plug-in.
 
 __Optional - Setup a Building Component Library (BCL) Account__
@@ -32,7 +32,7 @@ __Optional - Setup a Building Component Library (BCL) Account__
 
 __Optional - Install Parametric Analysis Tool (PAT)__
 
-1. Download the latest release of PAT [here](https://github.com/NREL/OpenStudio-PAT/releases) (not available for Linux).
+1. Download the latest release of PAT [here](https://github.com/NatLabRockies/OpenStudio-PAT/releases) (not available for Linux).
 
 ## Workflow Overview
 The typical OpenStudio Application workflow is shown in the diagram below.
@@ -43,7 +43,7 @@ The typical OpenStudio Application workflow is shown in the diagram below.
 
 Data Viewer is used to view simulation results. The section within documentation for Running Simulation & Viewing Results has information on using [Data Viewer](../getting_started/running_your_simulation.md#using-data-viewer).
 
-The [Parametric Analysis Tool Interface Guide](http://nrel.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/) provides an introduction to the interface and workflow for creating multiple design alternatives from a seed model.
+The [Parametric Analysis Tool Interface Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/) provides an introduction to the interface and workflow for creating multiple design alternatives from a seed model.
 
 ## Introductory Tutorial
 The tutorial below was created before the grid view was added to the Space Types and Thermal Zones tabs. Grid view allows you to view and edit more than one space type or thermal zone at a time. Go to the [OpenStudio Application Interface Guide](../reference/openstudio_application_interface.md) to learn more about grid view.

@@ -3,7 +3,7 @@ Although building energy modeling has been common for many years, large-scale an
 
 The Parametric Analysis Tool (PAT) now exports a spreadsheet format compatible with the OpenStudio-analysis-spreadsheet project for running large parametric analyses using cloud resources.
 
-Go to the [GitHub repository](https://github.com/NREL/OpenStudio-analysis-spreadsheet) for information and code for the analysis spreadsheet. There are instructions and examples on the GitHub site.
+Go to the [GitHub repository](https://github.com/NatLabRockies/OpenStudio-analysis-spreadsheet) for information and code for the analysis spreadsheet. There are instructions and examples on the GitHub site.
 
 ## The Workflow
 1. Build your baseline model with the OpenStudio Application
@@ -32,7 +32,7 @@ __________
 ## Starting OpenStudio's Cloud
 ```bash
 gem install bundler
-git clone https://github.com/NREL/OpenStudio-analysis-spreadsheet.git
+git clone https://github.com/NatLabRockies/OpenStudio-analysis-spreadsheet.git
 bundle install
 ```
 

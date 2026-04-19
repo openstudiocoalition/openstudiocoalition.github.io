@@ -13,7 +13,7 @@ The OpenStudio Coalition is managed by volunteers from the founding organization
 It is the intent of the founding members to seek external funding to support the goals of the organization.  The primary focus of initial funding will be to fund incremental development of the OpenStudio application.
 
 ## Organization Resources
-The National Renewable Energy Laboratory (NREL) transferred control of the OpenStudioApplication and openstudio-sketchup-plugin repositories to the OpenStudio Coalition in July 2020.  This transfer included all source code developed for these tools by NREL as well as issue tracking information, documentation, and release packages.  The OpenStudio Coalition has assumed control of these resources and will be managing them going forward.
+The National Renewable Energy Laboratory (NREL), now National Laboratory of the Rockies (NLR), transferred control of the OpenStudioApplication and openstudio-sketchup-plugin repositories to the OpenStudio Coalition in July 2020.  This transfer included all source code developed for these tools by NREL as well as issue tracking information, documentation, and release packages.  The OpenStudio Coalition has assumed control of these resources and will be managing them going forward.
 
 ## External Contributors
 
