@@ -64,7 +64,7 @@ This tutorial explains how to size a vertical ground heat exchanger with OpenStu
     - The *.csv files are the hourly loads (same as seen in graph).
     - The report.html is the same report seen in the OS Application.
 
-4. Open GLHEPro, which can be downloaded (not free) from here: [http://www.hvac.okstate.edu/glhepro/](http://www.hvac.okstate.edu/glhepro/)
+4. Open GLHEPro, which can be downloaded (not free) from here: [https://www.hvac.okstate.edu/glhepro/](https://www.hvac.okstate.edu/glhepro/)
 5. In the top menu, click Loads > Read Heat Pump Loads and select the "Monthly Loads.gt1" file.
 6. Double-check that these numbers make sense, then click OK.
 

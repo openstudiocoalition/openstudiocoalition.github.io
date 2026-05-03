@@ -56,8 +56,8 @@ ___________________
 
 ## Add Measures and Create Measure Options
 
-If you want to learn more about measures, check out the [About Measures](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
-<br>Check out the [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) to start writing your own custom measures.
+If you want to learn more about measures, check out the [About Measures](https://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
+<br>Check out the [Measure Writing Guide](https://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) to start writing your own custom measures.
 
 PAT works with three classes of measures:
 

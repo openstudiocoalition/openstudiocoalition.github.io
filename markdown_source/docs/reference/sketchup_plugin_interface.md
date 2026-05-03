@@ -248,7 +248,7 @@ You can create interior partition groups within a space only. Once you enter int
 </td>
 <td markdown="block">
 #### New Daylighting Control Object
-The New Daylighting Control Object tool creates a new OpenStudio Daylighting Control object. This consists of a single sensor, which by default will be placed 30 inches above the surface you click on. You can move the object with the SketchUp Move tool or via the OpenStudio Inspector, and you can set many attributes that feed information to EnergyPlus and [Radiance Daylighting Measure](https://bcl.nrel.gov/node/84189). The Glare Calculation Azimuth Angle of View Direction also changes the appearance of the object in OpenStudio. To report data from the sensors in EnergyPlus, you also need to include light objects in your model. Most space types in the template files already include a light object.
+The New Daylighting Control Object tool creates a new OpenStudio Daylighting Control object. This consists of a single sensor, which by default will be placed 30 inches above the surface you click on. You can move the object with the SketchUp Move tool or via the OpenStudio Inspector, and you can set many attributes that feed information to EnergyPlus and [Radiance Daylighting Measure](https://bcl.nlr.gov/content/1e3cfef8-b051-4e60-8bb0-ed2d29d4f45f). The Glare Calculation Azimuth Angle of View Direction also changes the appearance of the object in OpenStudio. To report data from the sensors in EnergyPlus, you also need to include light objects in your model. Most space types in the template files already include a light object.
 
 You can create a daylighting control object from within a space, or you can copy and paste one from one space to another.
 
@@ -298,7 +298,7 @@ To associate an illuminance map with a thermal zone, select the desired thermal 
 </td>
 <td markdown="block">
 #### New Glare Sensor
-The New Glare Sensor creates a new OpenStudio Glare Sensor that supports [Radiance Daylighting Measure](https://bcl.nrel.gov/node/84189) simulations. Unlike the illuminance map and daylighting control point, the glare sensor has no connection to a thermal zone. The default placement of the sensor is 30 inches above the surface you click on. You can move the object with the SketchUp Move tool or through the OpenStudio Inspector, and you can set many attributes that feed information to Radiance.
+The New Glare Sensor creates a new OpenStudio Glare Sensor that supports [Radiance Daylighting Measure](https://bcl.nlr.gov/content/1e3cfef8-b051-4e60-8bb0-ed2d29d4f45f) simulations. Unlike the illuminance map and daylighting control point, the glare sensor has no connection to a thermal zone. The default placement of the sensor is 30 inches above the surface you click on. You can move the object with the SketchUp Move tool or through the OpenStudio Inspector, and you can set many attributes that feed information to Radiance.
 
 You can create a glare sensor object from within a space, or you can copy and paste one into a different space.
 

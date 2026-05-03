@@ -1,5 +1,5 @@
 #OpenStudio-Radiance Reference Guide
-This reference guide explains the methods used in OpenStudio to utilize [Radiance](http://www.radiance-online.org/) to simulate the daylight ingress in your OpenStudio model, allowing for higher fidelity simulations of daylighting-related energy efficiency measures. Radiance is not constrained to simple geometry, and the OpenStudio model supports interior architectural detail such as [interior partition surfaces](../reference/sketchup_plugin_interface.md#new-interior-partition-surface-group) (for representing columns, soffits, furniture, etc) and air walls (for eliminating thermal zone boundaries that do not correspond to any actual building architecture). This allows for a more accurate characterization of the spatial distribution of daylight in the OpenStudio model.
+This reference guide explains the methods used in OpenStudio to utilize [Radiance](https://www.radiance-online.org/) to simulate the daylight ingress in your OpenStudio model, allowing for higher fidelity simulations of daylighting-related energy efficiency measures. Radiance is not constrained to simple geometry, and the OpenStudio model supports interior architectural detail such as [interior partition surfaces](../reference/sketchup_plugin_interface.md#new-interior-partition-surface-group) (for representing columns, soffits, furniture, etc) and air walls (for eliminating thermal zone boundaries that do not correspond to any actual building architecture). This allows for a more accurate characterization of the spatial distribution of daylight in the OpenStudio model.
 
 For OpenStudio [v1.7.0](https://github.com/NatLabRockies/OpenStudio/releases/tag/v1.7.0), added support for window shades and wall thickness has increased the utility of the Radiance simulation option in the OpenStudio application.
 
@@ -32,6 +32,3 @@ We rely on the rfluxmtx tool in Radiance to handle the creation of all the neces
 - shading control
 
 All windows with no shading control are grouped together into a single group called Window Group Zero (WG0), and are calculated together. Then, windows matching each unique combination of the properties above are also grouped together, into sequentially-numbered groups (WG1, WG2, etc). An annual illuminance schedule for each window group is calculated, and in the case of controlled window groups, a schedule is calculated once for that group with the shades up, and another one for the shades down. A shade schedule is generated, based on incident solar irradiance on the glazing, and this is used to create a final _Building Illuminance Schedule_ which takes the correct timestep illuminance values for each window group and sums them together for each day, for the entire year.
-
-
-

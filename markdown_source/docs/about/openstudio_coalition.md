@@ -26,12 +26,8 @@ The OpenStudio Coalition is greatful to everyone who contibutes to the project b
 
 Sign up to our email list:
 
-<a href="mailing_list.md" class="btn btn-primary" role="button">Email List</a>
+<a href="about/mailing_list.md" class="btn btn-primary" role="button">Email List</a>
 
 Contact us at osc@openstudiocoalition.org
 
 <a href="mailto:osc@openstudiocoalition.org" class="btn btn-primary" role="button">Contact Us</a>
-
-
-
-

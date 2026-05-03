@@ -57,7 +57,7 @@ __________
 ### Buildings Specific Chef Cookbooks
 Provisioning ensures that the appropriate tools are ready on the server, that there are consistent images across platforms, and makes it easier to test and deploy.
 
-The OpenStudio Server uses Chef to help automate the workflow. [Chef Documentation](https://docs.getchef.com/chef_overview.html)
+The OpenStudio Server uses Chef to help automate the workflow. 
 
 OpenStudio - [https://github.com/NREL-cookbooks/openstudio](https://github.com/NREL-cookbooks/openstudio)
 

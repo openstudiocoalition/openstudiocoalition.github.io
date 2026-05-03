@@ -1,5 +1,5 @@
 <h1>Import IFC</h1>
-This tutorial explains how to import an IFC file into OpenStudio using BIMserver.  This functionality is available in OpenStudio 1.7.1 and higher.  This functionality was developed by Chong Zhou as part of the [BIMDataHub](https://github.com/BIMDataHub) project at the [Consortium for Building Energy Innovation](http://www.cbei.psu.edu/).
+This tutorial explains how to import an IFC file into OpenStudio using BIMserver.  This functionality is available in OpenStudio 1.7.1 and higher.  This functionality was developed by Chong Zhou as part of the [BIMDataHub](https://github.com/BIMDataHub) project at the [Consortium for Building Energy Innovation](https://www.cbei.psu.edu/).
 
 **Notice** The IFC plugin was built by the [BIMDataHub](https://github.com/BIMDataHub) group.  The functionality has not been maintained since 2016.
 
@@ -9,7 +9,7 @@ This tutorial explains how to import an IFC file into OpenStudio using BIMserver
 
 Most users will want to install a stand-alone version of BIMserver on their local computer.
 
-- Install the Java JDK. Java 1.8 is not well supported yet, Java JDK 1.7 can be [downloaded here](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html), for Windows you will want the file named jdk-7u75-windows-x64.exe.
+- Install the Java JDK. Java 1.8 is not well supported yet, Java JDK 1.7 can be [downloaded here](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html), for Windows you will want the file named jdk-7u75-windows-x64.exe.
 
 - Download [BIMserver 1.3.4](https://github.com/opensourceBIM/BIMserver/releases/download/1.3.4-FINAL-2014-10-17/bimserver-1.3.4-FINAL-2014-10-17.jar) from the BIMserver Github site.
 
@@ -96,6 +96,6 @@ We provide an IFC to OSM transformation utility, using BIMserver as a middle-war
 ### What to do if you have some elements being transformed incorrectly or not transformed
 - Save the imported OSM model in OpenStudio by clicking File -> Save As in the menu.
 - Use SketchUp with the OpenStudio plug-in to open the new OSM file.
-- Modify the building geometry in SketchUp. For more information, please refer to [this tutorial](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/getting_started.md#installation-instructions).
+- Modify the building geometry in SketchUp. For more information, please refer to [this tutorial](https://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/getting_started.md#installation-instructions).
 
 
