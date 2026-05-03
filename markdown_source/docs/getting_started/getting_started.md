@@ -28,7 +28,7 @@ https://github.com/openstudiocoalition/openstudio-sketchup-plugin/wiki/OpenStudi
 
 __Optional - Setup a Building Component Library (BCL) Account__
 
-[Building Component Library (BCL)](https://bcl.nrel.gov/) content can now be accessed from within the OpenStudio SketchUp Plug-in and from the standalone OpenStudio Application without a BCL key.
+[Building Component Library (BCL)](https://bcl.nlr.gov/) content can now be accessed from within the OpenStudio SketchUp Plug-in and from the standalone OpenStudio Application without a BCL key.
 
 __Optional - Install Parametric Analysis Tool (PAT)__
 
@@ -43,7 +43,7 @@ The typical OpenStudio Application workflow is shown in the diagram below.
 
 Data Viewer is used to view simulation results. The section within documentation for Running Simulation & Viewing Results has information on using [Data Viewer](../getting_started/running_your_simulation.md#using-data-viewer).
 
-The [Parametric Analysis Tool Interface Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/) provides an introduction to the interface and workflow for creating multiple design alternatives from a seed model.
+The [Parametric Analysis Tool Interface Guide](https://natlabrockies.github.io/OpenStudio-user-documentation/reference/parametric_analysis_tool_2/) provides an introduction to the interface and workflow for creating multiple design alternatives from a seed model.
 
 ## Introductory Tutorial
 The tutorial below was created before the grid view was added to the Space Types and Thermal Zones tabs. Grid view allows you to view and edit more than one space type or thermal zone at a time. Go to the [OpenStudio Application Interface Guide](../reference/openstudio_application_interface.md) to learn more about grid view.

@@ -1,8 +1,8 @@
 <h1>Radiance and OpenStudio Application</h1>
-This tutorial explains how to use [Radiance](http://www.radiance-online.org/) to simulate the daylight ingress in your OpenStudio Model, allowing for higher fidelity simulations of daylighting-related energy efficiency measures. For the OpenStudio Application, the Radiance simulation option has been refactored (moved) to a [measure](https://bcl.nrel.gov/node/84189).
+This tutorial explains how to use [Radiance](https://www.radiance-online.org/) to simulate the daylight ingress in your OpenStudio Model, allowing for higher fidelity simulations of daylighting-related energy efficiency measures. For the OpenStudio Application, the Radiance simulation option has been refactored (moved) to a [measure](https://bcl.nlr.gov/content/1e3cfef8-b051-4e60-8bb0-ed2d29d4f45f).
 
 ## Workflow
-This workflow uses the OpenStudio Application (and the Plug-in) to perform a [climate-based daylight simulation](http://climate-based-daylighting.com/doku.php?id=academic:climate-based-daylight-modelling), using Radiance as the lighting simulation engine (in lieu of EnergyPlus' daylight simulation options).
+This workflow uses the OpenStudio Application (and the Plug-in) to perform a [climate-based daylight simulation](https://climate-based-daylighting.com/doku.php?id=academic:climate-based-daylight-modelling), using Radiance as the lighting simulation engine (in lieu of EnergyPlus' daylight simulation options).
 
 The process for using Radiance for daylighting analysis in the OpenStudio Application is not dissimilar from using EnergyPlus. The basic steps are as follows, with the required applications in parentheses:
 ### 1. Create (or Import) Building Geometry, Define Thermal Zones & Spaces (SketchUp Plug-in)
@@ -59,5 +59,3 @@ The results of the Radiance/EnergyPlus simulation are stored in a few locations:
     - Continuous Daylight Autonomy (cDA)
     - Useful Daylight Illuminance (UDI)
 - **[windowGroupName].ill** - annual daylight illuminance schedules for each window group, used for the shade control simulation
-
-

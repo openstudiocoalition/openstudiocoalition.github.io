@@ -108,7 +108,7 @@ The following table is intended to provide users with some guidance around which
 - Specify and create air walls
 - Specify and create constructions appropriate for hydronic radiant heating and cooling constructions
 - Built-in library of building constructions (walls, windows, doors, floors, etc.) for all DOE reference building types and vintages (pre-1980, 1980-2004), ASHRAE standard prototype buildings (189.1-2009, 90.1-2004, 90.1-2007, 90.1-2010, 90.1-2013), and DEER building types (pre-1975, 1985, 1996, 2003, 2007, 2011, 2014, 2015, 2017)
-- [Online library](https://bcl.nrel.gov/nrel/types/component) of building materials and their modeling properties from ASHRAE Handbook
+- [Online library](https://bcl.nlr.gov) of building materials and their modeling properties from ASHRAE Handbook
 
 ### Building Loads
 
@@ -266,7 +266,7 @@ The following table is intended to provide users with some guidance around which
 - Lights in the EnergyPlus Model controlled based on daylight available per radiance
 
 ### Custom Controls
-Within EnergyPlus, advanced controls that are not built-in can be implemented utilizing the [EnergyManagementSystem (EMS)](https://energyplus.net/sites/all/modules/custom/nrel_custom/pdfs/pdfs_v9.2.0/EMSApplicationGuide.pdf) suite of objects. This involves defining Sensors and Actuators that interact with building parameters through Programs which are written in the EnergyPlus Runtime Language (ERL), which is based on a common building-controls language. OpenStudio Application supports the creation of EMS programs.
+Within EnergyPlus, advanced controls that are not built-in can be implemented utilizing the [EnergyManagementSystem (EMS)](https://energyplus.readthedocs.io/en/stable/ems-application-guide/ems-application-guide.html) suite of objects. This involves defining Sensors and Actuators that interact with building parameters through Programs which are written in the EnergyPlus Runtime Language (ERL), which is based on a common building-controls language. OpenStudio Application supports the creation of EMS programs.
 
 ### Location-Specific Information
 
@@ -292,7 +292,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 - SDD export (input format - geometry, constructions, and thermal zones only)
 - IFC import (geometry only)
 - Import resources (materials, constructions, loads, spacetypes) from .osm file
-- Import surfaces, subsurfaces, spaces, and thermal zones from eQuest models using a [Measure](https://github.com/canmet-energy/btap/tree/master/measures_development/btap_equest_converter)
+- Import surfaces, subsurfaces, spaces, and thermal zones from eQuest models using a [Measure](https://github.com/NatLabRockies/OpenStudio-Prototype-Buildings/tree/master/lib/btap/measures/btap_equest_converter)
 
 ### Analysis of Existing Buildings
 
@@ -312,7 +312,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 
 - OpenStudio Measures provide reliable and repeatable mechanism to apply transforms to models
 - Eliminates ambiguity and user error; all rules encapsulated in measure itself
-- More than 316 measures available [online](https://bcl.nrel.gov) and always growing
+- More than 316 measures available [online](https://bcl.nlr.gov) and always growing
 - Write measure once and apply to many projects
 - Perform complex ECMs, like full HVAC replacement, easily
 - Quickly access online and local libraries of measures from drag-and-drop interface
@@ -325,7 +325,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 - Users don't have to understand to use; gives expert review to junior modelers more inexpensively
 - Automate key checks for utility regulators to keep up quality
 - Lower time spent by reviewers on mundane checks; frees time to focus on real issues
-- Users can modify [Generic QAQC Measure](https://bcl.nrel.gov/node/83673) to create custom checks
+- Users can modify [Generic QAQC Measure](https://bcl.nlr.gov/content/d58d6b29-69ba-4915-b907-3c2c37ddb7c7) to create custom checks
 
 ### Reporting
 
@@ -343,8 +343,7 @@ Within EnergyPlus, advanced controls that are not built-in can be implemented ut
 
 ### Share Modeling Best-Practices
 
-- Online database called [BCL](https://bcl.nrel.gov) (Building Component Library) can be used to share measures
+- Online database called [BCL](https://bcl.nlr.gov) (Building Component Library) can be used to share measures
 - BCL can be used to share building components
 - Instantaneous world-wide distribution and updating of content
 - Allows utilities to ensure uniformity and best-practices across many energy consulting firms
-

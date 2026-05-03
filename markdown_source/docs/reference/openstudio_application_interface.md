@@ -129,7 +129,7 @@ Once you select a measure you may edit the measure inputs on the right side of t
 *Above: This menu item allows you to run one measure on your model.*
 
 ### Find Measures and Find Components
-The Online BCL window gives you access to an online repository of building energy modeling data called the Building Component Library. Although you can access the [BCL website](https://bcl.nrel.gov/) on its own, OpenStudio Application has integrated access to the BCL. You can access this through the Components & Measures menu.
+The Online BCL window gives you access to an online repository of building energy modeling data called the Building Component Library. Although you can access the [BCL website](https://bcl.nlr.gov/) on its own, OpenStudio Application has integrated access to the BCL. You can access this through the Components & Measures menu.
 
 [![BCL Window](../img/os_interface/bcl_window.png "Click to view")](../img/os_interface/bcl_window.png)
 

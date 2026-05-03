@@ -47,7 +47,7 @@ ___________________
 ## Organize and Edit Measures for Project
 To add measures to your project, drag measures from the library to the central panel.
 
-If you want to learn more about measures, check out the [About Measures](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
+If you want to learn more about measures, check out the [About Measures](https://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section.
 
 There are three types of measures:
 
@@ -63,7 +63,7 @@ The measures are applied to the model in order from top to bottom. You can reord
 
 *Above: The "Set Window to Wall Ratio by Facade Group 1" contains 3 versions of the same measure with different parameter settings. The next section will show how to set measure parameters.*
 
-Check out the [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) and start writing your own custom measures.
+Check out the [Measure Writing Guide](https://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) and start writing your own custom measures.
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/3rmElK_OB28?start=112&end=273" allowfullscreen></iframe>
 
@@ -99,10 +99,10 @@ The "Check All" button can be used to select all the measures on a page view. If
 
 *Above: Browse categories or search for measures to download.*
 
-You can also search and browse measures on the [Building Component Library site.](https://bcl.nrel.gov/)
+You can also search and browse measures on the [Building Component Library site.](https://bcl.nlr.gov/)
 
 ### Duplicating and Creating New Measures
-If you cannot find the measure you need, you can duplicate a measure and adjust it or you can write a custom measure. Learn more about writing measures in the [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/)
+If you cannot find the measure you need, you can duplicate a measure and adjust it or you can write a custom measure. Learn more about writing measures in the [Measure Writing Guide](https://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/)
 
 ![Measures Buttons](../img/pat/measure_buttons.png)
 
@@ -112,7 +112,7 @@ Hit the "New Measure" icon to open a dialog to create your own measure. Write a 
 
 Duplicating a measure opens up a similar dialog, but the name of the measure will have "copy" added at the end.
 
-The [Measure Writing Guide](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) will guide you through this process and provide best practices.
+The [Measure Writing Guide](https://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/) will guide you through this process and provide best practices.
 
 ![New Measure Dialog](../img/pat/pat_new_measure.png)
 
@@ -169,7 +169,7 @@ Select your baseline model, then run locally before you start the cloud to confi
 
 *Above: Get to the Cloud Settings at any time from the "Cloud" menu.*
 
-Add information on your Amazon EC2 account and agree to the terms on the first screen. Get an Amazon EC2 account and learn more about using Amazon cloud at [aws.amazon.com](http://www.aws.amazon.com). Use the AWS Console to monitor your account charges. __Not monitoring your account carefully can result in unexpected charges.__
+Add information on your Amazon EC2 account and agree to the terms on the first screen. Get an Amazon EC2 account and learn more about using Amazon cloud at [aws.amazon.com](https://www.aws.amazon.com). Use the AWS Console to monitor your account charges. __Not monitoring your account carefully can result in unexpected charges.__
 
 Currently only Amazon EC2 is available through PAT.
 
@@ -181,7 +181,7 @@ On the second screen of the "Cloud Settings" dialog, confirm that you have chose
 
 As soon as you hit the "Turn on Cloud" button you will start incurring charges, and the smallest increment is one hour. If you have to cancel and re-start it you will be charged again.
 
-__Review Amazon pricing at [http://aws.amazon.com/ec2/pricing/](http://aws.amazon.com/ec2/pricing/).__
+__Review Amazon pricing at [https://aws.amazon.com/ec2/pricing/](https://aws.amazon.com/ec2/pricing/).__
 
 ![Cloud Settings 2](../img/pat/cloud_settings2.png)
 
@@ -217,7 +217,7 @@ To properly end the cloud session in PAT, re-open the PAT project (if you have c
 
 __Once you stop the cloud you will no longer be able to download detailed simulation results.__ If this happens and you want to get one, you can always run that job locally. It is generally not recommended to download detailed results for all design alternatives, as that will use a lot of hard drive space and network bandwidth.
 
-__It is always a good idea to go to the EC2 website to confirm that the instances have shut down. To view your EC2 web console, click the "Manage all Projects with AWS Console" in the "Monitor Use" dialog or "AWS Management Console" in the "Cloud Settings" dialog. It will take you to this address [http://aws.amazon.com/console/](http://aws.amazon.com/console/).  Click "Sign in to the AWS Console"__
+__It is always a good idea to go to the EC2 website to confirm that the instances have shut down. To view your EC2 web console, click the "Manage all Projects with AWS Console" in the "Monitor Use" dialog or "AWS Management Console" in the "Cloud Settings" dialog. It will take you to this address [https://aws.amazon.com/console/](https://aws.amazon.com/console/).  Click "Sign in to the AWS Console"__
 
 ![AWS Console](../img/pat/aws.png)
 
@@ -252,4 +252,4 @@ You can open individual design alternative reports (.html files) in your browser
 *Above: Right click on design alternative to get these options. If your model includes calibration reports, the calibration button at the top of the results will display those in a table format in the application.*
 
 ## Publications
-[A Parametric Analysis Tool for Building Energy Design Workflows: Application to a Utility Design Assistance Incentive Program (PDF)](http://www.aceee.org/files/proceedings/2014/data/papers/4-588.pdf)
+[A Parametric Analysis Tool for Building Energy Design Workflows: Application to a Utility Design Assistance Incentive Program (PDF)](https://www.aceee.org/files/proceedings/2014/data/papers/4-588.pdf)
