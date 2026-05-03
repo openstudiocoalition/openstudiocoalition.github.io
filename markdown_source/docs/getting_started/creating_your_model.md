@@ -213,14 +213,14 @@ Use the checkbox at the top of each column to select items that you want to have
 ------
 
 ## Downloading Components and Measures from the Building Component Library (BCL)
-In the OpenStudio Application you can download items directly from the BCL by going to the Components & Measures menu and choosing "Find Measures" or "Find Components". Your API key is available by registering on the [BCL site](https://bcl.nrel.gov/) and copying it from your account page.
+In the OpenStudio Application you can download items directly from the BCL by going to the Components & Measures menu and choosing "Find Measures" or "Find Components". Your API key is available by registering on the [BCL site](https://bcl.nlr.gov/) and copying it from your account page.
 
 [![BCL Dialog](../img/create_model/bcl_window.png)](../img/create_model/bcl_window.png)
 *Above: Downloading components from the online BCL window*
 
 The components are designed to provide data to the energy modeler and simplify the process of gathering inputs.
 
-Measures are scripts that can quickly alter your model or create different reports for viewing and checking your results. Learn more about measures in the [About Measures](http://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section. Learn how to [write your own custom measures](http://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/).
+Measures are scripts that can quickly alter your model or create different reports for viewing and checking your results. Learn more about measures in the [About Measures](https://natlabrockies.github.io/OpenStudio-user-documentation/getting_started/about_measures/) section. Learn how to [write your own custom measures](https://natlabrockies.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/).
 
 ------
 
@@ -489,7 +489,7 @@ In addition to manually creating and editing your model, you can apply measures 
 ##  Using the Measures Tab
 The measures selected on this tab will not run until you run your model, unlike the "Apply Measure Now" option.
 
-Download additional measures from [The Building Component Library (BCL)](http://bcl.nrel.gov/). Drag measures from the library to the central panel.
+Download additional measures from [The Building Component Library (BCL)](https://bcl.nlr.gov/). Drag measures from the library to the central panel.
 
 There are three types of measures:
 

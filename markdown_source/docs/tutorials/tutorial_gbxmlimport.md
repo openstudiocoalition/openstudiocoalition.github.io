@@ -2,7 +2,7 @@
 
 ## Import gbXML
 
-[gbXML](http://www.gbxml.org/) is an industry supported file format for sharing building information between disparate building design [software tools](http://www.gbxml.org/Software_Tools_that_Support_GreenBuildingXML_gbXML).  The OpenStudio Application can import and export gbXML files through the File->Import and File->Export menus.
+[gbXML](https://www.gbxml.org/) is an industry supported file format for sharing building information between disparate building design [software tools](https://www.gbxml.org/Software_Tools_that_Support_GreenBuildingXML_gbXML).  The OpenStudio Application can import and export gbXML files through the File->Import and File->Export menus.
 
 [![gbXML File Import](../img/gbxmlimport/file_import.jpg)](../img/gbxmlimport/file_import.jpg)
 
@@ -33,4 +33,3 @@ Geometry from the gbXML file is not brought into the OpenStudio Model until the 
 [![Merged Model](../img/gbxmlimport/merged_model.jpg)](../img/gbxmlimport/merged_model.jpg)
 
 After this point, detailed HVAC and other parameters may be set in the OpenStudio Model.  If new geometry becomes available in gbXML format, the user can go back to the geometry editor and re-import the new gbXML file.  The new gbXML file can be inspected using the Spider viewer and then merged with the current OpenStudio Model.  The OpenStudio Model merge process is relatively new and does not currently have user defined options to control how the merge is performed.  In the future, options (e.g. keep thermal zoning from the OpenStudio Model or from the gbXML) may be exposed to give the user more control.
-
