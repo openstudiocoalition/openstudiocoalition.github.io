@@ -22,9 +22,16 @@ Module._load = function (request, parent, isMain) {
     return nativeFetch;
   }
   if (request === 'abort-controller') {
-    // Return AbortController directly so TypeScript's __importDefault wraps it as
-    // { default: AbortController }, making `abort_controller_1.default` a constructor.
-    return globalThis.AbortController;
+    // Return an ESM-shaped module with both a default export and named exports so that
+    // TypeScript's __importDefault (expects { default: ... }) and callers that use named
+    // imports (`const { AbortController, AbortSignal } = require('abort-controller')`) both
+    // work correctly with the native globals.
+    return {
+      __esModule: true,
+      default: globalThis.AbortController,
+      AbortController: globalThis.AbortController,
+      AbortSignal: globalThis.AbortSignal,
+    };
   }
   return originalLoad.apply(this, arguments);
 };
