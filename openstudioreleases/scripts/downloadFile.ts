@@ -1,5 +1,6 @@
 import path from 'path';
-import {createDeferred} from './createDeferred';
+import { pipeline } from 'stream/promises';
+import { Readable } from 'stream';
 import fs from 'fs';
 import * as fsPromises from 'fs/promises';
 
@@ -21,38 +22,28 @@ export const downloadFile = async (fileUrl: string, outputPath: string) => {
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
+  if (!response.body) {
+    throw new Error(`Response body is null (status: ${response.status}) — cannot download file.`);
+  }
 
   await createDirectoriesRecursively(path.dirname(outputPath));
 
-  const onFileStreamFinished = createDeferred();
-
-  const fileStream = fs.createWriteStream(outputPath);
-
-  const totalBytes = parseInt(response.headers.get('content-length') || '0', 10);
+  const contentLength = response.headers.get('content-length');
+  const totalBytes = contentLength ? parseInt(contentLength, 10) : 0;
   let downloadedBytes = 0;
 
-  response.body.on('data', (chunk: Buffer) => {
+  const nodeStream = Readable.fromWeb(response.body as any);
+
+  nodeStream.on('data', (chunk: Buffer) => {
     downloadedBytes += chunk.length;
-    const progress = ((downloadedBytes / totalBytes) * 100).toFixed(2);
-    console.log(`(${name}) Download progress: ${progress}%`);
+    const progressStr = totalBytes > 0
+      ? `${((downloadedBytes / totalBytes) * 100).toFixed(2)}%`
+      : `${downloadedBytes} bytes`;
+    console.log(`(${name}) Download progress: ${progressStr}`);
   });
 
-  response.body.on('error', (err) => {
-    onFileStreamFinished.reject(`Error reading response body: ${err.message}`);
-  });
+  const fileStream = fs.createWriteStream(outputPath);
+  await pipeline(nodeStream, fileStream);
 
-  response.body.pipe(fileStream);
-
-  fileStream.on('finish', () => {
-    console.log(`(${name}) Download complete.`);
-
-    onFileStreamFinished.resolve();
-  });
-
-  fileStream.on('error', (err) => {
-    console.error('Error writing file:', err);
-    onFileStreamFinished.reject(err);
-  });
-
-  await onFileStreamFinished.promise;
+  console.log(`(${name}) Download complete.`);
 }
