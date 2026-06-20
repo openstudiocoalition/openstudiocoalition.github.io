@@ -53,10 +53,13 @@
     "webpack-merge": "^6.0.1"
   },
   "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production rspack build --config rspack/rspackProdConfig.js",
     "dev": "rspack serve --config rspack/rspackDevConfig.js",
-    "es": "set ESBUILD_RUN=true && node --no-experimental-fetch -r esbuild-register -r isomorphic-fetch",
+    "es": "set ESBUILD_RUN=true && node -r esbuild-register -r ./scripts/patchGaxios.cjs",
     "s": "set ESBUILD_RUN=true && node -r @swc-node/register --trace-deprecation --trace-warnings",
     "ghpages": "yarn build && gh-pages -d dist",
     "sync-releases": "yarn es scripts/getReleaseInfo.ts"
