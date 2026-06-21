@@ -11,7 +11,7 @@ export const writeCsv = async (filename: string, data: any) => {
   const csvFile = path.join(cwd, `${filename}.csv`);
 
   let csvData = [];
-  let columns = ['id','firstName','lastName','occupation','company','email','joinBetaTester','signMailingList','country'];
+  let columns = ['id','firstName','lastName','occupation','company','email','joinBetaTester','signMailingList','country','signUpDate','lastSignInDate','longevity'];
 
   let row = [];
   columns.forEach(column => {

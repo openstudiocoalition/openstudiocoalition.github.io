@@ -1,5 +1,64 @@
 [
   {
+    "name": "v1.12.0-rc1",
+    "tag_name": "v1.12.0-rc1",
+    "published_at": "2026-06-21T17:19:43Z",
+    "prerelease": true,
+    "body": "## What's Changed\r\n* Update actions to work after clearing cache, bump to RC2 by [@macumber](https://github.com/macumber) in [#854](https://github.com/openstudiocoalition/OpenStudioApplication/pull/854)\r\n* #757 - Implement a Site subtab for ground temperatures by [@jmarrec](https://github.com/jmarrec) in [#859](https://github.com/openstudiocoalition/OpenStudioApplication/pull/859)\r\n* Implement ability to change model from the 3D Geometry Preview View (set Construction, ThermalZone, reverse Vertices) by [@jmarrec](https://github.com/jmarrec) in [#863](https://github.com/openstudiocoalition/OpenStudioApplication/pull/863)\r\n* Remove qt5compat by [@jmarrec](https://github.com/jmarrec) in [#867](https://github.com/openstudiocoalition/OpenStudioApplication/pull/867)\r\n* Remove Qt from ModelEditor Ruby bindings by [@macumber](https://github.com/macumber) in [#864](https://github.com/openstudiocoalition/OpenStudioApplication/pull/864)\r\n* Bump Qt from 6.5.2 to Qt 6.11.0 by [@jmarrec](https://github.com/jmarrec) in [#868](https://github.com/openstudiocoalition/OpenStudioApplication/pull/868)\r\n* Add docker build container for AI agents to use by [@macumber](https://github.com/macumber) in [#870](https://github.com/openstudiocoalition/OpenStudioApplication/pull/870)\r\n* Future proof pinging bcl.nlr.gov instead of bcl.nrel.gov by [@jmarrec](https://github.com/jmarrec) in [#856](https://github.com/openstudiocoalition/OpenStudioApplication/pull/856)\r\n* Create 1.11.1 patch changing NREL to NLR by [@macumber](https://github.com/macumber) in [#881](https://github.com/openstudiocoalition/OpenStudioApplication/pull/881)\r\n* Complete language support to all GUI tabs (#876) by [@Ski90Moo](https://github.com/Ski90Moo) in [#877](https://github.com/openstudiocoalition/OpenStudioApplication/pull/877)\r\n* Update actions to avoid warnings by [@macumber](https://github.com/macumber) in [#884](https://github.com/openstudiocoalition/OpenStudioApplication/pull/884)\r\n* Refactor with architecture and developer documentation by [@macumber](https://github.com/macumber) in [#865](https://github.com/openstudiocoalition/OpenStudioApplication/pull/865)\r\n* Merge for 1.12.0-rc.1 by [@macumber](https://github.com/macumber) in [#885](https://github.com/openstudiocoalition/OpenStudioApplication/pull/885)\r\n\r\n\r\n**Full Changelog**: [v1.11.0...v1.12.0](https://github.com/openstudiocoalition/OpenStudioApplication/compare/v1.11.0...v1.12.0)-rc1\r\n\r\n\r\n**Date Range: 2026-02-18** (v1.11.0) - **2026-06-21:**\r\n\r\n**New Issues: 11**\r\n\r\n**Closed Issues: 7**\r\n\r\n**Accepted Pull Requests: 17**\r\n\r\n**Total Open Issues: 134**\r\n\r\n**Total Open Pull Requests: 2**\r\n\r\n\r\n<details>\r\n\r\n<summary>Click to see details</summary>\r\n\r\n**Closed Issues: 7**\r\n- ➕ [#757]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/757 ), Implement a method to specify monthly ground temperature schedule\r\n- ✔️ [#850]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/850 ), v1.11.0-rc1 Testing: Call for help from the community - updated to include v1.11.0-rc2\r\n- ✔️ [#861]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/861 ), Can't build with Qt 6.5.2 with macOS Tahoe 26.x\r\n- ➕ [#862]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/862 ), Implement ability to change model from the 3D Geometry Preview View (set Construction, ThermalZone, reverse Vertices)\r\n- ➕ [#872]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/872 ), 1.11.0 release is missing the mac and windows installers\r\n- ✔️ [#878]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/878 ), BCL Library not working\r\n- ✔️ [#879]( https://github.com/openstudiocoalition/OpenStudioApplication/issues/879 ), BCL not online\r\n\r\n**Accepted Pull Requests: 17**\r\n- ✔️ [#837]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/837 ), Work In Progress - Replace QtCharts with LGPL compliant JKQtPlotter\r\n- ✔️ [#856]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/856 ), Future proof pinging bcl.nlr.gov instead of bcl.nrel.gov\r\n- ✔️ [#858]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/858 ), Merge for OpenStudio Application v1.11.0 release\r\n- ➕ [#859]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/859 ), #757 - Implement a Site subtab for ground temperatures\r\n- ➕ [#863]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/863 ), Implement ability to change model from the 3D Geometry Preview View (set Construction, ThermalZone, reverse Vertices)\r\n- ✔️ [#864]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/864 ), Remove Qt from ModelEditor Ruby bindings\r\n- ✔️ [#865]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/865 ), Refactor with architecture and developer documentation\r\n- ✔️ [#867]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/867 ), Remove qt5compat\r\n- ✔️ [#868]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/868 ), Bump Qt from 6.5.2 to Qt 6.11.0\r\n- ✔️ [#869]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/869 ), Remove shared library exports for Windows\r\n- ✔️ [#870]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/870 ), Add docker build container for AI agents to use\r\n- ✔️ [#873]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/873 ), Complete language support to all GUI tabs\r\n- ✔️ [#874]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/874 ), Complete language support to all GUI tabs\r\n- ✔️ [#877]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/877 ), Complete language support to all GUI tabs (#876)\r\n- ✔️ [#881]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/881 ), Create 1.11.1 patch changing NREL to NLR\r\n- ✔️ [#884]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/884 ), Update actions to avoid warnings\r\n- ✔️ [#885]( https://github.com/openstudiocoalition/OpenStudioApplication/pull/885 ), Merge for 1.12.0-rc.1\r\n\r\n**Total Open Issues: 134** (#130, #132, #111, #113, #158, #133, #134, #172, #135, #136, #139, #174, #157, #166, #138, #167, #137, #121, #176, #114, #144, #152, #171, #141, #140, #122, #164, #170, #165, #151, #154, #148, #117, #150, #169, #124, #160, #155, #125, #156, #105, #159, #161, #120, #127, #118, #119, #128, #129, #146, #147, #168, #19, #78, #101, #96, #104, #199, #206, #224, #234, #239, #253, #254, #273, #278, #289, #293, #298, #300, #335, #336, #337, #338, #357, #371, #377, #380, #381, #389, #396, #400, #410, #411, #416, #423, #472, #481, #491, #495, #520, #529, #542, #555, #571, #615, #649, #658, #659, #679, #680, #687, #704, #709, #711, #751, #752, #760, #770, #776, #782, #786, #787, #794, #798, #801, #802, #803, #805, #810, #811, #817, #818, #834, #847, #851, #852, #857, #860, #866, #871, #875, #880, #882)\r\n\r\n**Total Open Pull Requests: 2** (#876, #883)\r\n\r\n</details>\r\n",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453851342",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-macOS13-arm64.dmg",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-macOS13-arm64.dmg"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453851503",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-macOS13-arm64.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-macOS13-arm64.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453857412",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-macOS13-x86_64.dmg",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-macOS13-x86_64.dmg"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453857546",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-macOS13-x86_64.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-macOS13-x86_64.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453848339",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-Ubuntu22.04.deb",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-Ubuntu22.04.deb"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453848538",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-Ubuntu22.04.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-Ubuntu22.04.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453848409",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-Ubuntu24.04.deb",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-Ubuntu24.04.deb"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453848497",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-Ubuntu24.04.tar.gz",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-Ubuntu24.04.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453860932",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-Windows.exe",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-Windows.exe"
+      },
+      {
+        "url": "https://api.github.com/repos/openstudiocoalition/OpenStudioApplication/releases/assets/453861000",
+        "name": "OpenStudioApplication-1.12.0-rc1+cc8f5a3524-Windows.zip",
+        "browser_download_url": "https://github.com/openstudiocoalition/OpenStudioApplication/releases/download/v1.12.0-rc1/OpenStudioApplication-1.12.0-rc1%2Bcc8f5a3524-Windows.zip"
+      }
+    ]
+  },
+  {
     "name": "v1.11.1",
     "tag_name": "v1.11.1",
     "published_at": "2026-06-17T11:30:54Z",
