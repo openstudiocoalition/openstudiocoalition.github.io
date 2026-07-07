@@ -134,7 +134,11 @@ async function fetchAllRows(): Promise<EventRow[]> {
       });
     }
 
-    console.log(`  Fetched rows ${offset + 1}–${offset + rows.length} (total so far: ${allRows.length})`);
+    console.log(
+      rows.length
+        ? `  Fetched rows ${offset + 1}–${offset + rows.length} (total so far: ${allRows.length})`
+        : `  Fetched 0 rows (total so far: ${allRows.length})`
+    );
 
     // Stop when we receive fewer rows than the page size
     if (rows.length < PAGE_SIZE) break;

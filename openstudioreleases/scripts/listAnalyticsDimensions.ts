@@ -52,9 +52,10 @@ const run = async (): Promise<void> => {
   }
 
   console.log(`\n── Built-in dimensions (${builtin.length}) ─────────────────────`);
-  builtin.forEach(d => console.log(`  ${d.apiName?.padEnd(45)} ${d.uiName}`));
+  builtin.forEach(d => console.log(`  ${(d.apiName ?? '').padEnd(45)} ${d.uiName ?? ''}`));
 
-  console.log(`\nTotal: ${dims.length} dimensions (${custom.length} custom, ${builtin.length} built-in)`);
+  console.log(`\nTotal: ${filtered.length} dimensions (${custom.length} custom, ${builtin.length} built-in)` +
+    (filterStr ? ` matching "${filterStr}" — ${dims.length} total on property` : ''));
 };
 
 run().catch((err) => {
