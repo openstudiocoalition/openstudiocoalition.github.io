@@ -85,3 +85,5 @@ assets
 yarn.lock
 users.csv
 users.json
+ga_events_*.csv
+ga_events_*.json

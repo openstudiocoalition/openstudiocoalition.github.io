@@ -180,3 +180,19 @@ yarn es scripts/syncReleaseAssets.ts
 # Set development or production
 
 set `NODE_ENV` in the `.env` to either "development" or "production" before making a build
+
+## Google Analytics Data Export
+
+Requires `firebase-service-account.json` and the [Google Analytics Data API](https://console.developers.google.com/apis/api/analyticsdata.googleapis.com/overview?project=891236007779) enabled. The service account also needs **Viewer** access on GA4 property `332455107` (Analytics Admin → Property Access Management).
+
+```bash
+# List available dimensions
+yarn ga-dimensions
+
+# Export select_content events (app tabs + downloads) for the last 90 days
+yarn ga-events --startDate 90daysAgo --endDate today --eventName select_content
+```
+
+Output CSV/JSON files are written to this directory and gitignored.
+
+

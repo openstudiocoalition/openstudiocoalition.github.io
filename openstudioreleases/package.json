@@ -5,6 +5,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@fontsource/roboto": "^5.0.13",
+    "@google-analytics/data": "^6.1.0",
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
     "adm-zip": "^0.5.15",
@@ -62,6 +63,8 @@
     "es": "set ESBUILD_RUN=true && node -r esbuild-register -r ./scripts/patchGaxios.cjs",
     "s": "set ESBUILD_RUN=true && node -r @swc-node/register --trace-deprecation --trace-warnings",
     "ghpages": "yarn build && gh-pages -d dist",
-    "sync-releases": "yarn es scripts/getReleaseInfo.ts"
+    "sync-releases": "yarn es scripts/getReleaseInfo.ts",
+    "ga-events": "yarn s scripts/getAnalyticsEvents.ts",
+    "ga-dimensions": "yarn s scripts/listAnalyticsDimensions.ts"
   }
 }
