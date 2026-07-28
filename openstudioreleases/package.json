@@ -8,7 +8,7 @@
     "@google-analytics/data": "^6.1.0",
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
-    "adm-zip": "^0.5.15",
+    "adm-zip": "^0.6.0",
     "core-js": "^3.38.1",
     "firebase": "^10.13.0",
     "firebase-admin": "^12.3.1",
